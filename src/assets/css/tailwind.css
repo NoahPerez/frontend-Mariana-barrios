@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply tw-font-body tw-text-body tw-leading-body tw-text-base tw-font-normal tw-overflow-x-hidden;
+    }
+    a {
+        @apply tw-transition-colors hover:tw-text-primary;
+    }
+    p {
+        @apply tw-mb-3.8;
+    }
+    p:last-child {
+        @apply tw-mb-0;
+    }
+    p:only-child {
+        @apply tw-mb-0;
+    }
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+        @apply tw-font-heading tw-text-heading tw-leading-heading tw-font-bold tw-mb-2;
+    }
+    h1,
+    .h1 {
+        @apply tw-text-h1;
+    }
+    h2,
+    .h2 {
+        @apply tw-text-[26px] md:tw-text-h2;
+    }
+    h3,
+    .h3 {
+        @apply tw-text-h4 md:tw-text-h3;
+    }
+    h4,
+    .h4 {
+        @apply tw-text-h4;
+    }
+    h5,
+    .h5 {
+        @apply tw-text-h5;
+    }
+    h6,
+    .h6 {
+        @apply tw-text-h6;
+    }
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+        @apply tw-text-current hover:tw-text-primary;
+    }
+    .link-overlay {
+        @apply tw-absolute tw-inset-0 -tw-indent-[99999px] tw-z-10;
+    }
+    .table-responsive {
+        @apply tw-overflow-y-auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    iframe {
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+    .tw-rotate-y-180 {
+        transform: rotateY(180deg);
+    }
+    .tw-rotate-y-180-translate-x-half {
+        transform: translateX(-50%) rotateY(180deg);
+    }
+    .tw-no-scroll::-webkit-scrollbar {
+        display: none;
+    }
+    .tw-no-scroll {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .fill-image {
+        position: relative !important;
+        width: unset !important;
+        height: unset !important;
+        object-fit: contain !important;
+        inset: auto !important;
+    }
+
+    span.tw-block.-tw-indent-\[99999px\].tw-border-\[6px\].tw-border-desert.tw-rounded-full.tw-w-\[42px\].tw-h-\[42px\].md\:tw-w-\[62px\].md\:tw-h-\[62px\].md\:tw-border-8 {
+        display: none;
+    }
+    .tw-absolute.tw-z-1.tw-top-\[-51px\].tw-left-0.lg\:tw-left-\[-107px\] {
+        display: none;
+    }
+
+    button.tw-group.tw-overflow-hidden.tw-fixed.tw-right-7\.5.tw-bottom-15.tw-z-50.tw-shadow-3xl.tw-shadow-black\/30.tw-p-0.tw-w-15.tw-h-15.tw-rounded-full.tw-text-center.tw-text-h3.tw-inline-flex.tw-justify-center.tw-items-center.tw-bg-primary.tw-text-white {
+        display: none;
+    }
+
+    svg#linea_basic_flag2 {
+        display: none;
+    }
+    svg#linea_basic_gear {
+        display: none;
+    }
+    svg#linea_basic_life_buoy {
+        display: none;
+    }
+    svg#linea_basic_display {
+        display: none;
+    }
+}
