@@ -65,7 +65,6 @@ const Home: PageProps = ({ data }) => {
                 bg="tw-bg-white"
                 titleSize="large"
             />
-            <ServiceArea data={content?.["service-area"]} space="none" />
 
             {/* <AboutArea data={content?.["about-area"]} /> */}
             {/* <Wrapper className="tw-py-[100px]">
