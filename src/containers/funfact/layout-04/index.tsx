@@ -18,6 +18,19 @@ type TProps = TSection & {
     };
 };
 
+type TCardProps = {
+    title: string;
+    description: string;
+};
+const Card = ({ title, description }: TCardProps) => {
+    return (
+        <div className="tw-flex tw-flex-col hover:tw-shadow-dark/10 hover:tw-shadow-sm tw-transition-all tw-p-4">
+            <h3>{title}</h3>
+            <p className="tw-leading-normal tw-px-2.5 tw-mt-3">{description}</p>
+        </div>
+    );
+};
+
 const FunfactArea = ({
     data: { section_title, motto, items },
     titleSize,
@@ -26,7 +39,7 @@ const FunfactArea = ({
         <section className="funfact-area tw-bg-white tw-px-4 tw-py-12 md:tw-p-12 tw-flex tw-flex-col">
             <div className="tw-w-full tw-max-w-[1200px] tw-m-auto tw-gap-[50px] lg:tw-gap-7.5">
                 <motion.div
-                    className="tw-flex tw-flex-col md:tw-flex-row tw-justify-between tw-items-center tw-gap-4 md:tw-gap-10"
+                    className="tw-flex tw-flex-col md:tw-flex-row tw-justify-between tw-items-center tw-gap-4 md:tw-gap-10 tw-mb-8"
                     initial="offscreen"
                     whileInView="onscreen"
                     viewport={{ once: true, amount: 0.4 }}
@@ -43,50 +56,30 @@ const FunfactArea = ({
                         voluptatibus?
                     </p>
                 </motion.div>
-                <div className="tw-flex tw-flex-wrap">
-                    <AnimatedServiceCard
-                        icon=""
+                <div className="tw-auto-columns">
+                    <Card
                         title="1:1 Sesiones"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam."
-                        path="/"
-                        pathText=""
-                        initial="offscreen"
-                        whileInView="onscreen"
-                        viewport={{ once: true, amount: 0.4 }}
-                        variants={scrollUpVariants}
+                        description="Quos reprehenderit temporibus sunt voluptatibus
+                        reiciendis tenetur est eligendi tempore ad, nihil sint
+                        harum."
                     />
-                    <AnimatedServiceCard
-                        icon=""
+                    <Card
                         title="1:1 Sesiones"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam."
-                        path="/"
-                        pathText=""
-                        initial="offscreen"
-                        whileInView="onscreen"
-                        viewport={{ once: true, amount: 0.4 }}
-                        variants={scrollUpVariants}
+                        description="Quos reprehenderit temporibus sunt voluptatibus
+                        reiciendis tenetur est eligendi tempore ad, nihil sint
+                        harum."
                     />
-                    <AnimatedServiceCard
-                        icon=""
+                    <Card
                         title="1:1 Sesiones"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam."
-                        path="/"
-                        pathText=""
-                        initial="offscreen"
-                        whileInView="onscreen"
-                        viewport={{ once: true, amount: 0.4 }}
-                        variants={scrollUpVariants}
+                        description="Quos reprehenderit temporibus sunt voluptatibus
+                        reiciendis tenetur est eligendi tempore ad, nihil sint
+                        harum."
                     />
-                    <AnimatedServiceCard
-                        icon=""
+                    <Card
                         title="1:1 Sesiones"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam."
-                        path="/"
-                        pathText=""
-                        initial="offscreen"
-                        whileInView="onscreen"
-                        viewport={{ once: true, amount: 0.4 }}
-                        variants={scrollUpVariants}
+                        description="Quos reprehenderit temporibus sunt voluptatibus
+                        reiciendis tenetur est eligendi tempore ad, nihil sint
+                        harum."
                     />
                 </div>
             </div>
