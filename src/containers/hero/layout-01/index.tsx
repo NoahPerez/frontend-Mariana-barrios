@@ -66,16 +66,10 @@ const HeroArea = ({
                         {texts?.map((text) => (
                             <p
                                 key={text.id}
-                                className="tw-text-md sm:tw-text-[16px] tw-font-medium tw-leading-relaxed tw-mt-3 sm:tw-mx-auto tw-max-w-[540px] md:tw-ml-0 md:tw-text-lg"
+                                className="tw-text-md sm:tw-text-[16px] tw-text-white tw-font-medium tw-leading-relaxed tw-mt-3 sm:tw-mx-auto tw-max-w-[540px] md:tw-ml-0 md:tw-text-lg"
                             >
                                 {text.content}
                             </p>
-                        ))}
-                        {buttons?.map(({ id, content, icon, ...rest }) => (
-                            <Button key={id} className="tw-mt-3" {...rest}>
-                                <i className={clsx(icon, "tw-mr-3")} />
-                                {content}
-                            </Button>
                         ))}
                     </motion.div>
                     {/* <motion.div

@@ -6,17 +6,17 @@
             "headings": [
                 {
                     "id":1,
-                    "content":"Texto is the lifebuoy"
+                    "content":""
                 },
                 {
                     "id":2,
-                    "content":"In Mentoring <br>2B a Better You."
+                    "content":"Tu bienestar es importante"
                 }
             ],
             "texts": [
                 {
                     "id":1,
-                    "content":"The right mentoring relationship can be a powerful tool for professional growth. Bark up the right tree."
+                    "content":"I help people to discover their true potential and live a fulfilling life...Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin using backed by science. Wanna transform your life?"
                 }
             ],
             "buttons": [
@@ -30,7 +30,7 @@
             "images": [
                 {
                     "id":1,
-                    "src": "/images/intro/intro1/bg-1.jpg"
+                    "src": "/images/intro/intro1/herobanner.jpg"
                 }
             ]
         },

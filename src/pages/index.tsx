@@ -17,7 +17,6 @@ import HeroArea2 from "@containers/hero/layout-02";
 import AboutArea from "@containers/about/layout-02";
 // import NewsletterArea from "@containers/newsletter/layout-01";
 
-
 import { normalizedData } from "@utils/methods";
 import { IBlog, ICourse } from "@utils/types";
 
@@ -55,14 +54,19 @@ const Home: PageProps = ({ data }) => {
                     popularCourse: data.popularCourse,
                 }}
             />
+            <div className="tw-w-full tw-p-2 tw-bg-primary">
+                <p className="tw-text-md sm:tw-text-[16px] tw-text-white tw-font-medium tw-leading-relaxed sm:tw-mx-auto md:tw-ml-0 md:tw-text-lg tw-text-center">
+                    Una Session Gratuita 15min.
+                </p>
+            </div>
             <FunfactArea
                 data={content?.["funfact-area"]}
                 space="bottom"
-                bg="tw-bg-gray-200"
+                bg="tw-bg-white"
                 titleSize="large"
             />
             <ServiceArea data={content?.["service-area"]} space="none" />
-            
+
             {/* <AboutArea data={content?.["about-area"]} /> */}
             {/* <Wrapper className="tw-py-[100px]">
                 <FunFactArea
@@ -75,7 +79,7 @@ const Home: PageProps = ({ data }) => {
                 />
             </Wrapper> */}
             <Wrapper className="tw-py-[100px]">
-            <TestimonialArea
+                <TestimonialArea
                     data={content?.["testimonial-area"]}
                     space="none"
                 />
@@ -84,14 +88,14 @@ const Home: PageProps = ({ data }) => {
                 data={{ ...content?.["blog-area"], blogs: data.blogs }}
                 titleSize="large"
             />
-             <HeroArea2 data={content?.["hero-area"]} />
+            <HeroArea2 data={content?.["hero-area"]} />
 
-             <AboutArea
+            <AboutArea
                 data={content?.["about-area"]}
                 titleSize="large"
                 space="top-bottom-3"
             />
-             {/* <NewsletterArea data={content?.["newsletter-area"]} /> */}
+            {/* <NewsletterArea data={content?.["newsletter-area"]} /> */}
             {/* <VideoArea data={content?.["video-area"]} space="none" /> */}
             {/* <CourseArea
                 data={{ ...content?.["course-area"], courses: data.courses }}
@@ -104,12 +108,13 @@ const Home: PageProps = ({ data }) => {
 
 Home.Layout = Layout;
 
-
 export const getStaticProps: GetStaticProps = () => {
     const page = getPageData("home", "index-01");
     const courses = getallCourses(
         ["title", "thumbnail", "price", "currency"],
-        0,3);
+        0,
+        3
+    );
     const popularCourse = getFilteredCourse(
         [
             "title",

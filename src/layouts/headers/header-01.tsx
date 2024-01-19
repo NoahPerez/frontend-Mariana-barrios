@@ -34,7 +34,6 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
     const [visibleSearch, setVisibleSearch] = useState(false);
     const [offcanvas, setOffcanvas] = useState(false);
     const { sticky, measuredRef } = useSticky();
-    
 
     useEffect(() => {
         setOffcanvas(false);
@@ -79,13 +78,13 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                         />
                         <MainMenu
                             className="tw-hidden xl:tw-block"
-                            align="center"
+                            align="right"
                             menu={menu}
                             color={mode}
                         />
                         <div className="tw-flex tw-justify-end tw-items-center">
-                            <Button className="tw-mt-3" > 
-                             Session Gratuita 20min
+                            <Button size="md" className="">
+                                Session Gratuita 20min
                             </Button>
                             {/* <Anchor
                                 path="/profile"
@@ -104,26 +103,7 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                                     bg={transparent ? "white" : "light"}
                                 />
                             </div> */}
-                            <div className="md:tw-hidden tw-overflow-hidden">
-                                <button
-                                    type="button"
-                                    className={clsx(
-                                        "tw-inline-block tw-px-2.5 tw-py-1.5 md:tw-hidden",
-                                        mode === "light" && "tw-text-white",
-                                        mode === "dark" && "tw-text-dark-50"
-                                    )}
-                                    onClick={() =>
-                                        setVisibleSearch((prev) => !prev)
-                                    }
-                                    aria-label="Search Toggle"
-                                >
-                                    <i className="far fa-search tw-text-lg" />
-                                </button>
-                                <FlyoutSearchForm
-                                    show={visibleSearch}
-                                    onClose={() => setVisibleSearch(false)}
-                                />
-                            </div>
+
                             <BurgerButton
                                 className="tw-pl-5 xl:tw-hidden"
                                 onClick={() => setOffcanvas(true)}
