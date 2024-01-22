@@ -206,7 +206,7 @@
         {
             "section": "blog-area",
             "section_title": {
-                "title": "Secrets of learning revealed in blogs",
+                "title": "Lee articulos que te puedan ayudar",
                 "subtitle":"study with your favorite tutors"
             },
             "motto": {
@@ -214,6 +214,16 @@
                 "path": "/blogs/blog-grid",
                 "pathText": "View all posts"
             }
+        },
+        {
+            "section": "mybook-area",
+            "section_title": {
+                "title": "No te pierdas mi Libro 'Vive la vida al máximo potencial'.",
+                "subtitle":""
+            },
+            "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+            "paragraph2": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "img": "/images/mybook/mybook.png"
         },
         {
             "section": "brand-area",

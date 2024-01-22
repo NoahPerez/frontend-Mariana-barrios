@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import StarRating from "@ui/star-rating";
 import { ImageType } from "@utils/types";
+import { Text } from "@components/ui/text";
 
 type TProps = {
     name: string;
@@ -26,37 +27,36 @@ const Testimonial = ({
                 className
             )}
         >
-            <div className="tw-flex tw-items-center tw-mb-5">
-                {image?.src && (
-                    <figure className="image tw-flex-auto0 tw-w-[90px]">
-                        <img
-                            src={image.src}
-                            alt={image?.alt || name}
-                            width={image?.width || 90}
-                            height={image?.height || 90}
-                            loading={image?.loading || "lazy"}
-                            className="tw-rounded-full"
-                        />
-                    </figure>
-                )}
-                <div className="tw-pl-7.5">
+            <div className="tw-flex tw-flex-col tw-items-center tw-mb-5">
+                <Text className="tw-font-medium tw-mb-6 md:tw-mb-[34px]">
+                    {review}
+                </Text>
+                <Text
+                    as="h3"
+                    className="tw-mb-6 tw-w-full tw-text-left tw-tracking-wider tw-uppercase tw-inline-block"
+                >
+                    {name}
+                </Text>
+                <div className="tw-flex tw-flex-col tw-justify-start tw-w-full">
+                    {image?.src && (
+                        <figure className="image tw-flex-auto0 tw-w-[70px] tw-flex">
+                            <img
+                                src={image.src}
+                                alt={image?.alt || name}
+                                width={image?.width || 70}
+                                height={image?.height || 70}
+                                loading={image?.loading || "lazy"}
+                                className="tw-rounded-full"
+                            />
+                        </figure>
+                    )}
                     <StarRating
                         rating={rating}
                         align="left"
-                        className="tw-mb-[11px]"
+                        className="tw-mt-[11px]"
                     />
-                    <h3 className="tw-mb-0 tw-tracking-wider tw-uppercase tw-inline-block tw-text-h6">
-                        {name}
-                    </h3>
-                    <span className="tw-text-md tw-inline-block tw-text-gray-300 tw-ml-3.5">
-                        / {designation}
-                    </span>
                 </div>
             </div>
-
-            <p className="tw-text-lg tw-font-medium tw-leading-relaxed tw-mb-6 md:tw-mb-[34px]">
-                {review}
-            </p>
         </div>
     );
 };

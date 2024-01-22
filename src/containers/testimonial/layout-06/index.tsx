@@ -36,8 +36,8 @@ const TestimonialArea = ({ data: { section_title, items } }: TProps) => {
         };
     }, []);
     return (
-        <section className="testimonial-area tw-py-15 md:tw-py-20 lg:tw-py-[100px]">
-            <div className="tw-container">
+        <section className="testimonial-area tw-mt-15 md:tw-mt-20">
+            <div className="">
                 {section_title && (
                     <AnimatedSectionTitle
                         {...section_title}

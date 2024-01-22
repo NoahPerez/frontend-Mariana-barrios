@@ -4,6 +4,7 @@ import BlogCard from "@components/blog-card/blog-03";
 import SectionTitle from "@components/section-title";
 import { scrollUpVariants } from "@utils/variants";
 import { MottoType, SectionTitleType, IBlog, TSection } from "@utils/types";
+import { Container } from "@components/ui/container";
 
 const AnimatedSectionTitle = motion(SectionTitle);
 const AnimatedBlogCard = motion(BlogCard);
@@ -23,7 +24,7 @@ const BlogArea = ({
     titleSize,
 }: TProps) => {
     return (
-        <Section className="blog-area" space={space} bg={bg}>
+        <Container clases="blog-area" bg="white">
             <div className="tw-container tw-relative">
                 {section_title && (
                     <AnimatedSectionTitle
@@ -55,7 +56,7 @@ const BlogArea = ({
                     ))}
                 </div>
             </div>
-        </Section>
+        </Container>
     );
 };
 

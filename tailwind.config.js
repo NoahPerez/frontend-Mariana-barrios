@@ -1,11 +1,14 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
 module.exports = {
-    content: ["./src/**/*.tsx"],
+    content: ["./src/**/*.tsx", "./src/components/ui/text/*.tsx"],
     prefix: "tw-",
     theme: {
         extend: {
             colors: {
+                primarytext: "#59462F",
+                secondarytext: "#1E470A",
+                whitetext: "#EDEFF5",
                 transparent: "transparent",
                 current: "currentColor",
                 primary: {

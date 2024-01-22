@@ -23,6 +23,7 @@ import { IBlog, ICourse } from "@utils/types";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
+import MyBook from "@containers/mybook";
 
 interface PageContent {
     section: string;
@@ -62,7 +63,7 @@ const Home: PageProps = ({ data }) => {
             <FunfactArea
                 data={content?.["funfact-area"]}
                 space="bottom"
-                bg="tw-bg-white"
+                bg="tw-bg-white tw-py-[100px]"
                 titleSize="large"
             />
 
@@ -77,15 +78,19 @@ const Home: PageProps = ({ data }) => {
                     space="none"
                 />
             </Wrapper> */}
-            <Wrapper className="tw-py-[100px]">
+            <Wrapper className="tw-px-4 tw-py-12 md:tw-py-[100px]">
                 <TestimonialArea
                     data={content?.["testimonial-area"]}
                     space="none"
                 />
             </Wrapper>
+            
             <BlogArea
                 data={{ ...content?.["blog-area"], blogs: data.blogs }}
                 titleSize="large"
+            />
+            <MyBook 
+                data={{...content?.["mybook-area"]}}
             />
             <HeroArea2 data={content?.["hero-area"]} />
 

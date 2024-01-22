@@ -12,6 +12,7 @@ import {
     ImageType,
     ICourse,
 } from "@utils/types";
+import { Text } from "@components/ui/text";
 
 type TProps = {
     data: {
@@ -56,12 +57,9 @@ const HeroArea = ({
                             </span>
                         )}
                         {headings?.[1]?.content && (
-                            <h2
-                                className="tw-text-3xl sm:tw-text-[40px] lg:tw-text-[54px] xl:tw-text-[63px] tw-leading-[1.13] tw-text-white"
-                                dangerouslySetInnerHTML={{
-                                    __html: headings[1].content,
-                                }}
-                            />
+                            <Text className="" size="big" color="white" as="h1">
+                                {headings[1].content}
+                            </Text>
                         )}
                         {texts?.map((text) => (
                             <p

@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
 import { IBlog } from "@utils/types";
+import { Text } from "@components/ui/text";
 
 type TProps = Pick<
     IBlog,
@@ -32,21 +33,24 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                     </Anchor>
                 </div>
 
-                <div className="info tw-pt-[26px]">
-                    <div className="tw-text-base tw-font-medium tw-uppercase -tw-tracking-tightest tw-leading-[1.4] tw-mb-1.5">
+                <div className="tw-flex tw-flex-col tw-px-6 tw-py-4">
+                    {/* <div className="tw-text-base tw-font-medium tw-uppercase -tw-tracking-tightest tw-leading-[1.4] tw-mb-1.5">
                         <Anchor
                             path={category.path}
                             className="tw-text-inherit"
                         >
                             {category.title}
                         </Anchor>
-                    </div>
+                    </div> */}
 
-                    <h3 className="tw-mb-0 tw-leading-normal">
+                    <Text as="h3" size="lg" className="tw-mb-0 tw-leading-normal">
                         <Anchor path={path}>{title}</Anchor>
-                    </h3>
+                    </Text>
+                    <Text className="tw-mt-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolor eaque at sed dignissimos velit. Voluptas quos porro ipsum error eveniet dolore veritatis, impedit nam eum libero quo neque ratione!
+                    </Text>
 
-                    <ul className="tw-flex tw-gap-7 tw-text-gray-300 tw-text-md">
+                    {/* <ul className="tw-flex tw-gap-7 tw-text-gray-300 tw-text-md">
                         <li className="tw-mt-3.8 tw-mb-0">
                             <i className="far fa-calendar tw-mr-2.5" />
                             {postedAt}
@@ -55,7 +59,7 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                             <i className="far fa-eye tw-mr-2.5" />
                             {views} views
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         );

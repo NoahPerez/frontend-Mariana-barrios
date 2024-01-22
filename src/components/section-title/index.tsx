@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import clsx from "clsx";
+import { Text } from "@components/ui/text";
 
 type TProps = {
     className?: string;
@@ -39,7 +40,7 @@ const SectionTitle = forwardRef<HTMLDivElement, TProps>(
                 )}
                 ref={ref}
             >
-                {subtitle && (
+                {/* {subtitle && (
                     <span
                         className={clsx(
                             "tw-font-medium tw-text-base tw-leading-none -tw-tracking-tightest tw-block tw-mb-2.5 tw-uppercase",
@@ -49,28 +50,15 @@ const SectionTitle = forwardRef<HTMLDivElement, TProps>(
                         )}
                         dangerouslySetInnerHTML={{ __html: subtitle }}
                     />
-                )}
+                )} */}
 
-                <h2
-                    className={clsx(
-                        "title tw-m-0 child:tw-text-primary child:tw-font-normal",
-                        color === "A" && "tw-text-secondary",
-                        color === "C" && "tw-text-white",
-                        titleSize === "large" &&
-                            "tw-text-4xl lg:tw-text-5xl tw-leading-heading lg:tw-leading-heading",
-                        titleClass
-                    )}
-                    dangerouslySetInnerHTML={{ __html: title }}
-                />
+                <Text as="h2" size="xl" color="primary">
+                    {title}
+                </Text>
                 {description && (
-                    <p
-                        className={clsx(
-                            "tw-mb-0 tw-mt-[25px] tw-font-medium",
-                            descClass,
-                            color === "C" && "tw-text-white"
-                        )}
-                        dangerouslySetInnerHTML={{ __html: description }}
-                    />
+                    <Text as="p">
+                        {description}
+                    </Text>
                 )}
             </div>
         );

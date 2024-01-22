@@ -6,6 +6,7 @@ import ServiceCard from "@components/icon-box/icon-box-01";
 import FunFact from "@components/funfact/funfact-01";
 import { ItemType, MottoType, SectionTitleType, TSection } from "@utils/types";
 import { scrollUpVariants } from "@utils/variants";
+import { Text } from "@components/ui/text";
 
 const AnimatedFunFact = motion(FunFact);
 const AnimatedServiceCard = motion(ServiceCard);
@@ -36,7 +37,7 @@ const FunfactArea = ({
     titleSize,
 }: TProps) => {
     return (
-        <section className="funfact-area tw-bg-white tw-px-4 tw-py-12 md:tw-p-12 tw-flex tw-flex-col">
+        <section className="funfact-area tw-bg-white tw-px-4 tw-py-12 md:tw-py-[100px] tw-flex tw-flex-col">
             <div className="tw-w-full tw-max-w-[1200px] tw-m-auto tw-gap-[50px] lg:tw-gap-7.5">
                 <motion.div
                     className="tw-flex tw-flex-col md:tw-flex-row tw-justify-between tw-items-center tw-gap-4 md:tw-gap-10 tw-mb-8"
@@ -45,9 +46,13 @@ const FunfactArea = ({
                     viewport={{ once: true, amount: 0.4 }}
                     variants={scrollUpVariants}
                 >
-                    <h2 className="tw-w-full md:tw-w-1/2 title tw-m-0 tw-text-secondary tw-text-2xl md:tw-text-3xl lg:tw-text-[50px] tw-leading-heading lg:tw-leading-heading tw-text-center md:tw-text-left">
+                    <Text
+                        as="h2"
+                        size="xl"
+                        className="tw-w-full md:tw-w-1/3 tw-text-center md:tw-text-left"
+                    >
                         Puedo ayudarte en estas áreas
-                    </h2>
+                    </Text>
                     <p className="tw-w-full tw-text-center md:tw-text-left md:tw-w-1/2">
                         Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Quos reprehenderit temporibus sunt voluptatibus
