@@ -10,6 +10,7 @@ import {
     ICourse,
 } from "@utils/types";
 import { Text } from "@components/ui/text";
+import Button from "@components/ui/button";
 
 type TProps = {
     data: {
@@ -50,18 +51,26 @@ const HeroArea = ({ data: { headings, texts, images } }: TProps) => {
                             </span>
                         )}
                         {headings?.[1]?.content && (
-                            <Text className="" size="big" color="white" as="h1">
+                            <Text
+                                className="tw-mb-8"
+                                size="big"
+                                color="white"
+                                as="h1"
+                            >
                                 {headings[1].content}
                             </Text>
                         )}
                         {texts?.map((text) => (
-                            <p
+                            <Text
                                 key={text.id}
-                                className="tw-text-md sm:tw-text-[16px] tw-text-white tw-font-medium tw-leading-relaxed tw-mt-3 sm:tw-mx-auto tw-max-w-[540px] md:tw-ml-0 md:tw-text-lg"
+                                color="white"
+                                size="md"
+                                className="tw-mb-8"
                             >
                                 {text.content}
-                            </p>
+                            </Text>
                         ))}
+                        <Button>Una Session Gratuita 15min.</Button>
                     </motion.div>
                     {/* <motion.div
                         className="course tw-flex tw-space-between tw-justify-center xl:tw-justify-end tw-relative tw-z-10"
