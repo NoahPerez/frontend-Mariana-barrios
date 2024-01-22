@@ -1,20 +1,22 @@
-import { SectionTitleType } from "@utils/types";
+import { SectionTitleType, TSection } from "@utils/types";
 import { Container } from "@components/ui/container";
 import { Text } from "@components/ui/text";
 import Button from "@components/ui/button";
 
-type TProps = {
-    section_title?: SectionTitleType;
-    paragraph1: string;
-    paragraph2: string;
-    img: string;
+type TProps = TSection & {
+    data: {
+        section_title?: SectionTitleType;
+        paragraph1: string;
+        paragraph2: string;
+        img: string;
+    };
 };
 
-const MyBook = ({ section_title, paragraph1, paragraph2, img }: TProps) => {
+const FreeSession = ({ data: { section_title, paragraph1, img } }: TProps) => {
     return (
         <Container clases="mybook-area" bg="white">
-            <div className="tw-flex tw-flex-col-reverse md:tw-flex-row md:tw-gap-10">
-                <div className="tw-w-full md:tw-w-1/2 tw-flex tw-flex-col tw-items-start tw-justify-center">
+            <div className="tw-flex tw-rounded-3xl tw-overflow-hidden tw-bg-spring md:tw-flex-row tw-flex-col">
+                <div className="tw-py-16 tw-pl-16 tw-pr-12 tw-w-full md:tw-w-2/3 tw-flex tw-flex-col tw-items-start tw-justify-center">
                     {section_title && (
                         <Text
                             as="h2"
@@ -30,21 +32,16 @@ const MyBook = ({ section_title, paragraph1, paragraph2, img }: TProps) => {
                             {paragraph1}
                         </Text>
                     )}
-                    {paragraph2 && (
-                        <Text size="md" color="primary" className="tw-mb-4">
-                            {paragraph2}
-                        </Text>
-                    )}
                     <Button className="tw-mt-5">
                         <i className="tw-mr-4" />
-                        Get your free guide now
+                        Book now
                     </Button>
                 </div>
-                <div className="tw-w-1/2 tw-mb-10 md:tw-mb-0 md:tw-px-4 tw-flex tw-justify-end">
+                <div className="tw-w-full tw-rounded-r-3xl md:tw-w-1/3 tw-flex tw-justify-end tw-aspect-square">
                     <img
                         src={img}
                         alt={section_title?.title}
-                        className="md:tw-max-w-[400px] tw-w-full"
+                        className="md:tw-max-w-[400px] tw-w-full tw-aspect-square tw-object-cover"
                     />
                 </div>
             </div>
@@ -52,4 +49,4 @@ const MyBook = ({ section_title, paragraph1, paragraph2, img }: TProps) => {
     );
 };
 
-export default MyBook;
+export default FreeSession;

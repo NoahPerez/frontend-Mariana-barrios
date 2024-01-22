@@ -31,13 +31,13 @@ const NewsletterForm = forwardRef<HTMLFormElement, TProps>(
         return (
             <form
                 className={clsx(
-                    "tw-relative tw-max-w-[570px] tw-flex tw-flex-wrap",
+                    "tw-relative tw-max-w-[570px] tw-flex tw-flex-nowrap tw-items-center",
                     className
                 )}
                 onSubmit={handleSubmit(onSubmit)}
                 ref={ref}
             >
-                <div className="tw-flex-100 md:tw-flex-auto0">
+                <div className="">
                     <label htmlFor="newsletter_email" className="tw-sr-only">
                         Newsletter
                     </label>
@@ -64,7 +64,7 @@ const NewsletterForm = forwardRef<HTMLFormElement, TProps>(
                 </div>
                 <Button
                     type="submit"
-                    className="tw-mt-3.8 md:tw-mt-0 md:tw-rounded-bl-none md:tw-rounded-tl-none"
+                    className="md:tw-rounded-bl-none md:tw-rounded-tl-none"
                 >
                     Subscribe
                 </Button>

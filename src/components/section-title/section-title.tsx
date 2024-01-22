@@ -6,7 +6,7 @@ type TProps = {
     className?: string;
     title: string;
     subtitle?: string;
-    description?: string;
+    paragraph1?: string;
     align?: "left" | "right" | "center";
     color?: "A" | "B" | "C";
     titleSize?: "default" | "large";
@@ -15,13 +15,13 @@ type TProps = {
     descClass?: string;
 };
 
-const SectionTitle = forwardRef<HTMLDivElement, TProps>(
+const SectionTitle2 = forwardRef<HTMLDivElement, TProps>(
     (
         {
             className,
             title,
             subtitle,
-            description,
+            paragraph1,
             align,
             color,
             titleSize,
@@ -52,18 +52,22 @@ const SectionTitle = forwardRef<HTMLDivElement, TProps>(
                     />
                 )} */}
 
-                <Text as="h2" size="xl" color="primary">
+                <Text as="h2" size="xl" color="primary" className="tw-mb-8">
                     {title}
                 </Text>
-                {description && <Text as="p">{description}</Text>}
+                {paragraph1 && (
+                    <Text size="lg" color="primary" className="tw-mb-4">
+                        {paragraph1}
+                    </Text>
+                )}
             </div>
         );
     }
 );
 
-SectionTitle.defaultProps = {
+SectionTitle2.defaultProps = {
     align: "center" as const,
     color: "A" as const,
 };
 
-export default SectionTitle;
+export default SectionTitle2;

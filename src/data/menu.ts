@@ -1,8 +1,8 @@
 export default [
     {
         id: 1,
-        label: "Inicio",
-        path: "/",
+        label: "Services",
+        path: "/services",
     },
     {
         id: 2,

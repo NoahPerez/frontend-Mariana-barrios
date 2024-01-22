@@ -1,7 +1,11 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
 module.exports = {
-    content: ["./src/**/*.tsx", "./src/components/ui/text/*.tsx"],
+    content: [
+        "./src/**/*.tsx",
+        "./src/components/ui/text/*.tsx",
+        "./src/components/ui/container/*.tsx",
+    ],
     prefix: "tw-",
     theme: {
         extend: {

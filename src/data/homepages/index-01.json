@@ -226,6 +226,23 @@
             "img": "/images/mybook/mybook.png"
         },
         {
+            "section": "freesesion-area",
+            "section_title": {
+                "title": "Obten una session Gratutita de 15min.",
+                "subtitle":""
+            },
+            "paragraph1": "Limited Period Offer. Claim Now.",
+            "img": "/images/free-session/free-session.png"
+        },
+        {
+            "section": "newsletter-area",
+            "section_title": {
+                "title": "Recibe notificaciones cuando publique nuevos artículos.",
+                "subtitle":""
+            },
+            "paragraph1": "Stay up to date with the latest news, announcements, and articles."
+        },
+        {
             "section": "brand-area",
             "items": [
                 {

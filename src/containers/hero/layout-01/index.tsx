@@ -1,10 +1,7 @@
-import clsx from "clsx";
 import { motion } from "framer-motion";
-import Button from "@ui/button";
 // import CourseCard from "@components/course-card/course-01";
 // import BottomShape from "@ui/bottom-shape/shape-01";
 import { scrollUpVariants } from "@utils/variants";
-import { useUI } from "@contexts/ui-context";
 import {
     HeadingType,
     TextType,
@@ -24,11 +21,7 @@ type TProps = {
     };
 };
 
-const HeroArea = ({
-    data: { headings, texts, buttons, images, popularCourse },
-}: TProps) => {
-    const { trans1 } = useUI();
-
+const HeroArea = ({ data: { headings, texts, images } }: TProps) => {
     return (
         <div className="tw-h-full md:tw-min-h-[750px] xl:tw-min-h-[820px] tw-py-[50px] tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
             <h1 className="tw-sr-only">Inicio</h1>

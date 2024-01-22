@@ -14,7 +14,7 @@ type Props = {
         | "warning"
         | "grey"
         | "custom";
-    size?: "big" | "xl" | "lg" | "md" | "sm" | "xs" | "custom";
+    size?: "big" | "xl" | "xlarge" | "lg" | "md" | "sm" | "xs" | "custom";
     className?: string;
 } & React.HTMLAttributes<HTMLElement>;
 
@@ -44,8 +44,9 @@ export const Text: React.FC<Props> = ({
             "": color === "custom",
         },
         {
-            "tw-text-5xl md:tw-text-6xl": size === "big",
-            "tw-text-3xl md:tw-text-4xl": size === "xl",
+            "tw-text-4xl md:tw-text-5xl": size === "big",
+            "tw-text-2xl md:tw-text-3xl": size === "xl",
+            "tw-text-xl md:tw-text-2xl": size === "xlarge",
             "tw-text-lg md:tw-text-xl": size === "lg",
             "tw-text-base md:tw-text-base": size === "md",
             "tw-text-sm md:tw-text-md": size === "sm",

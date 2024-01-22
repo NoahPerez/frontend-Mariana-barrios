@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Section from "@ui/section";
 import BlogCard from "@components/blog-card/blog-03";
 import SectionTitle from "@components/section-title";
 import { scrollUpVariants } from "@utils/variants";
@@ -17,15 +16,10 @@ type TProps = TSection & {
     };
 };
 
-const BlogArea = ({
-    data: { section_title, blogs },
-    space,
-    bg,
-    titleSize,
-}: TProps) => {
+const BlogArea = ({ data: { section_title, blogs }, titleSize }: TProps) => {
     return (
         <Container clases="blog-area" bg="white">
-            <div className="tw-container tw-relative">
+            <div className="tw-relative">
                 {section_title && (
                     <AnimatedSectionTitle
                         {...section_title}

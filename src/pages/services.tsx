@@ -3,6 +3,7 @@ import { GetStaticProps } from "next";
 import Layout from "@layout/layout-01";
 import Wrapper from "@ui/wrapper/wrapper-01";
 import HeroArea from "@containers/hero/layout-01";
+import ServiceArea from "@containers/service/layout-01";
 // import AboutArea from "@containers/about/layout-01";
 
 // import FunFactArea from "@containers/funfact/layout-01";
@@ -12,6 +13,8 @@ import TestimonialArea from "@containers/testimonial/layout-06";
 // import VideoArea from "@containers/video/layout-01";
 // import BlogArea from "@containers/blog/layout-01";
 import BlogArea from "@containers/blog/layout-03";
+import HeroArea2 from "@containers/hero/layout-02";
+import AboutArea from "@containers/about/layout-02";
 // import NewsletterArea from "@containers/newsletter/layout-01";
 
 import { normalizedData } from "@utils/methods";
@@ -20,6 +23,7 @@ import { IBlog, ICourse } from "@utils/types";
 import MyBook from "@containers/mybook";
 import FreeSession from "@containers/free-session";
 import NewsletterArea from "@containers/newsletter/layout-01";
+import CanHelp from "@containers/services/canhelp";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
@@ -45,7 +49,7 @@ type PageProps = NextPage<TProps> & {
 
 const Home: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
-    console.log({ content });
+
     return (
         <>
             <HeroArea
@@ -54,11 +58,11 @@ const Home: PageProps = ({ data }) => {
                     popularCourse: data.popularCourse,
                 }}
             />
-            {/* <div className="tw-w-full tw-p-2 tw-bg-primary">
-                <p className="tw-text-md sm:tw-text-[16px] tw-text-white tw-font-medium tw-leading-relaxed sm:tw-mx-auto md:tw-ml-0 md:tw-text-lg tw-text-center">
-                    Una Session Gratuita 15min.
-                </p>
-            </div> */}
+            <CanHelp
+                data={{
+                    ...content?.["canhelp-area"],
+                }}
+            />
             <FunfactArea
                 data={content?.["funfact-area"]}
                 space="bottom"
@@ -78,7 +82,10 @@ const Home: PageProps = ({ data }) => {
                 />
             </Wrapper> */}
             <Wrapper className="tw-px-4 tw-py-12 md:tw-py-[100px]">
-                <TestimonialArea data={content?.["testimonial-area"]} />
+                <TestimonialArea
+                    data={content?.["testimonial-area"]}
+                    space="none"
+                />
             </Wrapper>
 
             <BlogArea
@@ -103,7 +110,7 @@ const Home: PageProps = ({ data }) => {
 Home.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("home", "index-01");
+    const page = getPageData("services", "services");
     const courses = getallCourses(
         ["title", "thumbnail", "price", "currency"],
         0,

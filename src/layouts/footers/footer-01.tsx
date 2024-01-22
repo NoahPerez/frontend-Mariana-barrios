@@ -2,6 +2,7 @@ import clsx from "clsx";
 import TwoColumnListWidget from "@widgets/two-col-list-widget";
 import TextWidget from "@widgets/text-widget";
 import ListWidget from "@components/widgets/list-widget";
+import { Text } from "@components/ui/text";
 
 type TProps = {
     mode?: "light" | "dark";
@@ -12,11 +13,11 @@ const Footer01 = ({ mode }: TProps) => {
         <footer
             className={clsx(
                 "tw-pt-[70px] tw-pb-[50px]",
-                mode === "dark" && "tw-bg-dark-100",
+                mode === "dark" && "tw-bg-light-100",
                 mode === "light" && "tw-bg-light-100"
             )}
         >
-            <h2 className="tw-sr-only">Footer</h2>
+            <Text className="tw-sr-only">Footer</Text>
             <div className="tw-container">
                 <div className="tw-grid tw-grid-cols-12">
                     <TextWidget
@@ -34,11 +35,7 @@ const Footer01 = ({ mode }: TProps) => {
                 </div>
                 <p className="copyright tw-text-center tw-text-md tw-text-gray-400 tw-mt-5">
                     &copy; {new Date().getFullYear()} Mariana Barrios Terapeuta.{" "}
-                    <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="/"
-                    >
+                    <a target="_blank" rel="noopener noreferrer" href="/">
                         All Rights Reserved
                     </a>
                 </p>

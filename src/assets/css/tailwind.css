@@ -127,3 +127,9 @@
     gap: 10px;
     display: grid;     
 }
+
+.tw-auto-2-columns {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, max(200px, calc(50% - 10px))), 1fr));
+    gap: 10px;
+    display: grid;     
+}
