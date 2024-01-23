@@ -6,7 +6,6 @@ import HeroArea from "@containers/hero/layout-01";
 // import AboutArea from "@containers/about/layout-01";
 
 // import FunFactArea from "@containers/funfact/layout-01";
-import FunfactArea from "@containers/funfact/layout-04";
 import TestimonialArea from "@containers/testimonial/layout-06";
 // import TestimonialArea from "@containers/testimonial/layout-01";
 // import VideoArea from "@containers/video/layout-01";
@@ -20,6 +19,7 @@ import { IBlog, ICourse } from "@utils/types";
 import MyBook from "@containers/mybook";
 import FreeSession from "@containers/free-session";
 import NewsletterArea from "@containers/newsletter/layout-01";
+import AreasHome from "@containers/home/areas";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
@@ -45,7 +45,8 @@ type PageProps = NextPage<TProps> & {
 
 const Home: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
-    console.log({ content });
+    const areaData = content["areas-area"];
+    const myBookData = content["mybook-area"];
     return (
         <>
             <HeroArea
@@ -59,12 +60,13 @@ const Home: PageProps = ({ data }) => {
                     Una Session Gratuita 15min.
                 </p>
             </div> */}
-            <FunfactArea
+            <AreasHome data={{ ...areaData }} />
+            {/* <FunfactArea
                 data={content?.["funfact-area"]}
                 space="bottom"
                 bg="tw-bg-white tw-py-[100px]"
                 titleSize="large"
-            />
+            /> */}
 
             {/* <AboutArea data={content?.["about-area"]} /> */}
             {/* <Wrapper className="tw-py-[100px]">
@@ -85,7 +87,7 @@ const Home: PageProps = ({ data }) => {
                 data={{ ...content?.["blog-area"], blogs: data.blogs }}
                 titleSize="large"
             />
-            <MyBook data={{ ...content?.["mybook-area"] }} />
+            <MyBook data={{ ...myBookData }} />
             <FreeSession data={{ ...content?.["freesesion-area"] }} />
             <NewsletterArea data={{ ...content?.["newsletter-area"] }} />
 

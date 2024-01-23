@@ -35,6 +35,41 @@
             ]
         },
         {
+            "section": "areas-area",
+            "section_title": {
+                "title": "Puedo ayudarte en estas áreas.​",
+                "subtitle":""
+            },
+            "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+            "paragraph2": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ",
+            "items": [
+                {
+                    "id": 1,
+                    "icon": "/images/home/book.svg",
+                    "title": "1:1 Sesiones",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
+                },
+                {
+                    "id": 2,
+                    "icon": "/images/home/message.svg",
+                    "title": "Consultation",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
+                },
+                {
+                    "id": 3,
+                    "icon": "/images/home/humans.svg",
+                    "title": "Sesiones Grupales",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
+                }
+            ]
+        }, 
+        {
             "section": "service-area",
             "section_title": {
                 "title": "Online Texto For Remote Learning.",
@@ -107,33 +142,7 @@
                     "src": "/images/others/teracher-quote-1.jpg"
                 }
             ]
-        }, 
-        {
-            "section": "funfact-area",
-            "section_title": {
-                "title": "Learn the secrets to <span>Life Success</span>, <br/>these people have got the key.​",
-                "subtitle":"MAXIMIZE YOUR POTENTIALS and possibilities"
-            },
-            "items": [
-                {
-                    "id": 1,
-                    "title": "Registered Enrolls",
-                    "suffix": "+",
-                    "counter": 3.092
-                },
-                {
-                    "id": 2,
-                    "title": "Finished sessions",
-                    "counter": 1.926
-                },
-                {
-                    "id": 3,
-                    "title": "Satisfaction rate",
-                    "suffix": "%",
-                    "counter": 100
-                }
-            ]
-        }, 
+        },        
         {
             "section": "testimonial-area",
             "items": [
@@ -174,35 +183,7 @@
                     ]
                 }
             ]
-        }, 
-        {
-            "section": "video-area",
-            "section_title": {
-                "title": "Learn with all your <span>SENSES​</span>",
-                "subtitle":"The combination of all senses into learning"
-            },
-            "images": [
-                {
-                    "src": "/images/about/about-me/about-me-popup-video-poster.jpg"
-                }
-            ],
-            "video": {
-                "videoId": "eS9Qm4AOOBY",
-                "channel": "youtube"
-            }
-        },
-        {
-            "section": "course-area",
-            "section_title": {
-                "title": "Current Signature Courses",
-                "subtitle":"Learn at your Pace"
-            },
-            "motto": {
-                "text": "Get the most dedicated consultation for your life-changing course. Earn a certification for your effort and passion",
-                "path": "/courses/grid-01",
-                "pathText": "Get Free Guide"
-            }
-        },
+        },             
         {
             "section": "blog-area",
             "section_title": {
@@ -241,59 +222,6 @@
                 "subtitle":""
             },
             "paragraph1": "Stay up to date with the latest news, announcements, and articles."
-        },
-        {
-            "section": "brand-area",
-            "items": [
-                {
-                    "id": 1,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-01.png"
-                        }
-                    ]
-                },
-                {
-                    "id": 2,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-02.png"
-                        }
-                    ]
-                },
-                {
-                    "id": 3,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-03.png"
-                        }
-                    ]
-                },
-                {
-                    "id": 4,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-04.png"
-                        }
-                    ]
-                },
-                {
-                    "id": 5,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-05.png"
-                        }
-                    ]
-                },
-                {
-                    "id": 6,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-01.png"
-                        }
-                    ]
-                }
-            ]
-        }
+        }       
     ]
 }

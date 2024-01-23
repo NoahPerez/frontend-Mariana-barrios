@@ -2,70 +2,46 @@
     "name": "about-me",
     "content": [
         {
-            "section": "service-area",
-            "section_title": {
-                "title": "Online <span>Coaching Lessons</span> For Remote Learning.",
-                "subtitle":"Education for everyone"
-            },
-            "items": [
+            "section": "hero-area",
+            "headings": [
                 {
-                    "id": 1,
-                    "icon": "linea-basic-flag2",
-                    "title": "Life Mentoring",
-                    "description": "Get some soul healing and guidance for your future career and vocational directions.",
-                    "path": "/start-here",
-                    "pathText": "Start here"
+                    "id":1,
+                    "content":""
                 },
                 {
-                    "id": 2,
-                    "icon": "linea-basic-gear",
-                    "title": "Self Development",
-                    "description": "Develop skills for career of various majors including computer science & language competence.",
-                    "path": "/start-here",
-                    "pathText": "Discover now"
-                },
+                    "id":2,
+                    "content":"About me"
+                }
+            ],
+            "paragraph1": "My name is Mariana Barrios",
+            "buttons": [
                 {
-                    "id": 3,
-                    "icon": "linea-basic-life-buoy",
-                    "title": "Ask Consultancy",
-                    "description": "Make a reservation with our special consultant to learn what's best for your dream career.",
+                    "id":1,
                     "path": "/start-here",
-                    "pathText": "Get Free Quote"
-                },
+                    "content":"Download free guide",
+                    "icon": "far fa-download"
+                }
+            ],
+            "img": "/images/about/about-me/hero.png",
+            "images": [
                 {
-                    "id": 4,
-                    "icon": "linea-basic-display",
-                    "title": "Remote Learning",
-                    "description": "Learn from anywhere in the world on desktop, tablet or mobile phone with an Internet connection.",
-                    "path": "/start-here",
-                    "pathText": "Start Now"
+                    "id":1,
+                    "src": "/images/about/about-me/hero.png"
                 }
             ]
         },
         {
-            "section": "video-area",
-            "images": [
-                {
-                    "src": "/images/about/about-me/about-me-popup-video-poster.jpg"
-                }
-            ],
-            "video": {
-                "videoId": "eS9Qm4AOOBY",
-                "channel": "youtube"
-            }
+            "section": "texthero-area",
+            "paragraph1": "I help people to discover their true potential and live a fulfilling life...Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin using backed by science. Wanna transform your life?"           
         },
         {
             "section": "testimonial-area",
-            "section_title": {
-                "title": "Learn the secrets to <span>Life Success</span>, <br class='tw-hidden md:tw-block'>these people have got the key.​",
-                "subtitle":"equip yourself with the power of education"
-            },
             "items": [
                 {
                     "id": 1,
                     "name": "Luvic Dubble",
-                    "designation": "Private Tutor",
                     "rating": 5,
+                    "designation": "Private Tutor",
                     "description": "I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.",
                     "images": [
                         {
@@ -76,8 +52,8 @@
                 {
                     "id": 2,
                     "name": "Florence Themes",
-                    "designation": "Multimedia Admin",
                     "rating": 5,
+                    "designation": "Multimedia Admin",
                     "description": "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. Texto guys just got me.",
                     "images": [
                         {
@@ -88,8 +64,8 @@
                 {
                     "id": 3,
                     "name": "Mina Hollace",
-                    "designation": "Freelancer",
                     "rating": 5,
+                    "designation": "Freelancer",
                     "description": "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
                     "images": [
                         {
@@ -100,91 +76,120 @@
             ]
         }, 
         {
-            "section": "brand-area",
+            "section": "transform-area",
+            "section_title": {
+                "title": "Are you ready to transform your life?",
+                "subtitle":"How does it work?"
+            },
+            "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
             "items": [
                 {
                     "id": 1,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-01.png"
-                        }
-                    ]
+                    "icon": "/images/service/talk.svg",
+                    "title": "Talk to me first",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
                 },
                 {
                     "id": 2,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-02.png"
-                        }
-                    ]
+                    "icon": "/images/service/calendar.svg",
+                    "title": "Schedule a meeting",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Discover now"
                 },
                 {
                     "id": 3,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-03.png"
-                        }
-                    ]
+                    "icon": "/images/service/message.svg",
+                    "title": "Online consultation",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Get Free Quote"
                 },
                 {
                     "id": 4,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-04.png"
-                        }
-                    ]
+                    "icon": "/images/service/medal.svg",
+                    "title": "Ready to start? Let’s talk!",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
                 },
                 {
                     "id": 5,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-05.png"
-                        }
-                    ]
+                    "icon": "/images/service/notification.svg",
+                    "title": "Ready to start? Let’s talk!",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
                 },
                 {
                     "id": 6,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-01.png"
-                        }
-                    ]
+                    "icon": "/images/service/message.svg",
+                    "title": "Ready to start? Let’s talk!",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
                 }
-            ]
+            ],
+            "img": "/images/service/transform.png"
         },
         {
-            "section": "funfact-area",
+            "section": "good-area",
+            "section_title": {
+                "title": "Good to know."
+            },
+            "paragraph1": "Everything you need to know about the my services.",
             "items": [
                 {
                     "id": 1,
-                    "title": "Finished Sessions",
-                    "counter": 1.926
+                    "icon": "linea-basic-flag2",
+                    "title": "How long does the coaching process take?",
+                    "description": "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
                 },
                 {
                     "id": 2,
-                    "title": "Online Enrollment",
-                    "counter": 3.092,
-                    "suffix": "+"
+                    "icon": "linea-basic-gear",
+                    "title": "What if I wanted to end my coaching engagement?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Discover now"
                 },
                 {
                     "id": 3,
-                    "title": "Subjects Taught",
-                    "counter": 200
+                    "icon": "linea-basic-life-buoy",
+                    "title": "Can I change through coaching?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Get Free Quote"
                 },
                 {
                     "id": 4,
-                    "title": "Satisfaction rate",
-                    "counter": 100,
-                    "suffix": "%"
+                    "icon": "linea-basic-display",
+                    "title": "How often do we meet?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
                 }
-            ]
+            ]          
         },
+        {
+            "section": "stillq-area",
+            "section_title": {
+                "title": "Still have questions?"
+            },
+            "paragraph1": "Can’t find the answer you’re looking for? Please chat to our friendly team.",
+            "button": "Get in touch"        
+        }, 
         {
             "section": "newsletter-area",
             "section_title": {
-                "title": "Sign up for our <span>Newsletters</span>",
-                "description":"Enter your email address to register to our newsletter subscription <br class='tw-hidden md:tw-block'>delivered on a regular basis!"
-            }
-        }
+                "title": "Recibe notificaciones cuando publique nuevos artículos.",
+                "subtitle":""
+            },
+            "paragraph1": "Stay up to date with the latest news, announcements, and articles."
+        }       
     ]
 }

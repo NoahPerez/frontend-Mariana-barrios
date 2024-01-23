@@ -4,13 +4,17 @@ import { Text } from "@components/ui/text";
 import Button from "@components/ui/button";
 
 type TProps = {
-    section_title?: SectionTitleType;
-    paragraph1: string;
-    paragraph2: string;
-    img: string;
+    data: {
+        section_title?: SectionTitleType;
+        paragraph1?: string;
+        paragraph2?: string;
+        img?: string;
+    };
 };
 
-const MyBook = ({ section_title, paragraph1, paragraph2, img }: TProps) => {
+const MyBook = ({
+    data: { section_title, paragraph1, paragraph2, img },
+}: TProps) => {
     return (
         <Container clases="mybook-area" bg="white">
             <div className="tw-flex tw-flex-col-reverse md:tw-flex-row md:tw-gap-10">

@@ -66,6 +66,7 @@ export interface ItemType {
 }
 
 export interface SectionType {
+    paragraph1: string | undefined;
     headings?: HeadingType[];
     texts?: TextType[];
     buttons?: ButtonType[];

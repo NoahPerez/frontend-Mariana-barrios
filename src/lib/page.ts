@@ -4,7 +4,7 @@ interface IData {
     name: string;
     content: Array<{ [x: string]: unknown }>;
 }
-type PageType = "home" | "inner" | "services";
+type PageType = "home" | "inner";
 
 export function getPageData(page: PageType, pageName: string) {
     const dirPath =

@@ -133,3 +133,13 @@
     gap: 10px;
     display: grid;     
 }
+.tw-auto-3-columns {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, max(250px, calc(33% - 50px))), 1fr));
+    gap: 50px;
+    display: grid;     
+}
+.tw-auto-testimonial-columns {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, max(350px, calc(50% - 10px))), 1fr));
+    gap: 10px;
+    display: grid;     
+}

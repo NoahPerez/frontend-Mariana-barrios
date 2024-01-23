@@ -6,17 +6,17 @@ export default [
     },
     {
         id: 2,
-        label: "Sobre mi",
-        path: "#!",
+        label: "Free guide",
+        path: "/free-guide",
     },
     {
         id: 3,
-        label: "Consulta",
-        path: "#!",
+        label: "About me",
+        path: "/about-me",
     },
     {
         id: 4,
-        label: "Blog",
-        path: "#!",
+        label: "Extra Sales",
+        path: "/extra-sales",
     },
 ];

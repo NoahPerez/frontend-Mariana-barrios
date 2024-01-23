@@ -8,7 +8,7 @@ import { Text } from "@components/ui/text";
 type TProps = TSection & {
     data: {
         section_title?: SectionTitleType;
-        paragraph1: string;
+        paragraph1?: string;
     };
 };
 

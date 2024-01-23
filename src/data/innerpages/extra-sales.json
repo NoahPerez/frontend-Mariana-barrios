@@ -1,0 +1,286 @@
+{
+    "name": "extra-sales",
+    "content": [
+        {
+            "section": "hero-area",
+            "section_title": {
+                "title": "Self Esteem Therapy",
+                "subtitle":"Proven strategies backed by science for success."
+            },
+            "paragraph1": "I help people to discover their true potential and live a fulfilling life...Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin using backed by science. Wanna transform your life?",
+            "img": "/images/extra-sales/hero.jpg",
+            "button": "Claim your spot"
+        },
+        {
+            "section": "transform-area",
+            "section_title": {
+                "title": "Are you ready to transform your life?",
+                "subtitle":"How does it work?"
+            },
+            "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+            "items": [
+                {
+                    "id": 1,
+                    "icon": "/images/service/talk.svg",
+                    "title": "Talk to me first",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
+                },
+                {
+                    "id": 2,
+                    "icon": "/images/service/calendar.svg",
+                    "title": "Schedule a meeting",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Discover now"
+                },
+                {
+                    "id": 3,
+                    "icon": "/images/service/message.svg",
+                    "title": "Online consultation",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Get Free Quote"
+                },
+                {
+                    "id": 4,
+                    "icon": "/images/service/medal.svg",
+                    "title": "Ready to start? Let’s talk!",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
+                },
+                {
+                    "id": 5,
+                    "icon": "/images/service/notification.svg",
+                    "title": "Ready to start? Let’s talk!",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
+                },
+                {
+                    "id": 6,
+                    "icon": "/images/service/message.svg",
+                    "title": "Ready to start? Let’s talk!",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
+                }
+            ],
+            "img": "/images/service/transform.png"
+        },
+        {
+            "section": "video-area",
+            "section_title": {
+                "title": "Are you ready to transform your life?",
+                "subtitle":"How does it work?"
+            },
+            "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+            "button": "Get started",
+            "items": [
+                {
+                    "id": 1,
+                    "icon": "/images/service/money.svg",
+                    "title": "Online consultation",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
+                },
+                {
+                    "id": 2,
+                    "icon": "/images/service/talk.svg",
+                    "title": "Ready to start? Let’s talk!",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                    "path": "/start-here",
+                    "pathText": "Discover now"
+                }
+            ],
+            "video": {
+                "videoId": "eS9Qm4AOOBY",
+                "channel": "youtube"
+            },
+             "images": [
+                {
+                    "id":1,
+                    "src": "/images/free-guide/video-player.png"
+                }
+            ]
+        },
+        {
+            "section": "freesesion-area",
+            "section_title": {
+                "title": "Obten una session Gratutita de 15min.",
+                "subtitle":""
+            },
+            "paragraph1": "Limited Period Offer. Claim Now.",
+            "img": "/images/free-session/free-session.png"
+        },
+         {
+            "section": "good-area",
+            "section_title": {
+                "title": "Good to know."
+            },
+            "paragraph1": "Everything you need to know about the my services.",
+            "items": [
+                {
+                    "id": 1,
+                    "icon": "linea-basic-flag2",
+                    "title": "How long does the coaching process take?",
+                    "description": "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
+                },
+                {
+                    "id": 2,
+                    "icon": "linea-basic-gear",
+                    "title": "What if I wanted to end my coaching engagement?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Discover now"
+                },
+                {
+                    "id": 3,
+                    "icon": "linea-basic-life-buoy",
+                    "title": "Can I change through coaching?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Get Free Quote"
+                },
+                {
+                    "id": 4,
+                    "icon": "linea-basic-display",
+                    "title": "How often do we meet?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
+                }
+            ]          
+        },
+        {
+            "section": "testimonials-area",
+            "section_title": {
+                "title": "Results that speak for themselves.",
+                "subtitle":"testimonials"
+            },
+            "button": "Get started",
+            "items": [
+                {
+                    "id": 1,
+                    "name": "Luvic Dubble",
+                    "rating": 5,
+                    "designation": "Private Tutor",
+                    "description": "I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.",
+                    "images": [
+                        {
+                            "src": "/images/testimonial/70/testimonial-1.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Florence Themes",
+                    "rating": 5,
+                    "designation": "Multimedia Admin",
+                    "description": "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. Texto guys just got me.",
+                    "images": [
+                        {
+                            "src": "/images/testimonial/70/testimonial-2.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Mina Hollace",
+                    "rating": 5,
+                    "designation": "Freelancer",
+                    "description": "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
+                    "images": [
+                        {
+                            "src": "/images/testimonial/70/testimonial-3.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Mina Hollace",
+                    "rating": 5,
+                    "designation": "Freelancer",
+                    "description": "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
+                    "images": [
+                        {
+                            "src": "/images/testimonial/70/testimonial-3.jpg"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section": "download-area",
+            "section_title": {
+                "title": "Don’t miss out on my ‘Live life at the full potential’ free guide",
+                "subtitle":""
+            },
+            "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            "paragraph2": "More than 100+ 5 star reviews",
+            "button": "Download my free guide"
+        },
+        {
+            "section": "stillq-area",
+            "section_title": {
+                "title": "Still have questions?"
+            },
+            "paragraph1": "Can’t find the answer you’re looking for? Please chat to our friendly team.",
+            "button": "Get in touch"        
+        }, 
+        {
+            "section": "good-area",
+            "section_title": {
+                "title": "Good to know."
+            },
+            "paragraph1": "Everything you need to know about the my services.",
+            "items": [
+                {
+                    "id": 1,
+                    "icon": "linea-basic-flag2",
+                    "title": "How long does the coaching process take?",
+                    "description": "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
+                },
+                {
+                    "id": 2,
+                    "icon": "linea-basic-gear",
+                    "title": "What if I wanted to end my coaching engagement?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Discover now"
+                },
+                {
+                    "id": 3,
+                    "icon": "linea-basic-life-buoy",
+                    "title": "Can I change through coaching?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Get Free Quote"
+                },
+                {
+                    "id": 4,
+                    "icon": "linea-basic-display",
+                    "title": "How often do we meet?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
+                }
+            ]          
+        },
+        {
+            "section": "newsletter-area",
+            "section_title": {
+                "title": "Recibe notificaciones cuando publique nuevos artículos.",
+                "subtitle":""
+            },
+            "paragraph1": "Stay up to date with the latest news, announcements, and articles."
+        }       
+    ]
+}

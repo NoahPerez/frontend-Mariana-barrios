@@ -1,29 +1,16 @@
 import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 import Layout from "@layout/layout-01";
-import Wrapper from "@ui/wrapper/wrapper-01";
 import HeroArea from "@containers/hero/layout-01";
-import ServiceArea from "@containers/service/layout-01";
-// import AboutArea from "@containers/about/layout-01";
-
-// import FunFactArea from "@containers/funfact/layout-01";
-import FunfactArea from "@containers/funfact/layout-04";
-import TestimonialArea from "@containers/testimonial/layout-06";
-// import TestimonialArea from "@containers/testimonial/layout-01";
-// import VideoArea from "@containers/video/layout-01";
-// import BlogArea from "@containers/blog/layout-01";
-import BlogArea from "@containers/blog/layout-03";
-import HeroArea2 from "@containers/hero/layout-02";
-import AboutArea from "@containers/about/layout-02";
-// import NewsletterArea from "@containers/newsletter/layout-01";
 
 import { normalizedData } from "@utils/methods";
 import { IBlog, ICourse } from "@utils/types";
 
-import MyBook from "@containers/mybook";
-import FreeSession from "@containers/free-session";
 import NewsletterArea from "@containers/newsletter/layout-01";
 import CanHelp from "@containers/services/canhelp";
+import TransformSection from "@containers/services/transform";
+import GoodSection from "@containers/services/good";
+import StillQuestionSection from "@containers/services/still-questions";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
@@ -63,46 +50,22 @@ const Home: PageProps = ({ data }) => {
                     ...content?.["canhelp-area"],
                 }}
             />
-            <FunfactArea
-                data={content?.["funfact-area"]}
-                space="bottom"
-                bg="tw-bg-white tw-py-[100px]"
-                titleSize="large"
+            <TransformSection
+                data={{
+                    ...content?.["transform-area"],
+                }}
             />
-
-            {/* <AboutArea data={content?.["about-area"]} /> */}
-            {/* <Wrapper className="tw-py-[100px]">
-                <FunFactArea
-                    data={content?.["funfact-area"]}
-                    space="bottom-2"
-                />
-                <TestimonialArea
-                    data={content?.["testimonial-area"]}
-                    space="none"
-                />
-            </Wrapper> */}
-            <Wrapper className="tw-px-4 tw-py-12 md:tw-py-[100px]">
-                <TestimonialArea
-                    data={content?.["testimonial-area"]}
-                    space="none"
-                />
-            </Wrapper>
-
-            <BlogArea
-                data={{ ...content?.["blog-area"], blogs: data.blogs }}
-                titleSize="large"
+            <GoodSection
+                data={{
+                    ...content?.["good-area"],
+                }}
             />
-            <MyBook data={{ ...content?.["mybook-area"] }} />
-            <FreeSession data={{ ...content?.["freesesion-area"] }} />
+            <StillQuestionSection
+                data={{
+                    ...content?.["stillq-area"],
+                }}
+            />
             <NewsletterArea data={{ ...content?.["newsletter-area"] }} />
-
-            {/* <NewsletterArea data={content?.["newsletter-area"]} /> */}
-            {/* <VideoArea data={content?.["video-area"]} space="none" /> */}
-            {/* <CourseArea
-                data={{ ...content?.["course-area"], courses: data.courses }}
-            />
-            <BlogArea data={{ ...content?.["blog-area"], blogs: data.blogs }} />
-            <BrandArea data={content?.["brand-area"]} /> */}
         </>
     );
 };
@@ -110,7 +73,7 @@ const Home: PageProps = ({ data }) => {
 Home.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("services", "services");
+    const page = getPageData("inner", "services");
     const courses = getallCourses(
         ["title", "thumbnail", "price", "currency"],
         0,

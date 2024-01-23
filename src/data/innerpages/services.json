@@ -43,7 +43,7 @@
             "items": [
                 {
                     "id": 1,
-                    "icon": "linea-basic-flag2",
+                    "icon": "/images/home/humans.svg",
                     "title": "Group Coaching Sessions",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
                     "path": "/start-here",
@@ -51,7 +51,7 @@
                 },
                 {
                     "id": 2,
-                    "icon": "linea-basic-gear",
+                   "icon": "/images/home/book.svg",
                     "title": "Online course",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
                     "path": "/start-here",
@@ -59,7 +59,7 @@
                 },
                 {
                     "id": 3,
-                    "icon": "linea-basic-life-buoy",
+                    "icon": "/images/home/message.svg",
                     "title": "Consultation",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
                     "path": "/start-here",
@@ -67,7 +67,7 @@
                 },
                 {
                     "id": 4,
-                    "icon": "linea-basic-display",
+                    "icon": "/images/home/book.svg",
                     "title": "1:1 Coaching",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
                     "path": "/start-here",
@@ -76,163 +76,96 @@
             ]
         },
         {
-            "section": "about-area",
+            "section": "transform-area",
             "section_title": {
-                "title": "Get rid of <span>Old School Assumptions</span>"
-            },
-            "texts": [
-                {
-                    "id": 1,
-                    "content": "I assist learners in finding new effective belief and get rid of the outdated, discouraged and irrelevant life attitudes. Yo upgrading to be a better you."
-                },
-                {
-                    "id": 2,
-                    "content": "19<sub>years</sub>"
-                },
-                {
-                    "id": 3,
-                    "content": "Work Experience"
-                }
-            ],
-            "anchors": [
-                {
-                    "id": 1,
-                    "path": "/start-here",
-                    "content": "Get Free Guide"
-                }
-            ],
-            "images": [
-                {
-                    "id": 1,
-                    "src": "/images/others/teracher-quote-1.jpg"
-                }
-            ]
-        }, 
-        {
-            "section": "funfact-area",
-            "section_title": {
-                "title": "Learn the secrets to <span>Life Success</span>, <br/>these people have got the key.​",
-                "subtitle":"MAXIMIZE YOUR POTENTIALS and possibilities"
-            },
-            "items": [
-                {
-                    "id": 1,
-                    "title": "Registered Enrolls",
-                    "suffix": "+",
-                    "counter": 3.092
-                },
-                {
-                    "id": 2,
-                    "title": "Finished sessions",
-                    "counter": 1.926
-                },
-                {
-                    "id": 3,
-                    "title": "Satisfaction rate",
-                    "suffix": "%",
-                    "counter": 100
-                }
-            ]
-        }, 
-        {
-            "section": "testimonial-area",
-            "items": [
-                {
-                    "id": 1,
-                    "name": "Luvic Dubble",
-                    "rating": 5,
-                    "designation": "Private Tutor",
-                    "description": "I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.",
-                    "images": [
-                        {
-                            "src": "/images/testimonial/70/testimonial-1.jpg"
-                        }
-                    ]
-                },
-                {
-                    "id": 2,
-                    "name": "Florence Themes",
-                    "rating": 5,
-                    "designation": "Multimedia Admin",
-                    "description": "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. Texto guys just got me.",
-                    "images": [
-                        {
-                            "src": "/images/testimonial/70/testimonial-2.jpg"
-                        }
-                    ]
-                },
-                {
-                    "id": 3,
-                    "name": "Mina Hollace",
-                    "rating": 5,
-                    "designation": "Freelancer",
-                    "description": "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
-                    "images": [
-                        {
-                            "src": "/images/testimonial/70/testimonial-3.jpg"
-                        }
-                    ]
-                }
-            ]
-        }, 
-        {
-            "section": "video-area",
-            "section_title": {
-                "title": "Learn with all your <span>SENSES​</span>",
-                "subtitle":"The combination of all senses into learning"
-            },
-            "images": [
-                {
-                    "src": "/images/about/about-me/about-me-popup-video-poster.jpg"
-                }
-            ],
-            "video": {
-                "videoId": "eS9Qm4AOOBY",
-                "channel": "youtube"
-            }
-        },
-        {
-            "section": "course-area",
-            "section_title": {
-                "title": "Current Signature Courses",
-                "subtitle":"Learn at your Pace"
-            },
-            "motto": {
-                "text": "Get the most dedicated consultation for your life-changing course. Earn a certification for your effort and passion",
-                "path": "/courses/grid-01",
-                "pathText": "Get Free Guide"
-            }
-        },
-        {
-            "section": "blog-area",
-            "section_title": {
-                "title": "Lee articulos que te puedan ayudar",
-                "subtitle":"study with your favorite tutors"
-            },
-            "motto": {
-                "text": "Get into details now?",
-                "path": "/blogs/blog-grid",
-                "pathText": "View all posts"
-            }
-        },
-        {
-            "section": "mybook-area",
-            "section_title": {
-                "title": "No te pierdas mi Libro 'Vive la vida al máximo potencial'.",
-                "subtitle":""
+                "title": "Are you ready to transform your life?",
+                "subtitle":"How does it work?"
             },
             "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
-            "paragraph2": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-            "img": "/images/mybook/mybook.png"
+            "items": [
+                {
+                    "id": 1,
+                    "icon": "/images/service/message.svg",
+                    "title": "Talk to me first",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
+                },
+                {
+                    "id": 2,
+                    "icon": "/images/service/calendar.svg",
+                    "title": "Schedule a meeting",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Discover now"
+                },
+                {
+                    "id": 3,
+                    "icon": "/images/service/money.svg",
+                    "title": "Online consultation",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Get Free Quote"
+                },
+                {
+                    "id": 4,
+                    "icon": "/images/service/talk.svg",
+                    "title": "Ready to start? Let’s talk!",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
+                }
+            ],
+            "img": "/images/service/transform.png"
         },
         {
-            "section": "freesesion-area",
+            "section": "stillq-area",
             "section_title": {
-                "title": "Obten una session Gratutita de 15min.",
-                "subtitle":""
+                "title": "Still have questions?"
             },
-            "paragraph1": "Limited Period Offer. Claim Now.",
-            "img": "/images/free-session/free-session.png"
+            "paragraph1": "Can’t find the answer you’re looking for? Please chat to our friendly team.",
+            "button": "Get in touch"        
+        }, 
+        {
+            "section": "good-area",
+            "section_title": {
+                "title": "Good to know."
+            },
+            "paragraph1": "Everything you need to know about the my services.",
+            "items": [
+                {
+                    "id": 1,
+                    "icon": "linea-basic-flag2",
+                    "title": "How long does the coaching process take?",
+                    "description": "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
+                },
+                {
+                    "id": 2,
+                    "icon": "linea-basic-gear",
+                    "title": "What if I wanted to end my coaching engagement?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Discover now"
+                },
+                {
+                    "id": 3,
+                    "icon": "linea-basic-life-buoy",
+                    "title": "Can I change through coaching?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Get Free Quote"
+                },
+                {
+                    "id": 4,
+                    "icon": "linea-basic-display",
+                    "title": "How often do we meet?",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
+                }
+            ]          
         },
         {
             "section": "newsletter-area",
@@ -241,59 +174,6 @@
                 "subtitle":""
             },
             "paragraph1": "Stay up to date with the latest news, announcements, and articles."
-        },
-        {
-            "section": "brand-area",
-            "items": [
-                {
-                    "id": 1,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-01.png"
-                        }
-                    ]
-                },
-                {
-                    "id": 2,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-02.png"
-                        }
-                    ]
-                },
-                {
-                    "id": 3,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-03.png"
-                        }
-                    ]
-                },
-                {
-                    "id": 4,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-04.png"
-                        }
-                    ]
-                },
-                {
-                    "id": 5,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-05.png"
-                        }
-                    ]
-                },
-                {
-                    "id": 6,
-                    "images": [
-                        {
-                            "src": "/images/brand/client-logo-01.png"
-                        }
-                    ]
-                }
-            ]
-        }
+        }       
     ]
 }

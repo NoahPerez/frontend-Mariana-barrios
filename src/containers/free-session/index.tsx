@@ -6,9 +6,9 @@ import Button from "@components/ui/button";
 type TProps = TSection & {
     data: {
         section_title?: SectionTitleType;
-        paragraph1: string;
-        paragraph2: string;
-        img: string;
+        paragraph1?: string;
+        paragraph2?: string;
+        img?: string;
     };
 };
 

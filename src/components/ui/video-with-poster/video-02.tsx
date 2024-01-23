@@ -14,7 +14,7 @@ const Video02 = forwardRef<HTMLDivElement, TProps>(
         return (
             <div
                 className={clsx(
-                    "tw-relative tw-overflow-hidden tw-group tw-z-20 tw-rounded tw-shadow-xxl tw-shadow-black/[22%]",
+                    "tw-relative tw-overflow-hidden tw-group tw-z-20 tw-rounded tw-shadow-none tw-shadow-black/[22%]",
                     className
                 )}
                 ref={ref}
