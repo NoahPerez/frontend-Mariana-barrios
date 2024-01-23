@@ -18,21 +18,8 @@ const TextWidget = ({ className, mode }: TProps) => {
                 )}
             >
                 <p className="tw-mb-[11px]">
-                    382 NE 191st St # 87394 Miami, FL 33179-3899
-                </p>
-                <p className="tw-mb-[11px]">
-                    +1 (305) 547-9909 (9am - 5pm EST, Monday - Friday){" "}
-                </p>
-                <p className="tw-mb-[11px]">
-                    <a
-                        href="#!"
-                        className={clsx(
-                            "hover:tw-text-primary",
-                            mode === "dark" && "tw-text-gray-400"
-                        )}
-                    >
-                        info@example.com{" "}
-                    </a>
+                    Design amazing digital experiences that create more happy in
+                    the world.
                 </p>
             </div>
             <Social

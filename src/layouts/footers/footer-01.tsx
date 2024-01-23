@@ -22,15 +22,11 @@ const Footer01 = ({ mode }: TProps) => {
                 <div className="tw-grid tw-grid-cols-12">
                     <TextWidget
                         mode={mode}
-                        className="tw-col-span-12 lg:tw-col-span-5 xl:tw-col-span-6 tw-mb-[43px]"
+                        className="tw-col-span-3 lg:tw-col-span-3 xl:tw-col-span-3 tw-mb-[43px]"
                     />
                     <TwoColumnListWidget
                         mode={mode}
-                        className="tw-col-span-12 md:tw-col-span-7 lg:tw-col-span-4 xl:tw-col-span-3 tw-mb-[25px]"
-                    />
-                    <ListWidget
-                        mode={mode}
-                        className="tw-col-span-12 md:tw-col-span-5 lg:tw-col-span-3 tw-mb-7.5"
+                        className="tw-col-span-9 md:tw-col-span-9 lg:tw-col-span-9 xl:tw-col-span-9 tw-mb-[25px]"
                     />
                 </div>
                 <p className="copyright tw-text-center tw-text-md tw-text-gray-400 tw-mt-5">
