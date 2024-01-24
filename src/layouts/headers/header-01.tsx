@@ -10,6 +10,8 @@ import Anchor from "@ui/anchor";
 import menu from "@data/menu";
 import Button from "@ui/button";
 import { useSticky } from "@hooks";
+import Link from "next/link";
+import { Text } from "@components/ui/text";
 // import { useUI } from "@contexts/ui-context";
 
 const MobileMenu = dynamic(() => import("../../components/menu/mobile-menu"), {
@@ -69,7 +71,7 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                     <div
                         className={clsx(
                             "tw-container tw-grid tw-grid-flow-col xl:tw-grid-cols-[22%_minmax(56%,_1fr)_22%] tw-items-center",
-                            fluid && "tw-max-w-full tw-px-3.8 3xl:tw-px-37"
+                            fluid && "tw-max-w-[1300px] tw-mx-auto tw-px-4 "
                         )}
                     >
                         <Logo
@@ -82,10 +84,19 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                             menu={menu}
                             color={mode}
                         />
-                        <div className="tw-flex tw-justify-end tw-items-center">
-                            <Button size="md" className="">
-                                Session Gratuita 20min
-                            </Button>
+                        <div className="tw-flex tw-justify-end tw-items-center tw-ml-2">
+                            <Link
+                                href="/"
+                                className="tw-rounded-lg tw-bg-primary tw-p-1 tw-px-4 md:tw-p-2 md:tw-px-5"
+                            >
+                                <Text
+                                    size="sm"
+                                    color="white"
+                                    className="tw-font-bold"
+                                >
+                                    Sesion gratuita
+                                </Text>
+                            </Link>
                             {/* <Anchor
                                 path="/profile"
                                 className={clsx(
@@ -113,7 +124,6 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                         </div>
                     </div>
                 </div>
-                <div className="tw-h-20" />
             </header>
             <MobileMenu
                 isOpen={offcanvas}

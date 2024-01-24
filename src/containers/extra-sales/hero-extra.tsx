@@ -28,9 +28,9 @@ const HeroExtra = ({
     data: { section_title, paragraph1, img, button },
 }: TProps) => {
     return (
-        <div className="tw-flex tw-relative tw-min-h-[80vh] tw-px-4 tw-bg-spring ">
+        <div className="tw-flex tw-relative tw-min-h-[80vh] tw-pb-[30px] tw-px-4 tw-bg-spring tw-pt-[60px]">
             <div className="tw-w-full md:tw-w-1/2 tw-py-12 md:tw-py-0 tw-mx-auto tw-flex tw-justify-end  tw-bg-transparent tw-items-center">
-                <div className="tw-w-full lg:tw-max-w-[600px]  tw-block md:tw-pr-16 lg:tw-pr-24">
+                <div className="tw-w-full lg:tw-max-w-[600px] tw-mt-10 tw-block md:tw-pr-16 lg:tw-pr-24">
                     {section_title && (
                         <>
                             <Text

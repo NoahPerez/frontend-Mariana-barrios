@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
+import { Text } from "@components/ui/text";
 
 type TProps = {
     className?: string;
@@ -31,9 +32,13 @@ const Breadcrumb = ({
         >
             {showTitle && (
                 <div className="tw-container">
-                    <h1 className="title tw-capitalize tw-mt-5 tw-mb-0 tw-text-3xl md:tw-text-4xl lg:tw-text-5xl tw-text-center">
+                    <Text
+                        as="h1"
+                        size="big"
+                        className="tw-w-full tw-text-center"
+                    >
                         {title || currentPage}
-                    </h1>
+                    </Text>
                 </div>
             )}
             {!showTitle && (

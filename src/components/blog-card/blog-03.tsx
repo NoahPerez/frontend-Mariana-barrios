@@ -43,11 +43,18 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                         </Anchor>
                     </div> */}
 
-                    <Text as="h3" size="lg" className="tw-mb-0 tw-leading-normal">
+                    <Text
+                        as="h3"
+                        size="lg"
+                        className="tw-mb-0 tw-leading-normal"
+                    >
                         <Anchor path={path}>{title}</Anchor>
                     </Text>
                     <Text className="tw-mt-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolor eaque at sed dignissimos velit. Voluptas quos porro ipsum error eveniet dolore veritatis, impedit nam eum libero quo neque ratione!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquam dolor eaque at sed dignissimos velit. Voluptas
+                        quos porro ipsum error eveniet dolore veritatis, impedit
+                        nam eum libero quo neque ratione!
                     </Text>
 
                     {/* <ul className="tw-flex tw-gap-7 tw-text-gray-300 tw-text-md">

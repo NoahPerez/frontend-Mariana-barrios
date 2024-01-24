@@ -4,6 +4,9 @@ import SectionTitle from "@components/section-title";
 import { scrollUpVariants } from "@utils/variants";
 import { MottoType, SectionTitleType, IBlog, TSection } from "@utils/types";
 import { Container } from "@components/ui/container";
+import Button from "@components/ui/button";
+import Link from "next/link";
+import { Text } from "@components/ui/text";
 
 const AnimatedSectionTitle = motion(SectionTitle);
 const AnimatedBlogCard = motion(BlogCard);
@@ -48,6 +51,19 @@ const BlogArea = ({ data: { section_title, blogs }, titleSize }: TProps) => {
                             variants={scrollUpVariants}
                         />
                     ))}
+                </div>
+                <div className="tw-w-full tw-flex tw-items-center tw-justify-center tw-mt-12">
+                    <Link
+                        href="/blog"
+                        className="tw-rounded-lg tw-bg-primary tw-px-6 tw-py-2 tw-min-w-[200px]"
+                    >
+                        <Text
+                            className="tw-font-bold tw-w-full tw-text-center"
+                            color="white"
+                        >
+                            Read more blogs
+                        </Text>
+                    </Link>
                 </div>
             </div>
         </Container>

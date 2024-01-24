@@ -31,7 +31,7 @@ const HeroFreeGuide = ({
     const idName = useId();
     const idEmail = useId();
     return (
-        <div className="tw-flex tw-relative tw-min-h-[80vh] tw-px-4 tw-bg-spring md:tw-bg-transparent">
+        <div className="tw-flex tw-relative tw-min-h-[80vh] tw-px-4 tw-bg-spring md:tw-bg-transparent tw-pt-[50px] md:tw-pt-[90px]">
             <div className="tw-w-full md:tw-w-1/2 tw-py-12 md:tw-py-0 tw-mx-auto tw-flex tw-justify-end  md:tw-bg-white tw-items-center">
                 <div className="tw-w-full lg:tw-max-w-[600px]  tw-block md:tw-pr-16 lg:tw-pr-24">
                     {section_title && (

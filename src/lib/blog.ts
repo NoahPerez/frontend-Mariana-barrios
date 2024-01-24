@@ -13,7 +13,7 @@ interface BlogType extends Omit<IBlog, "category" | "tags" | "author"> {
     author: IDType;
 }
 
-const postsDirectory = join(process.cwd(), "src/data/blogs");
+const postsDirectory = join(process.cwd(), "src/data/blog");
 
 const makeExcerpt = (str: string, maxLength: number): string => {
     if (str.length <= maxLength) {
@@ -102,7 +102,7 @@ export function getPostBySlug(
     return {
         ...blog,
         postedAt: dayjs(blogData.postedAt).format("MMM DD, YYYY"),
-        path: `/blogs/${realSlug}`,
+        path: `/blog/${realSlug}`,
     };
 }
 

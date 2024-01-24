@@ -24,9 +24,19 @@ type TProps = {
 
 const HeroArea = ({ data: { headings, texts, images } }: TProps) => {
     return (
-        <div className="tw-h-full md:tw-min-h-[750px] xl:tw-min-h-[820px] tw-py-[50px] tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
+        <div className="tw-h-full md:tw-min-h-[80vh] xl:tw-min-h-[80vh]  tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
             <h1 className="tw-sr-only">Inicio</h1>
-            <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block">
+            <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block ">
+                {images?.[0]?.src && (
+                    <img
+                        src={images[0].src}
+                        alt={images[0]?.alt || "bg"}
+                        loading="eager"
+                        className="tw-w-full tw-h-full tw-object-cover"
+                    />
+                )}
+            </div>
+            <div className="tw-absolute tw-inset-0 -tw-z-10 tw-block md:tw-hidden">
                 {images?.[0]?.src && (
                     <img
                         src={images[0].src}
@@ -37,7 +47,7 @@ const HeroArea = ({ data: { headings, texts, images } }: TProps) => {
                 )}
             </div>
             <div className="tw-container 3xl:tw-max-w-full 3xl:tw-px-37">
-                <div className="tw-grid md:tw-gap-7.5 md:tw-grid-cols-2">
+                <div className="tw-grid md:tw-gap-7.5 md:tw-grid-cols-2 tw-pt-[80px]">
                     <motion.div
                         className="content tw-text-center tw-mb-7.5 md:tw-text-left md:tw-self-center"
                         initial="offscreen"
