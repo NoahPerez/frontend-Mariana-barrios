@@ -3,8 +3,8 @@ import { GetStaticProps } from "next";
 import SEO from "@components/seo/page-seo";
 import Layout from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
-import ContactInfo from "@containers/contact-info/layout-01";
-import ContactForm from "@containers/contact-form/layout-01";
+import ContactInfo from "@containers/contact-info/layout-02";
+import ContactForm from "@containers/contact-form/layout-02";
 
 import { normalizedData } from "@utils/methods";
 
@@ -31,10 +31,10 @@ const ContactMe: PageProps = ({ data }) => {
 
     return (
         <>
-            <SEO title="Contact Me" />
+            <SEO title="Contact Us" />
             <Breadcrumb
                 pages={[{ path: "/", label: "home" }]}
-                currentPage="Contact Me"
+                currentPage="Contact Us"
                 showTitle={false}
             />
             <ContactInfo data={content?.["contact-info"]} />
@@ -46,7 +46,7 @@ const ContactMe: PageProps = ({ data }) => {
 ContactMe.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("inner", "contact-me");
+    const page = getPageData("inner", "contact-us");
     return {
         props: {
             data: {

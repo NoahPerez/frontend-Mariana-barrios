@@ -61,7 +61,7 @@ const ContactInfo = ({ data: { section_title, items, location } }: TProps) => {
                         </div>
                     ))}
                 </motion.div>
-                {location && (
+                {/* {location && (
                     <motion.div
                         className="tw-h-[300px] lg:tw-h-[400px]"
                         initial="offscreen"
@@ -77,7 +77,7 @@ const ContactInfo = ({ data: { section_title, items, location } }: TProps) => {
                             zoom={14}
                         />
                     </motion.div>
-                )}
+                )} */}
             </div>
         </Section>
     );
