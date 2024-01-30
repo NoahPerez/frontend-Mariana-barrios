@@ -107,7 +107,7 @@ export const getStaticProps: GetStaticProps<TProps, Params> = ({ params }) => {
             },
             layout: {
                 headerShadow: true,
-                headerFluid: false,
+                headerFluid: true,
                 footerMode: "light",
             },
         },
