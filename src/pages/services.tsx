@@ -7,6 +7,7 @@ import { normalizedData } from "@utils/methods";
 import { IBlog, ICourse } from "@utils/types";
 
 import NewsletterArea from "@containers/newsletter/layout-01";
+import FreeSession from "@containers/free-session";
 import CanHelp from "@containers/services/canhelp";
 import TransformSection from "@containers/services/transform";
 import GoodSection from "@containers/services/good";
@@ -65,6 +66,7 @@ const Home: PageProps = ({ data }) => {
                     ...content?.["stillq-area"],
                 }}
             />
+            <FreeSession data={{ ...content?.["freesesion-area"] }} />
             <NewsletterArea data={{ ...content?.["newsletter-area"] }} />
         </>
     );

@@ -70,7 +70,7 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                 >
                     <div
                         className={clsx(
-                            "tw-container tw-grid tw-grid-flow-col xl:tw-grid-cols-[22%_minmax(56%,_1fr)_22%] tw-items-center",
+                            "tw-container tw-grid tw-grid-flow-col xl:tw-grid-cols-[22%_minmax(60%,_1fr)_22%] tw-items-center",
                             fluid && "tw-max-w-[1300px] tw-mx-auto tw-px-4 "
                         )}
                     >

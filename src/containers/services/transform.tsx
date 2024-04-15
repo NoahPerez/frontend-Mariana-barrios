@@ -11,6 +11,7 @@ type TProps = TSection & {
     };
 };
 
+
 const TransformSection = ({
     data: { section_title, items, paragraph1, img },
 }: TProps) => {
@@ -47,12 +48,12 @@ const TransformSection = ({
                     )}
                 </div>
                 <div className="lg:tw-flex-row tw-flex-col-reverse tw-mt-12 tw-flex tw-justify-between tw-gap-12">
-                    <div className="tw-flex tw-flex-col tw-w-full lg:tw-w-1/2 tw-items-center tw-justify-center tw-gap-10">
+                    <div  className="tw-flex tw-flex-col tw-w-full lg:tw-w-2/2 tw-items-center tw-justify-center tw-gap-10">
                         {items &&
                             items.map((e) => (
                                 <div
                                     key={e.id}
-                                    className="tw-flex tw-gap-4 tw-justify-between tw-items-center "
+                                    className="tw-flex tw-gap-4 tw-justify-between tw-items-center"
                                 >
                                     <div className="tw-rounded-full tw-w-12 tw-h-12 tw-bg-spring tw-p-2 tw-flex tw-items-center tw-justify-center tw-aspect-square">
                                         <img
@@ -71,7 +72,7 @@ const TransformSection = ({
                     </div>
                     <div className="tw-block tw-aspect-square">
                         <img
-                            className="tw-h-full tw-w-full tw-object-cover"
+                            className="tw-h-full tw-w-full tw-object-cover h-95"
                             src={img}
                             alt={section_title?.title}
                         />

@@ -9,6 +9,9 @@ module.exports = {
     prefix: "tw-",
     theme: {
         extend: {
+            height: {
+                95: "95%",
+            },
             colors: {
                 primarytext: "#59462F",
                 secondarytext: "#1E470A",

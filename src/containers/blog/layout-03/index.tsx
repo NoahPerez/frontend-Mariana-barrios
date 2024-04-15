@@ -61,7 +61,7 @@ const BlogArea = ({ data: { section_title, blogs }, titleSize }: TProps) => {
                             className="tw-font-bold tw-w-full tw-text-center"
                             color="white"
                         >
-                            Read more blogs
+                            Leer más artículos
                         </Text>
                     </Link>
                 </div>

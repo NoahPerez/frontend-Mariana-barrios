@@ -6,17 +6,17 @@
             "headings": [
                 {
                     "id":1,
-                    "content":""
+                    "content":"Te acompaño a descubrir tu verdadero potencial"
                 },
                 {
                     "id":2,
-                    "content":"I help people to discover their true potential"
+                    "content":"Te acompaño a descubrir tu verdadero potencial"
                 }
             ],
             "texts": [
                 {
                     "id":1,
-                    "content":"I help people to discover their true potential and live a fulfilling life...Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin using backed by science. Wanna transform your life?"
+                    "content":""
                 }
             ],
             "buttons": [
@@ -37,39 +37,39 @@
         {
             "section": "canhelp-area",
             "section_title": {
-                "title": "I can help you in these particular areas.",
+                "title": "Te Propongo",
                 "subtitle":""
             },
             "items": [
                 {
                     "id": 1,
                     "icon": "/images/home/humans.svg",
-                    "title": "Group Coaching Sessions",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "title": "Sesiones Grupales",
+                    "description": "Comparte experiencias únicas con personas que desean atravesar el camino de la transformación.",
                     "path": "/start-here",
                     "pathText": "Start here"
                 },
                 {
                     "id": 2,
-                   "icon": "/images/home/book.svg",
-                    "title": "Online course",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                   "icon": "/images/home/online-course.svg",
+                    "title": "Cursos on-line",
+                    "description": "Un viaje al interior Despertando tu potencial",
                     "path": "/start-here",
                     "pathText": "Discover now"
                 },
                 {
                     "id": 3,
                     "icon": "/images/home/message.svg",
-                    "title": "Consultation",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "title": "Charlas y eventos",
+                    "description": "Uno de mis objetivos es compartir esta filosofía de autoconocimiento que tanta felicidad me ha aportado. Siempre impregnado por la creatividad que emociona y nos hace viajar.",
                     "path": "/start-here",
                     "pathText": "Get Free Quote"
                 },
                 {
                     "id": 4,
                     "icon": "/images/home/book.svg",
-                    "title": "1:1 Coaching",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "title": "Consulta individual",
+                    "description": "Aprende a reconocer y utilizar tu herramientas para disfrutar de tu vida y con los que te rodean.",
                     "path": "/start-here",
                     "pathText": "Start Now"
                 }
@@ -78,16 +78,16 @@
         {
             "section": "transform-area",
             "section_title": {
-                "title": "Are you ready to transform your life?",
-                "subtitle":"How does it work?"
+                "title": "Lánzate a vivir una transformación",
+                "subtitle":"Te cuento como funciona"
             },
-            "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+            "paragraph1": "Te acompaño paso a paso a descubrir todas las herramientas de las que dispones para vivir una vida plena.",
             "items": [
                 {
                     "id": 1,
                     "icon": "/images/service/message.svg",
-                    "title": "Talk to me first",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+                    "title": "Reserva tu sesión",
+                    "description": "Selecciona fecha y hora",
                     "path": "/start-here",
                     "pathText": "Start here"
                 },

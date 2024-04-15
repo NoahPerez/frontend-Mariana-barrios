@@ -1,27 +1,27 @@
 export default [
     {
         id: 1,
-        label: "Home",
+        label: "Inicio",
         path: "/",
     },
     {
         id: 2,
-        label: "Services",
+        label: "Servicios",
         path: "/services",
     },
     {
         id: 3,
-        label: "Free guide",
+        label: "Cursos online",
         path: "/free-guide",
     },
     {
         id: 4,
-        label: "About me",
+        label: "Sobre mi",
         path: "/about-me",
     },
     {
         id: 5,
-        label: "Extra Sales",
+        label: "Eventos",
         path: "/extra-sales",
     },
     {
@@ -31,7 +31,7 @@ export default [
     },
     {
         id: 5,
-        label: "Contact",
+        label: "Contacta me",
         path: "/contact",
     },
 ];

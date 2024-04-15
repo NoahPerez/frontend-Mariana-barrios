@@ -61,7 +61,7 @@ const AboutArea = ({
                             />
                         </motion.div>
                     )}
-                    {images?.[1]?.src && (
+                    {/* {images?.[1]?.src && (
                         <div className="tw-absolute tw-z-20 tw-top-[-90px] tw-right-0 3xl:tw-right-[-73px]">
                             <img
                                 src={images[1].src}
@@ -72,7 +72,7 @@ const AboutArea = ({
                                 className="tw-rounded"
                             />
                         </div>
-                    )}
+                    )} */}
 
                     <motion.div
                         className="tw-absolute tw-z-1 tw-top-[-51px] tw-left-0 lg:tw-left-[-107px]"

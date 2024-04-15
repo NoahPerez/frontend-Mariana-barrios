@@ -25,7 +25,7 @@ type TProps = {
 
 const HeroAbout = ({ data: { headings, paragraph1, images } }: TProps) => {
     return (
-        <div className="tw-h-full md:tw-min-h-[750px] xl:tw-min-h-[820px] tw-py-[50px] tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
+        <div className="tw-h-full md:tw-min-h-[90vh] xl:tw-min-h-[90vh]  tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
             <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block">
                 {images?.[0]?.src && (
                     <img

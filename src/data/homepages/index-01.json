@@ -6,17 +6,17 @@
             "headings": [
                 {
                     "id":1,
-                    "content":""
+                    "content":"Mariana Barrios"
                 },
                 {
                     "id":2,
-                    "content":"Tu bienestar es importante"
+                    "content":"Te acompaño a un viaje"
                 }
             ],
             "texts": [
                 {
                     "id":1,
-                    "content":"I help people to discover their true potential and live a fulfilling life...Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin using backed by science. Wanna transform your life?"
+                    "content":"de autodescubrimiento y transformación a través de la Creatividad Terapéutica El objetivo es recordar el sentido de tu existencia, para volver a reencontrarte con tu poder creador."
                 }
             ],
             "buttons": [
@@ -40,13 +40,13 @@
                 "title": "Puedo ayudarte en estas áreas.​",
                 "subtitle":""
             },
-            "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
+            "paragraph1": "Para emprender este camino no hace falta tener conocimientos previos.Basta con poner la intención de descubrir cuales son tus potenciales y ponerlos a tu servicio.",
             "paragraph2": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ",
             "items": [
                 {
                     "id": 1,
                     "icon": "/images/home/book.svg",
-                    "title": "1:1 Sesiones",
+                    "title": "Cursos-Online",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
                     "path": "/start-here",
                     "pathText": "Start here"
@@ -54,7 +54,7 @@
                 {
                     "id": 2,
                     "icon": "/images/home/message.svg",
-                    "title": "Consultation",
+                    "title": "Consultas Individuales",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
                     "path": "/start-here",
                     "pathText": "Start here"
@@ -62,7 +62,7 @@
                 {
                     "id": 3,
                     "icon": "/images/home/humans.svg",
-                    "title": "Sesiones Grupales",
+                    "title": "Talleres y Eventos",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
                     "path": "/start-here",
                     "pathText": "Start here"
@@ -148,10 +148,10 @@
             "items": [
                 {
                     "id": 1,
-                    "name": "Luvic Dubble",
+                    "name": "Gara R",
                     "rating": 5,
                     "designation": "Private Tutor",
-                    "description": "I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.",
+                    "description": "Cuando ya no veía futuro en nada, cuando las emociones y la vitalidad estaban prácticamente dormidas, entendí que necesitaba ayuda de un profesional y aquí entró Mariana. Ella fue capaz de darme lo que me hacía falta para que volviera mi ilusión por la vida, haciéndome entender que las herramientas ya las tenía y puedo acceder a ellas cuando tengo dudas o ante cualquier situación. Me ayudó a comprender que yo soy la responsable de mi experiencia de vida. Me brindó sus conocimientos, paciencia, dulzura y simpatía para comprenderme. Así empecé a conseguir que mi esencia vuelva a brillar y disfrutar como lo hago hoy día.",
                     "images": [
                         {
                             "src": "/images/testimonial/70/testimonial-1.jpg"
@@ -160,10 +160,10 @@
                 },
                 {
                     "id": 2,
-                    "name": "Florence Themes",
+                    "name": "María A.",
                     "rating": 5,
                     "designation": "Multimedia Admin",
-                    "description": "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. Texto guys just got me.",
+                    "description": "Conocer a Mariana supuso para mí la llave a algo muy diferente a la típica consulta que todos conocemos. Mariana te da la libertad de dar tantas sesiones como tú sientas que necesitas. Respeta tus tiempos, tus necesidades, tus pausas, te sorprende en cada sesión, te transmite pasión por la vida a través de sus conocimientos, y siempre te vas con ganas de más!",
                     "images": [
                         {
                             "src": "/images/testimonial/70/testimonial-2.jpg"
@@ -172,10 +172,10 @@
                 },
                 {
                     "id": 3,
-                    "name": "Mina Hollace",
+                    "name": "Simona",
                     "rating": 5,
                     "designation": "Freelancer",
-                    "description": "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
+                    "description": "En mi proceso personal con Mariana aprendí a escucharme y así me convertí en mi propia prioridad. En todo el trabajo que he realizado con ella me he llevado una mayor consciencia de mi misma. Las herramientas que me ofreció me resultaron muy útiles porque son para mi día a día y me dieron la posibilidad de ser autónoma en mi camino.",
                     "images": [
                         {
                             "src": "/images/testimonial/70/testimonial-3.jpg"
@@ -187,8 +187,8 @@
         {
             "section": "blog-area",
             "section_title": {
-                "title": "Lee articulos que te puedan ayudar",
-                "subtitle":"study with your favorite tutors"
+                "title": "Te comparto publicaciones que te pueden interesar. Artículos · Post · Podcast",
+                "subtitle":"Artículos · Post · Podcast"
             },
             "motto": {
                 "text": "Get into details now?",
@@ -199,29 +199,29 @@
         {
             "section": "mybook-area",
             "section_title": {
-                "title": "No te pierdas mi Libro 'Vive la vida al máximo potencial'.",
+                "title": "Te presento La verdad que habita en ti",
                 "subtitle":""
             },
-            "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.",
-            "paragraph2": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "paragraph1": "Son relatos cortos que hablan del despertar. Una invitación a reflexionar sobre temas cotidianos que nos dejan enseñanzas profundas.",
+            "paragraph2": "",
             "img": "/images/mybook/mybook.png"
         },
         {
             "section": "freesesion-area",
             "section_title": {
-                "title": "Obten una session Gratutita de 15min.",
+                "title": "Obtén tu sesión Gratuita de 20 min.",
                 "subtitle":""
             },
-            "paragraph1": "Limited Period Offer. Claim Now.",
+            "paragraph1": "Haz tu reserva y nos vemos.",
             "img": "/images/free-session/free-session.png"
         },
         {
             "section": "newsletter-area",
             "section_title": {
-                "title": "Recibe notificaciones cuando publique nuevos artículos.",
+                "title": "Suscríbete para estar al tanto de todas las publicaciones.",
                 "subtitle":""
             },
-            "paragraph1": "Stay up to date with the latest news, announcements, and articles."
+            "paragraph1": ""
         }       
     ]
 }

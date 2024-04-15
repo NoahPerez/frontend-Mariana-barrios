@@ -44,7 +44,7 @@ const NewsletterForm = forwardRef<HTMLFormElement, TProps>(
                     <Input
                         id="newsletter_email"
                         type="email"
-                        placeholder="Your E-mail"
+                        placeholder="E-mail"
                         className="tw-max-h-[52px] md:tw-rounded-br-none md:tw-rounded-tr-none md:tw-border-r-0"
                         feedbackText={errors?.newsletter_email?.message}
                         state={
@@ -66,7 +66,7 @@ const NewsletterForm = forwardRef<HTMLFormElement, TProps>(
                     type="submit"
                     className="md:tw-rounded-bl-none md:tw-rounded-tl-none"
                 >
-                    Subscribe
+                    Suscríbete
                 </Button>
                 {message && <Feedback state="success">{message}</Feedback>}
             </form>

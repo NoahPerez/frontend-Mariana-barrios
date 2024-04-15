@@ -1,17 +1,19 @@
 import type { NextPage } from "next";
 import { GetStaticProps } from "next";
-import SEO from "@components/seo/page-seo";
 import Layout from "@layout/layout-01";
-import HeroArea from "@containers/hero/layout-08";
-import AboutArea from "@containers/about/layout-02";
-import VideoArea from "@containers/video/layout-06";
-import TestimonialArea from "@containers/testimonial/layout-07";
-import CtaArea from "@containers/cta/layout-02";
-import TeamArea from "@containers/team/layout-02";
-import NewsletterArea from "@containers/newsletter/layout-01";
+import Wrapper from "@ui/wrapper/wrapper-01";
+
+import TestimonialArea from "@containers/testimonial/layout-06";
 
 import { normalizedData } from "@utils/methods";
+import { IBlog, ICourse } from "@utils/types";
 
+import NewsletterArea from "@containers/newsletter/layout-01";
+import GoodSection from "@containers/services/good";
+import StillQuestionSection from "@containers/services/still-questions";
+import HeroAbout from "@containers/about-me/hero";
+import TextHeroAbout from "@containers/about-me/text-hero";
+import TransformAbout from "@containers/about-me/transform";
 import { getPageData } from "../lib/page";
 
 interface PageContent {
@@ -23,6 +25,9 @@ type TProps = {
         page: {
             content: PageContent[];
         };
+        courses: ICourse[];
+        popularCourse: ICourse;
+        blogs: IBlog[];
     };
 };
 
@@ -30,51 +35,53 @@ type PageProps = NextPage<TProps> & {
     Layout: typeof Layout;
 };
 
-const AboutUs01: PageProps = ({ data }) => {
+const AboutMe: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
-
+    const textHero = content["texthero-area"];
     return (
         <>
-            <SEO title="About Us 01" />
-            <HeroArea data={content?.["hero-area"]} />
-            <AboutArea
-                data={content?.["about-area"]}
-                bg="tw-bg-white"
-                space="top-bottom-3"
-                titleSize="large"
+            <HeroAbout
+                data={{
+                    ...content?.["hero-area"],
+                    popularCourse: data.popularCourse,
+                }}
             />
-            <VideoArea data={content?.["video-area"]} titleSize="large" />
-            <TestimonialArea
-                data={content?.["testimonial-area"]}
-                titleSize="large"
+            <TextHeroAbout data={textHero.paragraph1} />
+            <Wrapper className="tw-px-4 tw-py-12 md:tw-py-[100px]">
+                <TestimonialArea data={content?.["testimonial-area"]} />
+            </Wrapper>
+            <TransformAbout
+                data={{
+                    ...content?.["transform-area"],
+                }}
             />
-            <CtaArea
-                data={content?.["cta-area"]}
-                space="bottom"
-                bg="tw-bg-light-100"
+            <GoodSection
+                data={{
+                    ...content?.["good-area"],
+                }}
             />
-            <TeamArea data={content?.["team-area"]} titleSize="large" />
-            <NewsletterArea data={content?.["newsletter-area"]} />
+            <StillQuestionSection
+                data={{
+                    ...content?.["stillq-area"],
+                }}
+            />
+            <NewsletterArea data={{ ...content?.["newsletter-area"] }} />
         </>
     );
 };
 
-AboutUs01.Layout = Layout;
+AboutMe.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("inner", "about-us-01");
+    const page = getPageData("inner", "about-me");
+
     return {
         props: {
             data: {
                 page,
             },
-            layout: {
-                headerShadow: true,
-                headerFluid: false,
-                footerMode: "light",
-            },
         },
     };
 };
 
-export default AboutUs01;
+export default AboutMe;

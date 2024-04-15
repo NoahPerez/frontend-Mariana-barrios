@@ -26,7 +26,8 @@ const MyBook = ({
                             color="primary"
                             className="tw-mb-8"
                         >
-                            {section_title.title}
+                            {/* {section_title.title} */}
+                            Te presento La verdad que habita en ti
                         </Text>
                     )}
                     {paragraph1 && (
@@ -41,12 +42,12 @@ const MyBook = ({
                     )}
                     <Button className="tw-mt-5">
                         <i className="tw-mr-4" />
-                        Get your free guide now
+                        Consigue mi libro
                     </Button>
                 </div>
                 <div className="tw-w-1/2 tw-mb-10 md:tw-mb-0 md:tw-px-4 tw-flex tw-justify-end">
                     <img
-                        src={img}
+                        src="images/mybook/mybook.png"
                         alt={section_title?.title}
                         className="md:tw-max-w-[400px] tw-w-full"
                     />

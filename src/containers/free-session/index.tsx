@@ -34,12 +34,12 @@ const FreeSession = ({ data: { section_title, paragraph1, img } }: TProps) => {
                     )}
                     <Button className="tw-mt-5">
                         <i className="tw-mr-4" />
-                        Book now
+                        Reserva Consulta
                     </Button>
                 </div>
                 <div className="tw-w-full tw-rounded-r-3xl md:tw-w-1/3 tw-flex tw-justify-end tw-aspect-square">
                     <img
-                        src={img}
+                        src="/images/free-session/free-session.png"
                         alt={section_title?.title}
                         className="md:tw-max-w-[400px] tw-w-full tw-aspect-square tw-object-cover"
                     />

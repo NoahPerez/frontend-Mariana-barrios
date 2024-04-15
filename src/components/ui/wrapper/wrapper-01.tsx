@@ -19,9 +19,9 @@ const Wrapper = ({ children, className, color }: TProps) => {
                 <Text
                     as="h2"
                     size="xl"
-                    className="tw-w-full md:tw-w-1/2 tw-text-center md:tw-text-left"
-                >
-                    Que experiencia tuvieron mis clientes
+                    className="tw-w-full md:tw-w-2/2 tw-text-center md:tw-text-left">
+                    Opinión de quienes 
+                    han comenzado el viaje
                 </Text>
                 {children}
             </div>
