@@ -6,7 +6,7 @@
             "images": [
                 {
                     "id": 1,
-                    "src": "/images/page-banner/about-us-01-hero-bg.jpg"
+                    "src": "/images/page-banner/about-us-01-hero-bg.png"
                 }
             ],
             "headings": [
@@ -19,8 +19,8 @@
         {
             "section": "about-area",
             "section_title": {
-                "title": "Learn about our <span>Work Culture</span> at Texto",
-                "subtitle": "Get to know about <strong>Texto</strong>",
+                "title": "Learn about our Work Culture at Texto",
+                "subtitle": "Get to know about Texto",
                 "description": "Spend some time to visit our website or head office and discover our current courses, enrollment procedure, and registration deadline. We're opening new classes every beginning of each month."
             },
             "motto": {
@@ -52,7 +52,7 @@
                 "channel": "youtube"
             },
             "section_title": {
-                "title": "Upgrade Your Skills <span>Upgrade Your Life</span>",
+                "title": "Upgrade Your Skills Upgrade Your Life",
                 "subtitle": "how we work",
                 "description": "Spend some time to visit our website or head office and discover our current courses, enrollment procedure, and registration deadline. We're opening new classes every beginning of each month."
             },

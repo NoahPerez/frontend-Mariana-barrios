@@ -13,6 +13,11 @@ export interface HeadingType {
     content: string;
 }
 
+export interface HeadlineType {
+    id: IDType;
+    content: string;
+}
+
 export interface TextType {
     id: IDType;
     content: string;

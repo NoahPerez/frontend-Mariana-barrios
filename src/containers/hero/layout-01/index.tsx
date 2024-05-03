@@ -8,6 +8,7 @@ import {
     ButtonType,
     ImageType,
     ICourse,
+    HeadlineType
 } from "@utils/types";
 import { Text } from "@components/ui/text";
 import Button from "@components/ui/button";
@@ -19,13 +20,14 @@ type TProps = {
         buttons?: ButtonType[];
         images?: ImageType[];
         popularCourse: ICourse;
+        headline?: HeadlineType[];
     };
 };
 
-const HeroArea = ({ data: { headings, texts, images } }: TProps) => {
+const HeroArea = ({ data: { headline, headings, texts, images } }: TProps) => {
     return (
         <div className="tw-h-full md:tw-min-h-[90vh] xl:tw-min-h-[90vh]  tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
-            <h1 className="tw-sr-only">Inicio</h1>
+            <h1 className="tw-sr-only"> </h1>
             <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block ">
                 {images?.[0]?.src && (
                     <img
@@ -58,6 +60,7 @@ const HeroArea = ({ data: { headings, texts, images } }: TProps) => {
                         {headings?.[0]?.content && (
                             <span className="tw-text-sm tw-mb-2.5 -tw-tracking-tightest tw-font-bold tw-leading-loose tw-uppercase tw-text-white tw-block md:tw-mb-[18px] md:tw-tracking-[4px]">
                                 {headings[0].content}
+                                {/* {headline} */}
                             </span>
                         )}
                         {headings?.[1]?.content && (
