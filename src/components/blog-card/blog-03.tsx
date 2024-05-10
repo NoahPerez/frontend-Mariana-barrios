@@ -6,13 +6,33 @@ import { Text } from "@components/ui/text";
 
 type TProps = Pick<
     IBlog,
-    "image" | "path" | "title" | "category" | "postedAt" | "views"
+    | "image"
+    | "path"
+    | "title"
+    | "postedAt"
+    | "views"
+    | "content"
+    | "shortDescription"
 > & {
     className?: string;
 };
 
 const BlogCard = forwardRef<HTMLDivElement, TProps>(
-    ({ className, image, path, title, category, postedAt, views }, ref) => {
+    (
+        {
+            className,
+            image,
+            path,
+            title,
+            content,
+            shortDescription,
+            postedAt,
+            views,
+        },
+        ref
+    ) => {
+        console.log(content, postedAt, views);
+        const shortText = shortDescription?.substring(0, 200).concat("...");
         return (
             <div className={clsx("blog-card tw-group", className)} ref={ref}>
                 <div className="tw-relative tw-overflow-hidden tw-rounded tw-h-[250px]">
@@ -50,12 +70,7 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                     >
                         <Anchor path={path}>{title}</Anchor>
                     </Text>
-                    <Text className="tw-mt-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Aliquam dolor eaque at sed dignissimos velit. Voluptas
-                        quos porro ipsum error eveniet dolore veritatis, impedit
-                        nam eum libero quo neque ratione!
-                    </Text>
+                    <Text className="tw-mt-4">{shortText}</Text>
 
                     {/* <ul className="tw-flex tw-gap-7 tw-text-gray-300 tw-text-md">
                         <li className="tw-mt-3.8 tw-mb-0">

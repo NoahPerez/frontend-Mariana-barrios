@@ -16,21 +16,7 @@ type TProps = {
 };
 
 const SectionTitle2 = forwardRef<HTMLDivElement, TProps>(
-    (
-        {
-            className,
-            title,
-            subtitle,
-            paragraph1,
-            align,
-            color,
-            titleSize,
-            subtitleClass,
-            titleClass,
-            descClass,
-        },
-        ref
-    ) => {
+    ({ className, title, paragraph1, align }, ref) => {
         return (
             <div
                 className={clsx(

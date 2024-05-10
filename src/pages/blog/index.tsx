@@ -3,12 +3,11 @@ import SEO from "@components/seo/page-seo";
 import Layout01 from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
 import BlogArea from "@containers/blog-full/layout-01";
-import { IBlog } from "@utils/types";
-import { getAllBlogs } from "../../lib/blog";
+import { IBlogData, getBlogs, getMetaBlogs } from "services/blog/getBlogs";
 
 type TProps = {
     data: {
-        blogs: IBlog[];
+        blogs: IBlogData[];
         currentPage: number;
         numberOfPages: number;
     };
@@ -17,8 +16,6 @@ type TProps = {
 type PageProps = NextPage<TProps> & {
     Layout: typeof Layout01;
 };
-
-const POSTS_PER_PAGE = 9;
 
 const BlogPage: PageProps = ({
     data: { blogs, currentPage, numberOfPages },
@@ -42,19 +39,18 @@ const BlogPage: PageProps = ({
 
 BlogPage.Layout = Layout01;
 
-export const getStaticProps: GetStaticProps = () => {
-    const { blogs, count } = getAllBlogs(
-        ["title", "image", "category", "postedAt", "views"],
-        0,
-        POSTS_PER_PAGE
-    );
+export const getStaticProps: GetStaticProps = async () => {
+    const blogs = await getBlogs();
+    const metaBlogs = await getMetaBlogs();
 
     return {
         props: {
             data: {
                 blogs,
                 currentPage: 1,
-                numberOfPages: Math.ceil(count / POSTS_PER_PAGE),
+                numberOfPages: Math.ceil(
+                    metaBlogs.pagination.total / metaBlogs.pagination.pageSize
+                ),
             },
             layout: {
                 headerShadow: true,

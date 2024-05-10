@@ -1,51 +1,46 @@
 import { ItemType, SectionTitleType, TSection } from "@utils/types";
 import { Container } from "@components/ui/container";
 import { Text } from "@components/ui/text";
+import { IBlock } from "services/pages/home";
 
 type TProps = TSection & {
-    data: {
-        section_title?: SectionTitleType;
-        paragraph1?: string;
-        paragraph2?: string;
-        img?: string;
-        items?: ItemType[];
-    };
+    data: IBlock;
 };
 
-const CanHelp = ({ data: { section_title, items } }: TProps) => {
+const CanHelp = ({ data: { title, cards } }: TProps) => {
     return (
         <Container clases="mybook-area" bg="white">
             <div className="tw-flex tw-flex-col">
                 <div className="tw-mx-auto md:tw-w-1/2">
-                    {section_title && (
+                    {title && (
                         <Text
                             as="h2"
                             size="xl"
                             color="primary"
                             className="tw-w-full tw-text-center tw-mb-8"
                         >
-                            {section_title.title}
+                            {title}
                         </Text>
                     )}
                 </div>
                 <div className="tw-auto-2-columns lg:tw-px-[180px] tw-mx-auto tw-mt-10">
-                    {items &&
-                        items.map((e) => (
+                    {cards &&
+                        cards.map((e) => (
                             <div
                                 key={e.id}
                                 className="tw-p-10 tw-border-[1px] tw-border-spring"
                             >
                                 <img
-                                    src={e.icon}
-                                    alt={e.title}
+                                    src={e.icono ?? ""}
+                                    alt={title}
                                     width={40}
                                     height={40}
                                     className="tw-mb-4"
                                 />
                                 <Text type="title" size="lg" as="h3">
-                                    {e.title}
+                                    {e.titulo}
                                 </Text>
-                                <Text>{e.description}</Text>
+                                <Text>{e.cuerpo}</Text>
                             </div>
                         ))}
                 </div>

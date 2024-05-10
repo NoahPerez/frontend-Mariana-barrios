@@ -1,22 +1,17 @@
 import { useMemo } from "react";
 import { motion } from "framer-motion";
-import SectionTitle from "@components/section-title";
 import Swiper, { SwiperSlide } from "@ui/swiper";
 import Testimonial from "@components/testimonial/testimonial-06";
-import { ItemType, SectionTitleType } from "@utils/types";
 import { scrollUpVariants } from "@utils/variants";
+import { ICommentResult } from "services/comments/getComments";
 
-const AnimatedSectionTitle = motion(SectionTitle);
 const AnimatedSwiper = motion(Swiper);
 
 type TProps = {
-    data: {
-        section_title?: SectionTitleType;
-        items?: ItemType[];
-    };
+    comments: ICommentResult[];
 };
 
-const TestimonialArea = ({ data: { section_title, items } }: TProps) => {
+const TestimonialArea = ({ comments }: TProps) => {
     const options = useMemo(() => {
         return {
             slidesPerView: 1,
@@ -35,20 +30,12 @@ const TestimonialArea = ({ data: { section_title, items } }: TProps) => {
             },
         };
     }, []);
+
+    console.log({ comments });
     return (
         <section className="testimonial-area tw-mt-15 md:tw-mt-20">
             <div className="">
-                {section_title && (
-                    <AnimatedSectionTitle
-                        {...section_title}
-                        className="tw-pb-7.5 md:tw-pb-15"
-                        initial="offscreen"
-                        whileInView="onscreen"
-                        viewport={{ once: true, amount: 0.4 }}
-                        variants={scrollUpVariants}
-                    />
-                )}
-                {items && items.length > 0 && (
+                {comments && comments.length > 0 && (
                     <AnimatedSwiper
                         options={options}
                         shadowSize="small"
@@ -57,14 +44,17 @@ const TestimonialArea = ({ data: { section_title, items } }: TProps) => {
                         viewport={{ once: true, amount: 0.4 }}
                         variants={scrollUpVariants}
                     >
-                        {items.map((item) => (
+                        {comments.map((item) => (
                             <SwiperSlide key={item.id}>
                                 <Testimonial
-                                    name={item.name}
-                                    designation={item.designation}
-                                    review={item.description}
-                                    image={item.images?.[0]}
-                                    rating={item.rating}
+                                    name={item.title ?? ""}
+                                    review={item.body ?? ""}
+                                    image={{
+                                        height: 70,
+                                        width: 70,
+                                        src: item.img,
+                                    }}
+                                    rating={item.stars}
                                 />
                             </SwiperSlide>
                         ))}

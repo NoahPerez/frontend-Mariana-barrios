@@ -1,26 +1,18 @@
 import { motion } from "framer-motion";
 import Section from "@ui/section";
-import MottoText from "@ui/motto-text";
 import SectionTitle from "@components/section-title";
 import { useUI } from "@contexts/ui-context";
-import { ImageType, MottoType, SectionTitleType, TSection } from "@utils/types";
+import { TSection } from "@utils/types";
 import { scrollUpVariants } from "@utils/variants";
+import { IBlock } from "services/pages/aboutme";
 
 type TProps = TSection & {
-    data: {
-        section_title?: SectionTitleType;
-        motto?: MottoType;
-        images?: ImageType[];
-    };
+    block: IBlock;
 };
 
-const AboutArea = ({
-    data: { section_title, motto, images },
-    space,
-    bg,
-    titleSize,
-}: TProps) => {
+const AboutArea = ({ block, space, bg, titleSize }: TProps) => {
     const { trans1 } = useUI();
+    console.log({ block });
     return (
         <Section className="about-area" space={space} bg={bg}>
             <div className="tw-container tw-grid lg:tw-grid-cols-2 tw-items-center tw-gap-[50px] lg:tw-gap-7.5">
@@ -31,19 +23,19 @@ const AboutArea = ({
                     viewport={{ once: true, amount: 0.1 }}
                     variants={scrollUpVariants}
                 >
-                    {section_title && (
+                    {block.id && (
                         <SectionTitle
-                            {...section_title}
+                            data={block}
                             align="left"
                             titleSize={titleSize}
                         />
                     )}
-                    {motto && (
+                    {/* {motto && (
                         <MottoText className="tw-mt-4" size="md" {...motto} />
-                    )}
+                    )} */}
                 </motion.div>
                 <div className="tw-relative tw-order-1 lg:tw-order-2">
-                    {images?.[0]?.src && (
+                    {block.img && (
                         <motion.div
                             className="tw-relative tw-z-10"
                             initial="offscreen"
@@ -52,8 +44,8 @@ const AboutArea = ({
                             variants={scrollUpVariants}
                         >
                             <img
-                                src={images[0].src}
-                                alt={images[0]?.alt || "About One"}
+                                src={block.img}
+                                alt={block.title ?? "About One"}
                                 width={570}
                                 height={360}
                                 loading="lazy"

@@ -1,25 +1,20 @@
 import clsx from "clsx";
 import StarRating from "@ui/star-rating";
-import { ImageType } from "@utils/types";
 import { Text } from "@components/ui/text";
 
 type TProps = {
     name: string;
-    designation: string;
     review: string;
-    image: ImageType;
+    image: {
+        src: string;
+        width: number;
+        height: number;
+    };
     rating: number;
     className?: string;
 };
 
-const Testimonial = ({
-    name,
-    designation,
-    review,
-    image,
-    rating,
-    className,
-}: TProps) => {
+const Testimonial = ({ name, review, image, rating, className }: TProps) => {
     return (
         <div
             className={clsx(
@@ -38,15 +33,15 @@ const Testimonial = ({
                     {name}
                 </Text>
                 <div className="tw-flex tw-flex-col tw-justify-start tw-w-full">
-                    {image?.src && (
+                    {image.src && (
                         <figure className="image tw-flex-auto0 tw-w-[70px] tw-flex">
                             <img
                                 src={image.src}
-                                alt={image?.alt || name}
+                                alt={name}
                                 width={image?.width || 70}
                                 height={image?.height || 70}
-                                loading={image?.loading || "lazy"}
-                                className="tw-rounded-full"
+                                loading="lazy"
+                                className="tw-rounded-full tw-aspect-square tw-object-cover"
                             />
                         </figure>
                     )}

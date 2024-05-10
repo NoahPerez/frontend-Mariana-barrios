@@ -28,6 +28,7 @@
     "framer-motion": "^7.6.7",
     "gray-matter": "^4.0.3",
     "loading-attribute-polyfill": "^2.1.0",
+    "markdown-to-jsx": "^7.4.7",
     "marked": "^4.2.2",
     "next": "^13.0.3",
     "next-pwa": "^5.6.0",

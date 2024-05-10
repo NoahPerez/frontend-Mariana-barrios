@@ -43,7 +43,8 @@ const AboutMe: PageProps = ({ data }) => {
             <SEO title="Sobre Mi" />
             <HeroArea
                 data={{
-                    ...content?.["hero-area"], popularCourse: data.popularCourse,
+                    ...content?.["hero-area"],
+                    popularCourse: data.popularCourse,
                 }}
             />
             {/* <HeroArea data={content?.["hero-area"]} /> */}
@@ -92,4 +93,3 @@ export const getStaticProps: GetStaticProps = () => {
 };
 
 export default AboutMe;
-

@@ -1,19 +1,14 @@
 import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 import Layout from "@layout/layout-01";
-import Wrapper from "@ui/wrapper/wrapper-01";
-
-import TestimonialArea from "@containers/testimonial/layout-06";
-
 import { normalizedData } from "@utils/methods";
-import { IBlog, ICourse } from "@utils/types";
-
 import NewsletterArea from "@containers/newsletter/layout-01";
-import GoodSection from "@containers/services/good";
-import StillQuestionSection from "@containers/services/still-questions";
-import HeroAbout from "@containers/about-me/hero";
-import TextHeroAbout from "@containers/about-me/text-hero";
+// import GoodSection from "@containers/services/good";
+import TestimonialGuide from "@containers/free-guide/testimonials";
+import VideoGuide from "@containers/free-guide/video";
+import HeroExtra from "@containers/extra-sales/hero-extra";
 import TransformAbout from "@containers/about-me/transform";
+// import FreeSession from "@containers/free-session";
 import { getPageData } from "../lib/page";
 
 interface PageContent {
@@ -25,9 +20,6 @@ type TProps = {
         page: {
             content: PageContent[];
         };
-        courses: ICourse[];
-        popularCourse: ICourse;
-        blogs: IBlog[];
     };
 };
 
@@ -35,45 +27,46 @@ type PageProps = NextPage<TProps> & {
     Layout: typeof Layout;
 };
 
-const AboutMe: PageProps = ({ data }) => {
+const ExtraSales: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
-    const textHero = content["texthero-area"];
+
     return (
         <>
-            <HeroAbout
+            <HeroExtra
                 data={{
                     ...content?.["hero-area"],
-                    popularCourse: data.popularCourse,
                 }}
             />
-            <TextHeroAbout data={textHero.paragraph1} />
-            <Wrapper className="tw-px-4 tw-py-12 md:tw-py-[100px]">
-                <TestimonialArea data={content?.["testimonial-area"]} />
-            </Wrapper>
             <TransformAbout
                 data={{
                     ...content?.["transform-area"],
                 }}
             />
+            <VideoGuide
+                data={{
+                    ...content?.["video-area"],
+                }}
+            />
+            <TestimonialGuide
+                data={{
+                    ...content?.["testimonials-area"],
+                }}
+            />
+            {/* <FreeSession data={{ ...content?.["freesesion-area"] }} />
             <GoodSection
                 data={{
                     ...content?.["good-area"],
                 }}
-            />
-            <StillQuestionSection
-                data={{
-                    ...content?.["stillq-area"],
-                }}
-            />
+            /> */}
             <NewsletterArea data={{ ...content?.["newsletter-area"] }} />
         </>
     );
 };
 
-AboutMe.Layout = Layout;
+ExtraSales.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("inner", "about-me");
+    const page = getPageData("inner", "extra-sales");
 
     return {
         props: {
@@ -84,4 +77,4 @@ export const getStaticProps: GetStaticProps = () => {
     };
 };
 
-export default AboutMe;
+export default ExtraSales;

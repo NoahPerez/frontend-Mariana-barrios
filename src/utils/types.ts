@@ -53,9 +53,11 @@ export interface MottoType {
 
 export interface ItemType {
     id: IDType;
+    titulo: string;
     title: string;
     description: string;
-    icon: string;
+    cuerpo: string;
+    icono: string;
     path: string;
     pathText: string;
     suffix: string;
@@ -187,14 +189,14 @@ export interface IBlog {
     title: string;
     slug: string;
     path: string;
-    postedAt: string;
-    image: ImageType;
-    category: BlogMetaType;
-    tags: BlogMetaType[];
-    views: number;
-    author: IInstructor;
-    content: string;
-    excerpt: string;
+    postedAt?: string;
+    image?: ImageType;
+    tags?: BlogMetaType[];
+    views?: number;
+    author?: IInstructor;
+    content?: string;
+    shortDescription: string;
+    excerpt?: string;
 }
 
 export interface ISocial {

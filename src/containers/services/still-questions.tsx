@@ -1,26 +1,21 @@
-import { ItemType, SectionTitleType, TSection } from "@utils/types";
+import { TSection } from "@utils/types";
 import { Container } from "@components/ui/container";
 import { Text } from "@components/ui/text";
-import Button from "@components/ui/button";
+import { IBlock } from "services/pages/home";
+import Link from "next/link";
 
 type TProps = TSection & {
-    data: {
-        section_title?: SectionTitleType;
-        paragraph1?: string;
-        img?: string;
-        items?: ItemType[];
-        button?: string;
-    };
+    data: IBlock;
 };
 
 const StillQuestionSection = ({
-    data: { section_title, button, paragraph1 },
+    data: { title, buttonText, paragraphs, link },
 }: TProps) => {
     return (
         <Container clases="mybook-area" bg="white" py="tw-pt-0 tw-py-0">
             <div className="tw-flex tw-flex-col tw-bg-spring tw-rounded-xl tw-p-6">
                 <div className="tw-w-full tw-flex tw-flex-col tw-items-center tw-justify-center">
-                    {section_title && (
+                    {title && (
                         <>
                             <Text
                                 as="h2"
@@ -28,16 +23,25 @@ const StillQuestionSection = ({
                                 color="primary"
                                 className="tw-w-full tw-text-center tw-mb-4"
                             >
-                                {section_title.title}
+                                {title}
                             </Text>
-                            <Text
-                                as="p"
-                                color="primary"
-                                className="tw-w-full tw-mb-8 tw-text-center"
+                            {paragraphs?.map((e) => (
+                                <Text
+                                    key={e.id}
+                                    as="p"
+                                    color="primary"
+                                    className="tw-w-full tw-mb-8 tw-text-center"
+                                >
+                                    {e.parrafo}
+                                </Text>
+                            ))}
+
+                            <Link
+                                href={link ?? ""}
+                                className="tw-mt-5 tw-p-2 tw-px-6 tw-rounded-lg tw-text-white tw-font-medium hover:tw-text-white tw-text-center tw-bg-primary"
                             >
-                                {paragraph1}
-                            </Text>
-                            <Button>{button}</Button>
+                                {buttonText}
+                            </Link>
                         </>
                     )}
                 </div>

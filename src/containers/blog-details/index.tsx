@@ -32,7 +32,7 @@ const BlogDetails = ({
                 )}
 
                 <div className="tw-font-medium tw-uppercase -tw-tracking-tightest tw-mb-4">
-                    <Anchor path={category.path}>{category.title}</Anchor>
+                    <Anchor path={category?.path ?? ''}>{category?.title}</Anchor>
                 </div>
 
                 <h2 className="tw-mb-5">{title}</h2>

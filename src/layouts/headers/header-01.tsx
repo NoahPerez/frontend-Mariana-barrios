@@ -97,24 +97,6 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                                     Sesion gratuita
                                 </Text>
                             </Link>
-                            {/* <Anchor
-                                path="/profile"
-                                className={clsx(
-                                    "tw-inline-block tw-px-2.5 tw-py-1.5",
-                                    mode === "light" &&
-                                        "tw-text-white hover:tw-text-white",
-                                    mode === "dark" && "tw-text-dark-50"
-                                )}
-                                aria-label="User Profile"
-                            >
-                                <i className="far fa-user-circle tw-text-lg" />
-                            </Anchor> */}
-                            {/* <div className="tw-hidden md:tw-block md:tw-max-w-[250px] md:tw-pl-2.5">
-                                <SearchForm
-                                    bg={transparent ? "white" : "light"}
-                                />
-                            </div> */}
-
                             <BurgerButton
                                 className="tw-pl-5 xl:tw-hidden"
                                 onClick={() => setOffcanvas(true)}

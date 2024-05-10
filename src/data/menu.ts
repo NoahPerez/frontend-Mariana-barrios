@@ -7,7 +7,7 @@ export default [
     {
         id: 2,
         label: "Servicios",
-        path: "/services",
+        path: "/servicios",
     },
     {
         id: 3,
@@ -17,7 +17,7 @@ export default [
     {
         id: 4,
         label: "Sobre mi",
-        path: "/about-me",
+        path: "/sobre-mi",
     },
     {
         id: 5,

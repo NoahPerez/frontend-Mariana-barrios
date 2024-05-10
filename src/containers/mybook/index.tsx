@@ -2,54 +2,65 @@ import { SectionTitleType } from "@utils/types";
 import { Container } from "@components/ui/container";
 import { Text } from "@components/ui/text";
 import Button from "@components/ui/button";
+import Link from "next/link";
+import { IBlock } from "services/pages/home";
 
 type TProps = {
-    data: {
-        section_title?: SectionTitleType;
-        paragraph1?: string;
-        paragraph2?: string;
-        img?: string;
-    };
+    data: IBlock;
 };
 
 const MyBook = ({
-    data: { section_title, paragraph1, paragraph2, img },
+    data: { id, buttonText, img, link, paragraphs, subtitle, title },
 }: TProps) => {
     return (
         <Container clases="mybook-area" bg="white">
             <div className="tw-flex tw-flex-col-reverse md:tw-flex-row md:tw-gap-10">
                 <div className="tw-w-full md:tw-w-1/2 tw-flex tw-flex-col tw-items-start tw-justify-center">
-                    {section_title && (
+                    {subtitle && (
+                        <Text
+                            as="h3"
+                            size="lg"
+                            color="primary"
+                            className="tw-mb-8"
+                        >
+                            {subtitle}
+                        </Text>
+                    )}
+                    {title && (
                         <Text
                             as="h2"
                             size="xl"
                             color="primary"
                             className="tw-mb-8"
                         >
-                            {/* {section_title.title} */}
-                            Te presento La verdad que habita en ti
+                            {title}
                         </Text>
                     )}
-                    {paragraph1 && (
-                        <Text size="lg" color="primary" className="tw-mb-4">
-                            {paragraph1}
-                        </Text>
-                    )}
-                    {paragraph2 && (
-                        <Text size="md" color="primary" className="tw-mb-4">
-                            {paragraph2}
-                        </Text>
-                    )}
-                    <Button className="tw-mt-5">
-                        <i className="tw-mr-4" />
-                        Consigue mi libro
-                    </Button>
+
+                    {paragraphs &&
+                        paragraphs.map((paragraph) => (
+                            <Text
+                                key={paragraph.id}
+                                size="lg"
+                                color="primary"
+                                className="tw-mb-4"
+                            >
+                                {paragraph.parrafo}
+                            </Text>
+                        ))}
+
+                    <Link
+                        href={link ?? ""}
+                        className="tw-mt-5 tw-p-2 tw-px-6 tw-rounded-lg tw-text-white tw-font-medium hover:tw-text-white tw-text-center tw-bg-primary"
+                    >
+                        {buttonText}
+                    </Link>
                 </div>
                 <div className="tw-w-1/2 tw-mb-10 md:tw-mb-0 md:tw-px-4 tw-flex tw-justify-end">
                     <img
-                        src="images/mybook/mybook.png"
-                        alt={section_title?.title}
-                        className="md:tw-max-w-[400px] tw-w-full"
+                        src={img}
+                        alt={title}
+                        className="md:tw-max-w-[400px] tw-w-full tw-object-cover"
                     />
                 </div>
             </div>

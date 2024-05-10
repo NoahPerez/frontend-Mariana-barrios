@@ -1,46 +1,47 @@
-import { SectionTitleType, TSection } from "@utils/types";
+import { TSection } from "@utils/types";
 import { Container } from "@components/ui/container";
 import { Text } from "@components/ui/text";
-import Button from "@components/ui/button";
+import Link from "next/link";
+import { IFreeSesionResult } from "services/freeSesion/getFreeSesion";
 
 type TProps = TSection & {
-    data: {
-        section_title?: SectionTitleType;
-        paragraph1?: string;
-        paragraph2?: string;
-        img?: string;
-    };
+    data: IFreeSesionResult;
 };
 
-const FreeSession = ({ data: { section_title, paragraph1, img } }: TProps) => {
+const FreeSession = ({
+    data: { img, link, text, textButton, title },
+}: TProps) => {
     return (
         <Container clases="mybook-area" bg="white">
             <div className="tw-flex tw-rounded-3xl tw-overflow-hidden tw-bg-spring md:tw-flex-row tw-flex-col">
                 <div className="tw-p-12 md:tw-p-16 tw-w-full md:tw-w-2/3 tw-flex tw-flex-col tw-items-start tw-justify-center">
-                    {section_title && (
+                    {title && (
                         <Text
                             as="h2"
                             size="xl"
                             color="primary"
                             className="tw-mb-8"
                         >
-                            {section_title.title}
+                            {title}
                         </Text>
                     )}
-                    {paragraph1 && (
+
+                    {text && (
                         <Text size="lg" color="primary" className="tw-mb-4">
-                            {paragraph1}
+                            {text}
                         </Text>
                     )}
-                    <Button className="tw-mt-5">
-                        <i className="tw-mr-4" />
-                        Reserva Consulta
-                    </Button>
+                    <Link
+                        href={link ?? ""}
+                        className="tw-mt-5 tw-p-2 tw-px-6 tw-rounded-lg tw-text-white tw-font-medium hover:tw-text-white tw-text-center tw-bg-primary"
+                    >
+                        {textButton}
+                    </Link>
                 </div>
                 <div className="tw-w-full tw-rounded-r-3xl md:tw-w-1/3 tw-flex tw-justify-end tw-aspect-square">
                     <img
-                        src="/images/free-session/free-session.png"
-                        alt={section_title?.title}
+                        src={img}
+                        alt={title}
                         className="md:tw-max-w-[400px] tw-w-full tw-aspect-square tw-object-cover"
                     />
                 </div>

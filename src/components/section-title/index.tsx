@@ -1,34 +1,24 @@
 import { forwardRef } from "react";
 import clsx from "clsx";
 import { Text } from "@components/ui/text";
+import { IBlock } from "services/pages/aboutme";
+import Link from "next/link";
 
 type TProps = {
     className?: string;
-    title: string;
-    subtitle?: string;
-    description?: string;
+
     align?: "left" | "right" | "center";
     color?: "A" | "B" | "C";
     titleSize?: "default" | "large";
     subtitleClass?: string;
     titleClass?: string;
     descClass?: string;
+    data?: IBlock;
 };
 
 const SectionTitle = forwardRef<HTMLDivElement, TProps>(
     (
-        {
-            className,
-            title,
-            subtitle,
-            description,
-            align,
-            color,
-            titleSize,
-            subtitleClass,
-            titleClass,
-            descClass,
-        },
+        { className, align, data },
         ref
     ) => {
         return (
@@ -51,11 +41,20 @@ const SectionTitle = forwardRef<HTMLDivElement, TProps>(
                         dangerouslySetInnerHTML={{ __html: subtitle }}
                     />
                 )} */}
-
-                <Text as="h2" size="xl" color="primary">
-                    {title}
-                </Text>
-                {description && <Text as="p">{description}</Text>}
+                {data?.title && (
+                    <Text as="h2" size="xl" color="primary">
+                        {data?.title}
+                    </Text>
+                )}
+                {data?.paragraphs?.length &&
+                    data?.paragraphs.map((e) => (
+                        <Text as="p" key={e.id}>
+                            {e.parrafo}
+                        </Text>
+                    ))}
+                <Link href={data?.link ?? ""} className="tw-text-primary">
+                    {data?.buttonText}
+                </Link>
             </div>
         );
     }

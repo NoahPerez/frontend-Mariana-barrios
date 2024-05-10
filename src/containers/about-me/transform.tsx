@@ -54,7 +54,7 @@ const TransformAbout = ({
                         >
                             <div className="tw-rounded-full tw-w-12 tw-h-12 tw-flex tw-items-center tw-justify-center tw-bg-spring">
                                 <img
-                                    src={e.icon}
+                                    src={e.icono ?? ''}
                                     alt={e.title}
                                     width={25}
                                     height={25}

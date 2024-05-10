@@ -2,24 +2,29 @@ import { ItemType, SectionTitleType, TSection } from "@utils/types";
 import { Container } from "@components/ui/container";
 import { Text } from "@components/ui/text";
 import Accordion from "@components/ui/accordion";
+import { IBlock } from "services/pages/home";
+import { IFaqData } from "services/faqs/getFaqs";
 
 type TProps = TSection & {
     data: {
-        section_title?: SectionTitleType;
-        paragraph1?: string;
-        img?: string;
-        items?: ItemType[];
+        texts: IBlock;
+        faqs: IFaqData[];
     };
 };
 
-const GoodSection = ({
-    data: { section_title, items, paragraph1 },
-}: TProps) => {
+const GoodSection = ({ data: { texts, faqs } }: TProps) => {
+    const faqsArr = faqs.map((e) => {
+        return {
+            id: e.id,
+            title: e.question,
+            description: e.question,
+        };
+    });
     return (
         <Container clases="mybook-area" bg="white">
             <div className="tw-flex tw-flex-col">
                 <div className="tw-w-full">
-                    {section_title && (
+                    {texts && (
                         <>
                             <Text
                                 as="h2"
@@ -27,23 +32,27 @@ const GoodSection = ({
                                 color="primary"
                                 className="tw-w-full tw-text-center tw-mb-4"
                             >
-                                {section_title.title}
+                                {texts.title}
                             </Text>
-                            <Text
-                                as="p"
-                                color="primary"
-                                className="tw-w-full tw-mb-12 tw-text-center"
-                            >
-                                {paragraph1}
-                            </Text>
+                            {texts.paragraphs &&
+                                texts.paragraphs.map((paragraph) => (
+                                    <Text
+                                        key={paragraph.id}
+                                        as="p"
+                                        color="primary"
+                                        className="tw-w-full tw-mb-12 tw-text-center"
+                                    >
+                                        {paragraph.parrafo}
+                                    </Text>
+                                ))}
                         </>
                     )}
                 </div>
                 <div className="tw-mt-12 tw-w-full tw-max-w-[800px] tw-mx-auto">
-                    {items && items?.length > 0 && (
+                    {faqs && faqs?.length > 0 && (
                         <Accordion
-                            items={items}
-                            defaultActiveKey={items[0].id}
+                            items={faqsArr}
+                            defaultActiveKey={faqsArr[0].id}
                         />
                     )}
                 </div>

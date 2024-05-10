@@ -13,29 +13,25 @@ import TestimonialArea from "@containers/testimonial/layout-06";
 import BlogArea from "@containers/blog/layout-03";
 // import NewsletterArea from "@containers/newsletter/layout-01";
 
-import { normalizedData } from "@utils/methods";
-import { IBlog, ICourse } from "@utils/types";
-
 import MyBook from "@containers/mybook";
 import FreeSession from "@containers/free-session";
-import NewsletterArea from "@containers/newsletter/layout-01";
 import AreasHome from "@containers/home/areas";
-import { getPageData } from "../lib/page";
-import { getAllBlogs } from "../lib/blog";
-import { getallCourses, getFilteredCourse } from "../lib/course";
 
-interface PageContent {
-    section: string;
-}
+import { IHomeResult, getHome } from "services/pages/home";
+import { STRAPI_URL } from "config/config";
+import { ICommentResult, getComments } from "services/comments/getComments";
+import { IBlogData, getBlogs } from "services/blog/getBlogs";
+import {
+    IFreeSesionResult,
+    getFreeSesion,
+} from "services/freeSesion/getFreeSesion";
 
 type TProps = {
     data: {
-        page: {
-            content: PageContent[];
-        };
-        courses: ICourse[];
-        popularCourse: ICourse;
-        blogs: IBlog[];
+        home: IHomeResult;
+        comments: ICommentResult[];
+        blogs: IBlogData[];
+        freeSesion: IFreeSesionResult;
     };
 };
 
@@ -44,98 +40,77 @@ type PageProps = NextPage<TProps> & {
 };
 
 const Home: PageProps = ({ data }) => {
-    const content = normalizedData<PageContent>(data.page?.content, "section");
-    const areaData = content["areas-area"];
-    const myBookData = content["mybook-area"];
+    const {
+        home: {
+            banner,
+            linkButton,
+            myBook,
+            puedoAyudarteCards,
+            puedoAyudarteText,
+            puedoAyudarteTitle,
+            subtitle,
+            text,
+            textButton,
+            title,
+        },
+        comments,
+        blogs,
+        freeSesion,
+    } = data;
+
     return (
         <>
             <HeroArea
                 data={{
-                    ...content?.["hero-area"],
-                    popularCourse: data.popularCourse,
+                    subtitle,
+                    title,
+                    texto: text,
+                    button: textButton,
+                    link: linkButton,
+                    image: `${STRAPI_URL}${banner}`,
                 }}
             />
-            {/* <div className="tw-w-full tw-p-2 tw-bg-primary">
-                <p className="tw-text-md sm:tw-text-[16px] tw-text-white tw-font-medium tw-leading-relaxed sm:tw-mx-auto md:tw-ml-0 md:tw-text-lg tw-text-center">
-                    Una Session Gratuita 15min.
-                </p>
-            </div> */}
-            <AreasHome data={{ ...areaData }} />
-            {/* <FunfactArea
-                data={content?.["funfact-area"]}
-                space="bottom"
-                bg="tw-bg-white tw-py-[100px]"
-                titleSize="large"
-            /> */}
 
-            {/* <AboutArea data={content?.["about-area"]} /> */}
-            {/* <Wrapper className="tw-py-[100px]">
-                <FunFactArea
-                    data={content?.["funfact-area"]}
-                    space="bottom-2"
-                />
-                <TestimonialArea
-                    data={content?.["testimonial-area"]}
-                    space="none"
-                />
-            </Wrapper> */}
+            <AreasHome
+                data={{
+                    section_title: puedoAyudarteTitle,
+                    paragraph1: puedoAyudarteText,
+                    items: puedoAyudarteCards,
+                }}
+            />
+
             <Wrapper className="tw-px-4 tw-py-12 md:tw-py-[100px]">
-                <TestimonialArea data={content?.["testimonial-area"]} />
+                <TestimonialArea comments={comments} />
             </Wrapper>
 
             <BlogArea
-                data={{ ...content?.["blog-area"], blogs: data.blogs }}
+                data={{
+                    title: "Artículos · Post · Entrevistas · Podcast",
+                    blogs,
+                }}
                 titleSize="large"
             />
-            <MyBook data={{ ...myBookData }} />
-            <FreeSession data={{ ...content?.["freesesion-area"] }} />
-            <NewsletterArea data={{ ...content?.["newsletter-area"] }} />
-
-            {/* <NewsletterArea data={content?.["newsletter-area"]} /> */}
-            {/* <VideoArea data={content?.["video-area"]} space="none" /> */}
-            {/* <CourseArea
-                data={{ ...content?.["course-area"], courses: data.courses }}
-            />
-            <BlogArea data={{ ...content?.["blog-area"], blogs: data.blogs }} />
-            <BrandArea data={content?.["brand-area"]} /> */}
+            {myBook?.id && <MyBook data={myBook} />}
+            {freeSesion && <FreeSession data={freeSesion} />}
+            {/* <NewsletterArea data={{ ...content?.["newsletter-area"] }} /> */}
         </>
     );
 };
 
 Home.Layout = Layout;
 
-export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("home", "index-01");
-    const courses = getallCourses(
-        ["title", "thumbnail", "price", "currency"],
-        0,
-        3
-    );
-    const popularCourse = getFilteredCourse(
-        [
-            "title",
-            "published_at",
-            "thumbnail",
-            "price",
-            "currency",
-            "excerpt",
-            "isPopular",
-        ],
-        "isPopular",
-        true
-    );
-    const { blogs } = getAllBlogs(
-        ["title", "image", "category", "postedAt", "views"],
-        0,
-        3
-    );
+export const getStaticProps: GetStaticProps = async () => {
+    const response = await getHome();
+    const comments = await getComments();
+    const blogs = await getBlogs();
+    const freeSesion = await getFreeSesion();
     return {
         props: {
             data: {
-                page,
-                courses,
-                popularCourse,
+                home: response,
+                comments,
                 blogs,
+                freeSesion,
             },
         },
     };

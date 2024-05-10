@@ -1,13 +1,14 @@
 import { ItemType, SectionTitleType } from "@utils/types";
 import { Container } from "@components/ui/container";
 import { Text } from "@components/ui/text";
+import { Card } from "services/pages/types.home";
 
 type TProps = {
     data: {
-        section_title?: SectionTitleType;
+        section_title?: string;
         paragraph1?: string;
         paragraph2?: string;
-        items?: ItemType[];
+        items?: Card[];
         img?: string;
     };
 };
@@ -26,7 +27,7 @@ const AreasHome = ({
                             color="primary"
                             className="tw-w-full md:tw-w-1/2"
                         >
-                            {section_title.title}
+                            {section_title}
                         </Text>
                     )}
                     <div className="tw-flex tw-flex-col tw-w-full md:tw-w-1/2">
@@ -51,16 +52,16 @@ const AreasHome = ({
                                 className="tw-transition-all tw-border-[1px] tw-border-transparent hover:tw-border-spring tw-p-4 hover:tw-shadow-md hover:tw-shadow-black/5"
                             >
                                 <img
-                                    src={item.icon}
-                                    alt={item.title}
+                                    src={item.icono ?? ""}
+                                    alt={item.titulo}
                                     width={40}
                                     height={40}
                                     className="tw-mb-4"
                                 />
                                 <Text as="h3" size="lg">
-                                    {item.title}
+                                    {item.titulo}
                                 </Text>
-                                <Text size="md">{item.description}</Text>
+                                <Text size="md">{item.cuerpo}</Text>
                             </div>
                         ))}
                 </div>
