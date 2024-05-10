@@ -1,13 +1,8 @@
-import { SectionTitleType, ItemType } from "@utils/types";
+import { SectionTitleType } from "@utils/types";
 import { Text } from "@components/ui/text";
 import Button from "@components/ui/button";
 import { Container } from "@components/ui/container";
-import Testimonial from "@components/testimonial/testimonial-06";
-import { motion } from "framer-motion";
-import Video from "@ui/video-with-poster/video-02";
-import { scrollUpVariants } from "@utils/variants";
 
-const AnimatedVideo = motion(Video);
 
 type TProps = {
     data: {

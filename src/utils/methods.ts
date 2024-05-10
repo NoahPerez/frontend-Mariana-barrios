@@ -2,13 +2,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import type { Dispatch, SetStateAction } from "react";
 import dayjs from "dayjs";
-import { SectionType, ICourse, IEvent } from "./types";
+import { ICourse, IEvent } from "./types";
 
 export const normalizedData = <T extends object>(
     data: T[],
     identifier: keyof T
 ) => {
-    let allContetnt: { [x: string]: SectionType } = {};
+    let allContetnt: any = {};
     data.forEach((item) => {
         // Remove properties with null value
         const newObj: T = item;
@@ -25,7 +25,7 @@ export const normalizedData = <T extends object>(
 
         // Store All Content
         const k = newObj[identifier] as unknown as string;
-
+        
         allContetnt = {
             ...allContetnt,
             [k]: {

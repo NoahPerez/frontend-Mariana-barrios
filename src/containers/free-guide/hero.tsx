@@ -3,11 +3,6 @@
 // import BottomShape from "@ui/bottom-shape/shape-01";
 // import { scrollUpVariants } from "@utils/variants";
 import {
-    HeadingType,
-    TextType,
-    ButtonType,
-    ImageType,
-    ICourse,
     SectionTitleType,
 } from "@utils/types";
 import { Text } from "@components/ui/text";

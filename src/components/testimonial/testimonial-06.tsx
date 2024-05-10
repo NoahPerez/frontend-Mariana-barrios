@@ -14,7 +14,6 @@ type TProps = {
 
 const Testimonial = ({
     name,
-    designation,
     review,
     image,
     rating,

@@ -24,6 +24,10 @@
       "sourceType": "module"
     },
     "rules": {
+      "@typescript-eslint/no-empty-interface": "off",
+      "react/no-unused-prop-types": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
       "@typescript-eslint/no-misused-promises": [
         "error",
         {

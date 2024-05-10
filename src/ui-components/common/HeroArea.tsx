@@ -18,7 +18,7 @@ type TProps = {
 };
 
 const HeroArea = ({
-    data: { subtitle, title, texto, button, link, image },
+    data: { subtitle, title, texto, button, image },
 }: TProps) => {
     return (
         <div className="tw-h-full md:tw-min-h-[90vh] xl:tw-min-h-[90vh]  tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">

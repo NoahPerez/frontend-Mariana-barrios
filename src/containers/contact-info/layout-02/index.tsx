@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Section from "@ui/section";
-import GoogleMap from "@ui/google-map";
 import { ItemType, SectionTitleType, TSection } from "@utils/types";
 import { scrollUpVariants } from "@utils/variants";
 
@@ -16,7 +15,7 @@ type TProps = TSection & {
     };
 };
 
-const ContactInfo = ({ data: { section_title, items, location } }: TProps) => {
+const ContactInfo = ({ data: { section_title, items } }: TProps) => {
     return (
         <Section className="contact-info-area" space="none">
             <div className="tw-container">

@@ -1,6 +1,6 @@
-import { API_URL, STRAPI_URL } from "config/config";
 import { IService } from "./types.service";
 import { Card } from "./types.home";
+import { API_URL, STRAPI_URL } from "config/config";
 
 export async function getService() {
     const response = await fetch(`${API_URL}/servicio?populate=*`);

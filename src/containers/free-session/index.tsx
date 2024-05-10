@@ -12,7 +12,7 @@ type TProps = TSection & {
     };
 };
 
-const FreeSession = ({ data: { section_title, paragraph1, img } }: TProps) => {
+const FreeSession = ({ data: { section_title, paragraph1 } }: TProps) => {
     return (
         <Container clases="mybook-area" bg="white">
             <div className="tw-flex tw-rounded-3xl tw-overflow-hidden tw-bg-spring md:tw-flex-row tw-flex-col">

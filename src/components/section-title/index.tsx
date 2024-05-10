@@ -20,14 +20,8 @@ const SectionTitle = forwardRef<HTMLDivElement, TProps>(
         {
             className,
             title,
-            subtitle,
             description,
             align,
-            color,
-            titleSize,
-            subtitleClass,
-            titleClass,
-            descClass,
         },
         ref
     ) => {

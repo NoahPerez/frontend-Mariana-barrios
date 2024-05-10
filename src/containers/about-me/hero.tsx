@@ -4,14 +4,11 @@ import { motion } from "framer-motion";
 import { scrollUpVariants } from "@utils/variants";
 import {
     HeadingType,
-    TextType,
     ButtonType,
     ImageType,
     ICourse,
 } from "@utils/types";
 import { Text } from "@components/ui/text";
-import Button from "@components/ui/button";
-import { Container } from "@components/ui/container";
 
 type TProps = {
     data: {

@@ -13,7 +13,7 @@ type TProps = {
 };
 
 const MyBook = ({
-    data: { section_title, paragraph1, paragraph2, img },
+    data: { section_title, paragraph1, paragraph2 },
 }: TProps) => {
     return (
         <Container clases="mybook-area" bg="white">

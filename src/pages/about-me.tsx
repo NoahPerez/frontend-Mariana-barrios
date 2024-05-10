@@ -11,7 +11,7 @@ import TestimonialArea from "@containers/testimonial/layout-07";
 import NewsletterArea from "@containers/newsletter/layout-01";
 import FreeSession from "@containers/free-session";
 // import HeroAbout from "@containers/about-me/hero";
-import HeroArea from "@containers/hero/layout-01";
+// import HeroArea from "@containers/hero/layout-01";
 import MyBook from "@containers/mybook";
 
 import { normalizedData } from "@utils/methods";
@@ -41,11 +41,11 @@ const AboutMe: PageProps = ({ data }) => {
     return (
         <>
             <SEO title="Sobre Mi" />
-            <HeroArea
+            {/* <HeroArea
                 data={{
                     ...content?.["hero-area"], popularCourse: data.popularCourse,
                 }}
-            />
+            /> */}
             {/* <HeroArea data={content?.["hero-area"]} /> */}
             <AboutArea
                 data={content?.["about-area"]}

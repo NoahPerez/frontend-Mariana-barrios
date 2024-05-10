@@ -1,15 +1,9 @@
 import { motion } from "framer-motion";
-import Section from "@ui/section";
-import SectionTitle from "@components/section-title";
-import MottoText from "@ui/motto-text";
-import ServiceCard from "@components/icon-box/icon-box-01";
-import FunFact from "@components/funfact/funfact-01";
+
 import { ItemType, MottoType, SectionTitleType, TSection } from "@utils/types";
 import { scrollUpVariants } from "@utils/variants";
 import { Text } from "@components/ui/text";
 
-const AnimatedFunFact = motion(FunFact);
-const AnimatedServiceCard = motion(ServiceCard);
 
 type TProps = TSection & {
     data: {
@@ -36,6 +30,8 @@ const FunfactArea = ({
     data: { section_title, motto, items },
     titleSize,
 }: TProps) => {
+
+    console.log(section_title, motto, items, titleSize)
     return (
         <section className="funfact-area tw-bg-white tw-px-4 tw-py-12 md:tw-py-[100px] tw-flex tw-flex-col">
             <div className="tw-w-full tw-max-w-[1200px] tw-m-auto tw-gap-[50px] lg:tw-gap-7.5">

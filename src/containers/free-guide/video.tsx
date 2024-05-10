@@ -1,8 +1,6 @@
 import { SectionTitleType, ItemType } from "@utils/types";
 import { Text } from "@components/ui/text";
-import Button from "@components/ui/button";
 import { Container } from "@components/ui/container";
-import Testimonial from "@components/testimonial/testimonial-06";
 import { motion } from "framer-motion";
 import Video from "@ui/video-with-poster/video-02";
 import { scrollUpVariants } from "@utils/variants";
@@ -19,7 +17,7 @@ type TProps = {
         }[];
         items?: ItemType[];
         video?: {
-            videoId?: string;
+            videoId: string;
             channel?: string;
         };
     };
@@ -80,7 +78,7 @@ const VideoGuide = ({
             <div className="tw-w-full tw-absolute tw-block tw-left-0">
                 {video && images?.[0] && (
                     <AnimatedVideo
-                        poster={{ ...images[0], width: 700, height: 569 }}
+                        poster={{ ...images[0], width: 700, height: 569, src:'' }}
                         className="tw-max-w-[970px] tw-mx-auto"
                         video={video}
                         initial="offscreen"

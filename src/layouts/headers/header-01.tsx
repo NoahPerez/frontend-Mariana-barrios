@@ -6,9 +6,8 @@ import Logo from "@components/logo";
 // import SearchForm from "@components/forms/search-form";
 import MainMenu from "@components/menu/main-menu";
 import BurgerButton from "@ui/burger-button";
-import Anchor from "@ui/anchor";
+
 import menu from "@data/menu";
-import Button from "@ui/button";
 import { useSticky } from "@hooks";
 import Link from "next/link";
 import { Text } from "@components/ui/text";
@@ -17,12 +16,12 @@ import { Text } from "@components/ui/text";
 const MobileMenu = dynamic(() => import("../../components/menu/mobile-menu"), {
     ssr: false,
 });
-const FlyoutSearchForm = dynamic(
-    () => import("../../components/forms/flyout-search-form-01"),
-    {
-        ssr: false,
-    }
-);
+// const FlyoutSearchForm = dynamic(
+//     () => import("../../components/forms/flyout-search-form-01"),
+//     {
+//         ssr: false,
+//     }
+// );
 
 type TProps = {
     shadow?: boolean;
@@ -33,7 +32,6 @@ type TProps = {
 
 const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
     const router = useRouter();
-    const [visibleSearch, setVisibleSearch] = useState(false);
     const [offcanvas, setOffcanvas] = useState(false);
     const { sticky, measuredRef } = useSticky();
 

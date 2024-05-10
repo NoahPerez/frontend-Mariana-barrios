@@ -1,5 +1,6 @@
+
 import { API_URL, STRAPI_URL } from "config/config";
-import { IBlogs, Meta } from "./types";
+import { IBlogs } from "./types";
 
 export type IBlogData = {
     id: number;

@@ -1,6 +1,6 @@
-import { API_URL, STRAPI_URL } from "config/config";
 import { Card, IParrafo } from "./types.home";
 import { IAboutMe } from "./types.aboutme";
+import { API_URL, STRAPI_URL } from "config/config";
 
 export async function getAboutMe() {
     const response = await fetch(
