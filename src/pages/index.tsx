@@ -1,22 +1,18 @@
 import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 import Layout from "@layout/layout-01";
-import Wrapper from "@ui/wrapper/wrapper-01";
 // import AboutArea from "@containers/about/layout-01";
 
 // import FunFactArea from "@containers/funfact/layout-01";
-import TestimonialArea from "@containers/testimonial/layout-06";
+
 // import TestimonialArea from "@containers/testimonial/layout-01";
 // import VideoArea from "@containers/video/layout-01";
 // import BlogArea from "@containers/blog/layout-01";
-import BlogArea from "@containers/blog/layout-03";
 // import NewsletterArea from "@containers/newsletter/layout-01";
 
-import MyBook from "@containers/mybook";
-import FreeSession from "@containers/free-session";
+
 
 import { IHomeResult, getHome } from "services/pages/home";
-import { STRAPI_URL } from "config/config";
 import { ICommentResult, getComments } from "services/comments/getComments";
 import { IBlogData, getBlogs } from "services/blog/getBlogs";
 import {
@@ -25,6 +21,12 @@ import {
 } from "services/freeSesion/getFreeSesion";
 import AreasHome from "@uic/pages/home/AreasHome";
 import HeroArea from "@uic/common/HeroArea";
+import Wrapper from "@uic/ui/Wrapper-01";
+import TestimonialArea from "@uic/common/testimonial/TestimonialArea-06";
+import BlogArea from "@uic/common/blog/BlogArea-03";
+import MyBook from "@uic/common/mybook/MyBook";
+import FreeSession from "@uic/common/freeSesion/FreeSession";
+import { STRAPI_URL } from "config/config";
 
 type TProps = {
     data: {

@@ -1,30 +1,31 @@
 import { motion } from "framer-motion";
-import BlogCard from "@components/blog-card/blog-03";
-import SectionTitle from "@components/section-title";
 import { scrollUpVariants } from "@utils/variants";
-import { MottoType, SectionTitleType, IBlog, TSection } from "@utils/types";
-import { Container } from "@components/ui/container";
+import { MottoType, TSection } from "@utils/types";
 import Link from "next/link";
-import { Text } from "@components/ui/text";
+import { IBlogData } from "services/blog/getBlogs";
+import BlogCard from "./BlogCard-03";
+import { Container } from "@uic/ui/container";
+import SectionTitle from "../title/SectionTitle";
+import { Text } from "@uic/ui/text";
 
 const AnimatedSectionTitle = motion(SectionTitle);
 const AnimatedBlogCard = motion(BlogCard);
 
 type TProps = TSection & {
     data: {
-        section_title?: SectionTitleType;
+        title: string;
         motto?: MottoType;
-        blogs: IBlog[];
+        blogs: IBlogData[];
     };
 };
 
-const BlogArea = ({ data: { section_title, blogs }, titleSize }: TProps) => {
+const BlogArea = ({ data: { title, blogs }, titleSize }: TProps) => {
     return (
         <Container clases="blog-area" bg="white">
             <div className="tw-relative">
-                {section_title && (
+                {title && (
                     <AnimatedSectionTitle
-                        {...section_title}
+                        data={{ title }}
                         titleSize={titleSize}
                         className="tw-mb-7.5 md:tw-mb-15"
                         initial="offscreen"
@@ -37,13 +38,19 @@ const BlogArea = ({ data: { section_title, blogs }, titleSize }: TProps) => {
                 <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-7.5">
                     {blogs?.map((blog) => (
                         <AnimatedBlogCard
-                            key={blog.path}
+                            key={blog.id}
                             title={blog.title}
-                            path={blog.path}
-                            category={blog.category}
-                            postedAt={blog.postedAt}
-                            image={blog.image}
-                            views={blog.views}
+                            path={blog.slug}
+                            content={blog.body}
+                            postedAt=""
+                            shortDescription={blog.shortDescription}
+                            image={{
+                                src: blog.thumbnail,
+                                alt: blog.title,
+                                height: 400,
+                                width: 400,
+                            }}
+                            views={100}
                             initial="offscreen"
                             whileInView="onscreen"
                             viewport={{ once: true, amount: 0.4 }}
