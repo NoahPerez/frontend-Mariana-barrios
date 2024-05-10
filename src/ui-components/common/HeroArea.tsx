@@ -2,33 +2,38 @@ import { motion } from "framer-motion";
 // import CourseCard from "@components/course-card/course-01";
 // import BottomShape from "@ui/bottom-shape/shape-01";
 import { scrollUpVariants } from "@utils/variants";
-import {
-    HeadingType,
-    TextType,
-    ButtonType,
-    ImageType,
-    ICourse,
-    HeadlineType,
-} from "@utils/types";
+
 import { Text } from "@components/ui/text";
 import Button from "@components/ui/button";
 
 type TProps = {
     data: {
-        headings?: HeadingType[];
-        texts?: TextType[];
-        buttons?: ButtonType[];
-        images?: ImageType[];
-        popularCourse: ICourse;
-        headline?: HeadlineType[];
+        subtitle?: string;
+        title?: string;
+        texto?: string;
+        button?: string;
+        link?: string;
+        image: string;
     };
 };
 
-const HeroArea = ({ data: { headline, headings, texts, images } }: TProps) => {
+const HeroArea = ({
+    data: { subtitle, title, texto, button, link, image },
+}: TProps) => {
     return (
         <div className="tw-h-full md:tw-min-h-[90vh] xl:tw-min-h-[90vh]  tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
             <h1 className="tw-sr-only"> </h1>
             <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block ">
+                {image && (
+                    <img
+                        src={image}
+                        alt={title}
+                        loading="eager"
+                        className="tw-w-full tw-h-full tw-object-cover"
+                    />
+                )}
+            </div>
+            {/* <div className="tw-absolute tw-inset-0 -tw-z-10 tw-block md:tw-hidden">
                 {images?.[0]?.src && (
                     <img
                         src={images[0].src}
@@ -37,17 +42,7 @@ const HeroArea = ({ data: { headline, headings, texts, images } }: TProps) => {
                         className="tw-w-full tw-h-full tw-object-cover"
                     />
                 )}
-            </div>
-            <div className="tw-absolute tw-inset-0 -tw-z-10 tw-block md:tw-hidden">
-                {images?.[0]?.src && (
-                    <img
-                        src={images[0].src}
-                        alt={images[0]?.alt || "bg"}
-                        loading="eager"
-                        className="tw-w-full tw-h-full tw-object-cover"
-                    />
-                )}
-            </div>
+            </div> */}
             <div className="tw-container 3xl:tw-max-w-full 3xl:tw-px-37">
                 <div className="tw-grid md:tw-gap-7.5 md:tw-grid-cols-2 tw-pt-[80px]">
                     <motion.div
@@ -57,33 +52,27 @@ const HeroArea = ({ data: { headline, headings, texts, images } }: TProps) => {
                         viewport={{ once: true, amount: 0.1 }}
                         variants={scrollUpVariants}
                     >
-                        {headings?.[0]?.content && (
+                        {subtitle && (
                             <span className="tw-text-sm tw-mb-2.5 -tw-tracking-tightest tw-font-bold tw-leading-loose tw-uppercase tw-text-white tw-block md:tw-mb-[18px] md:tw-tracking-[4px]">
-                                {headings[0].content}
-                                {/* {headline} */}
+                                {subtitle}
                             </span>
                         )}
-                        {headings?.[1]?.content && (
+                        {title && (
                             <Text
                                 className="tw-mb-8"
                                 size="big"
                                 color="white"
                                 as="h1"
                             >
-                                {headings[1].content}
+                                {title}
                             </Text>
                         )}
-                        {texts?.map((text) => (
-                            <Text
-                                key={text.id}
-                                color="white"
-                                size="md"
-                                className="tw-mb-8"
-                            >
-                                {text.content}
+                        {texto && (
+                            <Text color="white" size="md" className="tw-mb-8">
+                                {texto}
                             </Text>
-                        ))}
-                        <Button>Una Session Gratuita 15min.</Button>
+                        )}
+                        <Button>{button}</Button>
                     </motion.div>
                     {/* <motion.div
                         className="course tw-flex tw-space-between tw-justify-center xl:tw-justify-end tw-relative tw-z-10"
