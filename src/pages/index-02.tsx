@@ -1,24 +1,28 @@
 import type { NextPage } from "next";
 import { GetStaticProps } from "next";
-import SEO from "@components/seo/page-seo";
 import Layout from "@layout/layout-01";
-import HeroArea from "@containers/hero/layout-02";
-import BrandArea from "@containers/brand/layout-01";
-import CourseArea from "@containers/course/layout-03";
-import ServiceArea from "@containers/service/layout-02";
-import VideoArea from "@containers/video/layout-02";
-import TestimonialArea from "@containers/testimonial/layout-02";
-import CtaArea from "@containers/cta/layout-02";
-import FunFactArea from "@containers/funfact/layout-03";
-import BlogArea from "@containers/blog/layout-02";
-import NewsletterArea from "@containers/newsletter/layout-01";
+import Wrapper from "@ui/wrapper/wrapper-01";
+import HeroArea from "@containers/hero/layout-01";
+// import AboutArea from "@containers/about/layout-01";
+
+// import FunFactArea from "@containers/funfact/layout-01";
+import TestimonialArea from "@containers/testimonial/layout-06";
+// import TestimonialArea from "@containers/testimonial/layout-01";
+// import VideoArea from "@containers/video/layout-01";
+// import BlogArea from "@containers/blog/layout-01";
+import BlogArea from "@containers/blog/layout-03";
+// import NewsletterArea from "@containers/newsletter/layout-01";
 
 import { normalizedData } from "@utils/methods";
 import { IBlog, ICourse } from "@utils/types";
 
+import MyBook from "@containers/mybook";
+import FreeSession from "@containers/free-session";
+import NewsletterArea from "@containers/newsletter/layout-01";
+import AreasHome from "@containers/home/areas";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
-import { getallCourses } from "../lib/course";
+import { getallCourses, getFilteredCourse } from "../lib/course";
 
 interface PageContent {
     section: string;
@@ -30,8 +34,8 @@ type TProps = {
             content: PageContent[];
         };
         courses: ICourse[];
-        recentPosts: IBlog[];
-        recentPostsWithImage: IBlog[];
+        popularCourse: ICourse;
+        blogs: IBlog[];
     };
 };
 
@@ -41,32 +45,59 @@ type PageProps = NextPage<TProps> & {
 
 const Home: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
-
+    const areaData = content["areas-area"];
+    const myBookData = content["mybook-area"];
     return (
         <>
-            <SEO title="Course Portal" />
-            <HeroArea data={content?.["hero-area"]} />
-            <BrandArea data={content?.["brand-area"]} />
-            <CourseArea
-                data={{ ...content?.["course-area"], courses: data.courses }}
-            />
-            <ServiceArea data={content?.["service-area"]} />
-            <VideoArea
-                data={content?.["video-area"]}
-                titleSize="large"
-                space="top-bottom-2"
-            />
-            <TestimonialArea data={content?.["testimonial-area"]} />
-            <CtaArea data={content?.["cta-area"]} />
-            <FunFactArea data={content?.["funfact-area"]} />
-            <BlogArea
+            <HeroArea
                 data={{
-                    ...content?.["blog-area"],
-                    recentPosts: data.recentPosts,
-                    recentPostsWithImage: data.recentPostsWithImage,
+                    ...content?.["hero-area"],
+                    popularCourse: data.popularCourse,
                 }}
             />
-            <NewsletterArea data={content?.["newsletter-area"]} />
+            {/* <div className="tw-w-full tw-p-2 tw-bg-primary">
+                <p className="tw-text-md sm:tw-text-[16px] tw-text-white tw-font-medium tw-leading-relaxed sm:tw-mx-auto md:tw-ml-0 md:tw-text-lg tw-text-center">
+                    Una Session Gratuita 15min.
+                </p>
+            </div> */}
+            <AreasHome data={{ ...areaData }} />
+            {/* <FunfactArea
+                data={content?.["funfact-area"]}
+                space="bottom"
+                bg="tw-bg-white tw-py-[100px]"
+                titleSize="large"
+            /> */}
+
+            {/* <AboutArea data={content?.["about-area"]} /> */}
+            {/* <Wrapper className="tw-py-[100px]">
+                <FunFactArea
+                    data={content?.["funfact-area"]}
+                    space="bottom-2"
+                />
+                <TestimonialArea
+                    data={content?.["testimonial-area"]}
+                    space="none"
+                />
+            </Wrapper> */}
+            <Wrapper className="tw-px-4 tw-py-12 md:tw-py-[100px]">
+                <TestimonialArea data={content?.["testimonial-area"]} />
+            </Wrapper>
+
+            <BlogArea
+                data={{ ...content?.["blog-area"], blogs: data.blogs }}
+                titleSize="large"
+            />
+            <MyBook data={{ ...myBookData }} />
+            <FreeSession data={{ ...content?.["freesesion-area"] }} />
+            <NewsletterArea data={{ ...content?.["newsletter-area"] }} />
+
+            {/* <NewsletterArea data={content?.["newsletter-area"]} /> */}
+            {/* <VideoArea data={content?.["video-area"]} space="none" /> */}
+            {/* <CourseArea
+                data={{ ...content?.["course-area"], courses: data.courses }}
+            />
+            <BlogArea data={{ ...content?.["blog-area"], blogs: data.blogs }} />
+            <BrandArea data={content?.["brand-area"]} /> */}
         </>
     );
 };
@@ -74,37 +105,37 @@ const Home: PageProps = ({ data }) => {
 Home.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("home", "index-02");
+    const page = getPageData("home", "index-01");
     const courses = getallCourses(
+        ["title", "thumbnail", "price", "currency"],
+        0,
+        3
+    );
+    const popularCourse = getFilteredCourse(
         [
             "title",
+            "published_at",
             "thumbnail",
             "price",
             "currency",
-            "total_lectures",
-            "total_students",
+            "excerpt",
+            "isPopular",
         ],
-        0,
-        6
+        "isPopular",
+        true
     );
-    const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
-    const { blogs: recentPostsWithImage } = getAllBlogs(
-        ["title", "image", "category", "views"],
-        5,
-        2
+    const { blogs } = getAllBlogs(
+        ["title", "image", "category", "postedAt", "views"],
+        0,
+        3
     );
     return {
         props: {
             data: {
                 page,
                 courses,
-                recentPosts,
-                recentPostsWithImage,
-            },
-            layout: {
-                headerShadow: true,
-                headerFluid: false,
-                footerMode: "light",
+                popularCourse,
+                blogs,
             },
         },
     };

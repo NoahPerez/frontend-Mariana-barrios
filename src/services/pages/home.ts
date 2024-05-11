@@ -41,7 +41,7 @@ export async function getHome() {
         text: attr.texto,
         textButton: attr.textoboton,
         linkButton: attr.linkboton,
-        banner: attr.banner.data?.attributes.url,
+        banner: `${STRAPI_URL}${attr.banner.data?.attributes.url}`,
         puedoAyudarteTitle: attr.puedoAyudarteTitulo,
         puedoAyudarteText: attr.puedoAyudarteTexto,
         puedoAyudarteCards: attr.Cards,

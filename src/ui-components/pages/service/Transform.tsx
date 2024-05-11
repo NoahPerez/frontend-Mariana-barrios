@@ -57,7 +57,7 @@ const TransformSection = ({
                                 >
                                     <div className="tw-rounded-full tw-w-12 tw-h-12 tw-bg-spring tw-p-2 tw-flex tw-items-center tw-justify-center tw-aspect-square">
                                         <img
-                                            src={e.icono ?? ""}
+                                            src={`/icons/svg/${e.icono ?? ""}.svg`}
                                             alt={e.titulo}
                                             width={25}
                                             height={25}

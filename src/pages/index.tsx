@@ -26,7 +26,6 @@ import TestimonialArea from "@uic/common/testimonial/TestimonialArea-06";
 import BlogArea from "@uic/common/blog/BlogArea-03";
 import MyBook from "@uic/common/mybook/MyBook";
 import FreeSession from "@uic/common/freeSesion/FreeSession";
-import { STRAPI_URL } from "config/config";
 
 type TProps = {
     data: {
@@ -69,7 +68,7 @@ const Home: PageProps = ({ data }) => {
                     texto: text,
                     button: textButton,
                     link: linkButton,
-                    image: `${STRAPI_URL}${banner}`,
+                    image: `${banner}`,
                 }}
             />
 
@@ -87,8 +86,9 @@ const Home: PageProps = ({ data }) => {
 
             <BlogArea
                 data={{
+                    showButton: true,
                     title: "Artículos · Post · Entrevistas · Podcast",
-                    blogs,
+                    blogs: blogs.slice(0,3),
                 }}
                 titleSize="large"
             />

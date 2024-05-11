@@ -7,19 +7,26 @@ import BlogCard from "./BlogCard-03";
 import { Container } from "@uic/ui/container";
 import SectionTitle from "../title/SectionTitle";
 import { Text } from "@uic/ui/text";
+import Pagination from "./pagination-01";
 
 const AnimatedSectionTitle = motion(SectionTitle);
 const AnimatedBlogCard = motion(BlogCard);
 
 type TProps = TSection & {
     data: {
-        title: string;
+        title?: string;
+        showButton: boolean;
         motto?: MottoType;
         blogs: IBlogData[];
+        pagiData?: {
+            currentPage: number;
+            numberOfPages: number;
+        };
     };
 };
 
-const BlogArea = ({ data: { title, blogs }, titleSize }: TProps) => {
+const BlogArea = ({ data: { title, blogs, pagiData, showButton = true }, titleSize }: TProps) => {
+    console.log({pagiData})
     return (
         <Container clases="blog-area" bg="white">
             <div className="tw-relative">
@@ -27,7 +34,7 @@ const BlogArea = ({ data: { title, blogs }, titleSize }: TProps) => {
                     <AnimatedSectionTitle
                         data={{ title }}
                         titleSize={titleSize}
-                        className="tw-mb-7.5 md:tw-mb-15"
+                        className="tw-mb-7.5 md:tw-mb-15 lg:tw-mt-4"
                         initial="offscreen"
                         whileInView="onscreen"
                         viewport={{ once: true, amount: 0.4 }}
@@ -40,8 +47,7 @@ const BlogArea = ({ data: { title, blogs }, titleSize }: TProps) => {
                         <AnimatedBlogCard
                             key={blog.id}
                             title={blog.title}
-                            path={blog.slug}
-                            content={blog.body}
+                            path={`/blog/${blog.slug}`}
                             postedAt=""
                             shortDescription={blog.shortDescription}
                             image={{
@@ -58,19 +64,29 @@ const BlogArea = ({ data: { title, blogs }, titleSize }: TProps) => {
                         />
                     ))}
                 </div>
-                <div className="tw-w-full tw-flex tw-items-center tw-justify-center tw-mt-12">
-                    <Link
-                        href="/blog"
-                        className="tw-rounded-lg tw-bg-primary tw-px-6 tw-py-2 tw-min-w-[200px]"
-                    >
-                        <Text
-                            className="tw-font-bold tw-w-full tw-text-center"
-                            color="white"
+                {showButton && (
+                    <div className="tw-w-full tw-flex tw-items-center tw-justify-center tw-mt-12">
+                        <Link
+                            href="/blog"
+                            className="tw-rounded-lg tw-bg-primary tw-px-6 tw-py-2 tw-min-w-[200px]"
                         >
-                            Leer más artículos
-                        </Text>
-                    </Link>
-                </div>
+                            <Text
+                                className="tw-font-bold tw-w-full tw-text-center"
+                                color="white"
+                            >
+                                Leer más artículos
+                            </Text>
+                        </Link>
+                    </div>
+                )}
+                {pagiData && pagiData.numberOfPages > 1 && (
+                    <Pagination
+                        className="tw-mt-[50px]"
+                        numberOfPages={pagiData.numberOfPages}
+                        currentPage={pagiData.currentPage}
+                        rootPage="blog"
+                    />
+                )}
             </div>
         </Container>
     );

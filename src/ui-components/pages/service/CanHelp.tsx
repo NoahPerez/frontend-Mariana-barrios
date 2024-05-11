@@ -32,7 +32,7 @@ const CanHelp = ({ data: { title, cards } }: TProps) => {
                                 className="tw-p-10 tw-border-[1px] tw-border-spring"
                             >
                                 <img
-                                    src={e.icono ?? ""}
+                                    src={`/icons/svg/${e.icono ?? ""}.svg`}
                                     alt={title}
                                     width={40}
                                     height={40}

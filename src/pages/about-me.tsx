@@ -17,6 +17,7 @@ import MyBook from "@containers/mybook";
 import { normalizedData } from "@utils/methods";
 
 import { getPageData } from "../lib/page";
+import HeroArea from "@containers/hero/layout-01";
 
 interface PageContent {
     section: string;
@@ -41,12 +42,12 @@ const AboutMe: PageProps = ({ data }) => {
     return (
         <>
             <SEO title="Sobre Mi" />
-            {/* <HeroArea
+            <HeroArea
                 data={{
-                    ...content?.["hero-area"], popularCourse: data.popularCourse,
+                    ...content?.["hero-area"],
                 }}
-            /> */}
-            {/* <HeroArea data={content?.["hero-area"]} /> */}
+            />
+           
             <AboutArea
                 data={content?.["about-area"]}
                 bg="tw-bg-white"
@@ -55,18 +56,13 @@ const AboutMe: PageProps = ({ data }) => {
             />
 
             <MyBook data={{ ...myBookData }} />
-            {/* <VideoArea data={content?.["video-area"]} titleSize="large" /> */}
+          
             <TestimonialArea
                 data={content?.["testimonial-area"]}
                 titleSize="large"
             />
 
-            {/* <CtaArea
-                data={content?.["cta-area"]}
-                space="bottom"
-                bg="tw-bg-light-100"
-            /> */}
-            {/* <TeamArea data={content?.["team-area"]} titleSize="large" /> */}
+           
             <FreeSession data={{ ...content?.["freesesion-area"] }} />
             <NewsletterArea data={content?.["newsletter-area"]} />
         </>

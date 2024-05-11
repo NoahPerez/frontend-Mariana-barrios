@@ -6,14 +6,14 @@ import Breadcrumb from "@components/breadcrumb";
 import BlogArea from "@containers/blog-full/layout-03";
 import { BlogMetaType, IBlog } from "@utils/types";
 import { getAllBlogs, getTags } from "../../lib/blog";
+import { IBlogData, getBlogBySlug, getSlugsBlogs } from "services/blog/getBlogs";
+import { Text } from "@uic/ui/text";
+import { Container } from "@uic/ui/container";
+import Markdown from "markdown-to-jsx";
 
 type TProps = {
     data: {
-        blogs: IBlog[];
-        recentPosts: IBlog[];
-        tags: BlogMetaType[];
-        currentPage: number;
-        numberOfPages: number;
+        blog: IBlogData;
     };
 };
 
@@ -21,50 +21,36 @@ type PageProps = NextPage<TProps> & {
     Layout: typeof Layout01;
 };
 
-const POSTS_PER_PAGE = 3;
 
 const BlogClassic: PageProps = ({
-    data: { blogs, recentPosts, tags, currentPage, numberOfPages },
+    data: { blog },
 }) => {
     return (
         <>
-            <SEO title={`Blog Classic - Page - ${currentPage}`} />
-            <Breadcrumb
+            <SEO title={`Blog | ${blog.title}`} />
+            {/* <Breadcrumb
                 pages={[{ path: "/", label: "home" }]}
                 currentPage="Blog"
-            />
-            <BlogArea
-                data={{
-                    blogs,
-                    recentPosts,
-                    tags,
-                    pagiData: {
-                        currentPage,
-                        numberOfPages,
-                        rootPage: "blog",
-                    },
-                }}
-            />
+            /> */}
+            <Container bg="white" >
+                <Text as="h1" className="tw-font-medium tw-w-full tw-text-center tw-mb-20 tw-mt-10" type="title" size="xl" >{blog.title}</Text>
+                <Markdown>
+                    {blog.body ?? ''}
+                </Markdown>
+            </Container>
         </>
     );
 };
 
 BlogClassic.Layout = Layout01;
 
-export const getStaticPaths: GetStaticPaths = () => {
-    const { count } = getAllBlogs([]);
-    const pages = Math.ceil(count / POSTS_PER_PAGE);
-
-    const pagesToGenerate = [...Array(pages).keys()]
-        .map((a) => {
-            if (a !== 0) return a + 1;
-            return null;
-        })
-        .filter(Boolean);
-
-    const paths = pagesToGenerate.map((page) => {
-        return { params: { page: String(page) } }; // cast page to string
-    });
+export const getStaticPaths: GetStaticPaths = async () => {
+    const slugs = await getSlugsBlogs()
+    const paths = slugs.map((e) => ({
+        params: {
+            page: e.slug
+        },
+    }));
 
     return {
         paths,
@@ -76,34 +62,12 @@ interface Params extends ParsedUrlQuery {
     page: string;
 }
 
-export const getStaticProps: GetStaticProps<TProps, Params> = ({ params }) => {
-    const page = params?.page;
-    const currentPage = !page || Number.isNaN(+page) ? 1 : +page;
-    const skip = (currentPage - 1) * POSTS_PER_PAGE;
-    const { blogs, count } = getAllBlogs(
-        [
-            "title",
-            "image",
-            "category",
-            "postedAt",
-            "views",
-            "author",
-            "excerpt",
-        ],
-        skip,
-        POSTS_PER_PAGE
-    );
-
-    const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
-    const tags = getTags();
+export const getStaticProps: GetStaticProps<TProps, Params> = async ({ params }) => {
+    const blog = await getBlogBySlug(params?.page ?? '');
     return {
         props: {
             data: {
-                blogs,
-                recentPosts,
-                tags,
-                currentPage,
-                numberOfPages: Math.ceil(count / POSTS_PER_PAGE),
+                blog,
             },
             layout: {
                 headerShadow: true,

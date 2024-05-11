@@ -3,22 +3,17 @@ import { GetStaticProps } from "next";
 import SEO from "@components/seo/page-seo";
 import Layout from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
-import ContactInfo from "@containers/contact-info/layout-02";
-import ContactForm from "@containers/contact-form/layout-02";
 
-import { normalizedData } from "@utils/methods";
 
-import { getPageData } from "../lib/page";
+import { IContactResult, getContact } from "services/contact/getContact";
+import ContactInfo from "@uic/pages/contact/ContactInfo";
+import ContactFormArea from "@uic/pages/contact/ContactForm";
 
-interface PageContent {
-    section: string;
-}
+
 
 type TProps = {
     data: {
-        page: {
-            content: PageContent[];
-        };
+        contact: IContactResult
     };
 };
 
@@ -26,8 +21,9 @@ type PageProps = NextPage<TProps> & {
     Layout: typeof Layout;
 };
 
-const ContactMe: PageProps = ({ data }) => {
-    const content = normalizedData<PageContent>(data.page?.content, "section");
+const ContactMe: PageProps = ({ data: { contact } }) => {
+   
+    console.log({contact})
 
     return (
         <>
@@ -37,20 +33,20 @@ const ContactMe: PageProps = ({ data }) => {
                 currentPage="Contact Us"
                 showTitle={false}
             />
-            <ContactInfo data={content?.["contact-info"]} />
-            <ContactForm data={content?.["contact-form"]} />
+            <ContactInfo data={contact} />
+            <ContactFormArea data={contact} />
         </>
     );
 };
 
 ContactMe.Layout = Layout;
 
-export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("inner", "contact-us");
+export const getStaticProps: GetStaticProps = async () => {
+    const contact = await getContact();
     return {
         props: {
             data: {
-                page,
+                contact,
             },
             layout: {
                 headerShadow: true,

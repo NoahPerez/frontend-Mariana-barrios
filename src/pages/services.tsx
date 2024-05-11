@@ -1,122 +1,111 @@
 import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 import Layout from "@layout/layout-01";
+import HeroArea from "@containers/hero/layout-01";
 
+import { normalizedData } from "@utils/methods";
+import { IBlog, ICourse } from "@utils/types";
 
+import NewsletterArea from "@containers/newsletter/layout-01";
+import FreeSession from "@containers/free-session";
+import CanHelp from "@containers/services/canhelp";
+import TransformSection from "@containers/services/transform";
+import GoodSection from "@containers/services/good";
+import StillQuestionSection from "@containers/services/still-questions";
+import { getPageData } from "../lib/page";
+import { getAllBlogs } from "../lib/blog";
+import { getallCourses, getFilteredCourse } from "../lib/course";
 
-import { getService, IServiceResult } from "services/pages/service";
-import { getFaqs, IFaqData } from "services/faqs/getFaqs";
-import {
-    getFreeSesion,
-    IFreeSesionResult,
-} from "services/freeSesion/getFreeSesion";
-import HeroArea from "@uic/common/HeroArea";
-import CanHelp from "@uic/pages/service/CanHelp";
-import TransformSection from "@uic/pages/service/Transform";
-import GoodSection from "@uic/pages/service/Good";
-import StillQuestionSection from "@uic/pages/service/StillQuestion";
-import FreeSession from "@uic/common/freeSesion/FreeSession";
+interface PageContent {
+    section: string;
+}
 
 type TProps = {
     data: {
-        service: IServiceResult;
-        faqs: IFaqData[];
-        freeSesion: IFreeSesionResult;
+        page: {
+            content: PageContent[];
+        };
+        courses: ICourse[];
+        popularCourse: ICourse;
+        blogs: IBlog[];
     };
 };
+
 type PageProps = NextPage<TProps> & {
     Layout: typeof Layout;
 };
 
-const Home: PageProps = ({
-    data: {
-        service: {
-            banner,
-            faqText,
-            faqTitle,
-            imgTransform,
-            linkButton,
-            listTransform,
-            moreQuestionsButtonText,
-            moreQuestionsLink,
-            moreQuestionsText,
-            moreQuestionsTitle,
-            subtitle,
-            subtitleTransform,
-            tePropongo,
-            tePropongoTitle,
-            text,
-            textButton,
-            textTransform,
-            title,
-            titleTransform,
-        },
-        faqs,
-        freeSesion,
-    },
-}) => {
+const Home: PageProps = ({ data }) => {
+    const content = normalizedData<PageContent>(data.page?.content, "section");
+
     return (
         <>
             <HeroArea
                 data={{
-                    image: banner,
-                    button: textButton,
-                    link: linkButton,
-                    subtitle,
-                    texto: text,
-                    title,
+                    ...content?.["hero-area"],
+                    popularCourse: data.popularCourse,
                 }}
             />
             <CanHelp
                 data={{
-                    title: tePropongoTitle,
-                    cards: tePropongo,
+                    ...content?.["canhelp-area"],
                 }}
             />
             <TransformSection
                 data={{
-                    title: titleTransform,
-                    subtitle: subtitleTransform,
-                    paragraphs: [{ id: 1, parrafo: textTransform }],
-                    img: imgTransform,
-                    cards: listTransform,
+                    ...content?.["transform-area"],
                 }}
             />
             <GoodSection
                 data={{
-                    faqs,
-                    texts: {
-                        title: faqTitle,
-                        paragraphs: [{ id: 1, parrafo: faqText }],
-                    },
+                    ...content?.["good-area"],
                 }}
             />
             <StillQuestionSection
                 data={{
-                    title: moreQuestionsTitle,
-                    link: moreQuestionsLink,
-                    buttonText: moreQuestionsButtonText,
-                    paragraphs: [{ id: 1, parrafo: moreQuestionsText }],
+                    ...content?.["stillq-area"],
                 }}
             />
-            <FreeSession data={freeSesion} />
-            {/* <NewsletterArea data={{ ...content?.["newsletter-area"] }} />  */}
+            <FreeSession data={{ ...content?.["freesesion-area"] }} />
+            <NewsletterArea data={{ ...content?.["newsletter-area"] }} />
         </>
     );
 };
 
 Home.Layout = Layout;
 
-export const getStaticProps: GetStaticProps = async () => {
-    const response = await getService();
-    const faqs = await getFaqs();
-    const freeSesion = await getFreeSesion();
+export const getStaticProps: GetStaticProps = () => {
+    const page = getPageData("inner", "services");
+    const courses = getallCourses(
+        ["title", "thumbnail", "price", "currency"],
+        0,
+        3
+    );
+    const popularCourse = getFilteredCourse(
+        [
+            "title",
+            "published_at",
+            "thumbnail",
+            "price",
+            "currency",
+            "excerpt",
+            "isPopular",
+        ],
+        "isPopular",
+        true
+    );
+    const { blogs } = getAllBlogs(
+        ["title", "image", "category", "postedAt", "views"],
+        0,
+        3
+    );
     return {
         props: {
             data: {
-                service: response,
-                faqs,
-                freeSesion,
+                page,
+                courses,
+                popularCourse,
+                blogs,
             },
         },
     };

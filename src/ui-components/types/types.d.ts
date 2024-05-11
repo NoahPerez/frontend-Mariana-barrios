@@ -193,7 +193,7 @@ export interface IBlog {
     tags: BlogMetaType[];
     views: number;
     author: IInstructor;
-    content: string;
+    content?: string;
     excerpt: string;
     shortDescription: string;
 }
