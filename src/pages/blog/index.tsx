@@ -1,7 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import SEO from "@components/seo/page-seo";
 import Layout01 from "@layout/layout-01";
-import Breadcrumb from "@components/breadcrumb";
 import { IBlogData, getBlogs, getMetaBlogs } from "services/blog/getBlogs";
 import BlogArea from "@uic/common/blog/BlogArea-03";
 

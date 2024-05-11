@@ -2,10 +2,7 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 import SEO from "@components/seo/page-seo";
 import Layout01 from "@layout/layout-01";
-import Breadcrumb from "@components/breadcrumb";
-import BlogArea from "@containers/blog-full/layout-03";
-import { BlogMetaType, IBlog } from "@utils/types";
-import { getAllBlogs, getTags } from "../../lib/blog";
+
 import { IBlogData, getBlogBySlug, getSlugsBlogs } from "services/blog/getBlogs";
 import { Text } from "@uic/ui/text";
 import { Container } from "@uic/ui/container";
