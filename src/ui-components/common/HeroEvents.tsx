@@ -13,7 +13,7 @@ type TProps = {
         image: string;
     };
 };
-const HeroEvent = ({ data: { subtitle, title, texto, button, image, link } }: TProps) => {
+const HeroEvent = ({ data: { subtitle, title, texto, button, image } }: TProps) => {
     return (
         <div className="tw-flex tw-relative tw-min-h-[80vh] tw-pb-[30px] tw-px-4 tw-bg-spring tw-pt-[60px]">
             <div className="tw-w-full md:tw-w-1/2 tw-py-12 md:tw-py-0 tw-mx-auto tw-flex tw-justify-end  tw-bg-transparent tw-items-center">

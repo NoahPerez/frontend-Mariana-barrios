@@ -1,13 +1,6 @@
-// import { motion } from "framer-motion";
-// import CourseCard from "@components/course-card/course-01";
-// import BottomShape from "@ui/bottom-shape/shape-01";
-// import { scrollUpVariants } from "@utils/variants";
-import { SectionTitleType } from "@utils/types";
 import { Text } from "@components/ui/text";
 import Button from "@components/ui/button";
-// import { Container } from "@components/ui/container";
-import Input from "@components/ui/form-elements/input";
-import { useId } from "react";
+
 
 type TProps = {
     data: {

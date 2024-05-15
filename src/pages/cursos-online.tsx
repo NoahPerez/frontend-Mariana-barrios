@@ -5,12 +5,11 @@ import Layout from "@layout/layout-01";
 // import HeroArea from "@containers/hero/layout-08";
 
 import { IEventResult, getEvent } from "services/pages/events";
-import HeroEvent from "@uic/common/HeroEvents";
+
 import { Text } from "@uic/ui/text";
 import { Container } from "@uic/ui/container";
 import Input from "@components/ui/form-elements/input";
 import Link from "next/link";
-import BlogArea from "@uic/common/blog/BlogArea-03";
 import HeroCursos from "@uic/common/HeroCursos";
 import { ICursoResult, getCursos } from "services/pages/cursos";
 import TestimonialCursos from "@uic/common/testimonial/TestimonialCursos";

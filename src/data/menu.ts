@@ -12,7 +12,7 @@ export default [
     {
         id: 3,
         label: "Cursos online",
-        path: "/free-guide",
+        path: "/cursos-online",
     },
     {
         id: 4,

@@ -1,9 +1,8 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import SEO from "@components/seo/page-seo";
 import Layout01 from "@layout/layout-01";
-import { IBlogData, PAGESIZE, getBlogs, getIdsBlogs, getMetaBlogs, getSlugsBlogs } from "services/blog/getBlogs";
+import { IBlogData, PAGESIZE, getBlogs, getIdsBlogs, getMetaBlogs } from "services/blog/getBlogs";
 import BlogArea from "@uic/common/blog/BlogArea-03";
-import { ParsedUrlQuery } from "querystring";
 
 type TProps = {
     data: {
