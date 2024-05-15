@@ -82,6 +82,7 @@ export const getStaticProps: GetStaticProps<TProps, Params> = async ({
                 footerMode: "light",
             },
         },
+        revalidate: 30,
     };
 };
 

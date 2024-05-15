@@ -79,6 +79,7 @@ export const getStaticProps: GetStaticProps<TProps> = async ({
                 footerMode: "light",
             },
         },
+        revalidate: 30,
     };
 };
 export default BlogPage;

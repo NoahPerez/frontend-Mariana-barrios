@@ -117,6 +117,7 @@ export const getStaticProps: GetStaticProps = async () => {
                 freeSesion,
             },
         },
+        revalidate: 30,
     };
 };
 

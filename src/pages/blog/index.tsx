@@ -46,9 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
             data: {
                 blogs,
                 currentPage: 1,
-                numberOfPages: Math.ceil(
-                    metaBlogs.pagination.total / PAGESIZE
-                ),
+                numberOfPages: Math.ceil(metaBlogs.pagination.total / PAGESIZE),
             },
             layout: {
                 headerShadow: true,
@@ -56,6 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
                 footerMode: "light",
             },
         },
+        revalidate: 30,
     };
 };
 

@@ -226,9 +226,10 @@ export const getStaticProps: GetStaticProps = async () => {
             data: {
                 cursos: response,
                 events,
-                comments
+                comments,
             },
         },
+        revalidate: 30,
     };
 };
 
