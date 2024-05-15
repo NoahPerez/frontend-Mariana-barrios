@@ -31,14 +31,16 @@ const BlogClassic: PageProps = ({ data: { blog } }) => {
                 currentPage="Blog"
             /> */}
             <Container bg="white">
-                <Text
-                    as="h1"
-                    className="tw-font-medium tw-w-full tw-text-center tw-mb-20 tw-mt-10"
-                    type="title"
-                    size="xl"
-                >
-                    {blog.title}
-                </Text>
+                {blog.title && (
+                    <Text
+                        as="h1"
+                        className="tw-font-medium tw-w-full tw-text-center tw-mb-20 tw-mt-10"
+                        type="title"
+                        size="xl"
+                    >
+                        {blog.title}
+                    </Text>
+                )}
                 <Markdown>{blog.body ?? ""}</Markdown>
             </Container>
         </>
