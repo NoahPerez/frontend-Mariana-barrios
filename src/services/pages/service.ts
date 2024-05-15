@@ -7,7 +7,7 @@ export async function getService() {
     const result = (await response.json()) as IService;
 
     const attr = result.data.attributes;
-
+    console.log({attr})
     const mappedData: IServiceResult = {
         id: result.data.id,
         subtitle: attr.SubtituloHeader,
@@ -22,7 +22,7 @@ export async function getService() {
         titleTransform: attr.TituloTransformacion,
         textTransform: attr.DescripcionTransformacion,
         listTransform: attr.ListaTransformacion,
-        imgTransform: `${STRAPI_URL}${attr.ImagenTransformacion.data.attributes.url}`,
+        imgTransform: `${STRAPI_URL}${attr?.ImagenTransformacion?.data?.attributes?.url}`,
         faqTitle: attr.FaqTitulo,
         faqText: attr.FaqTexto,
         moreQuestionsTitle: attr.MasPreguntasTitulo,

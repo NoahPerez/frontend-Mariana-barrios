@@ -11,9 +11,11 @@ export type IBlogData = {
     thumbnail: string;
 };
 
-export async function getBlogs() {
+export const PAGESIZE = 4
+
+export async function getBlogs({ page = 1}: { page: number}) {
     const response = await fetch(
-        `${API_URL}/blogs?populate=*&sort[0]=publishedAt:desc`
+        `${API_URL}/blogs?populate=*&sort[0]=publishedAt:desc&pagination[page]=${page}&pagination[pageSize]=${PAGESIZE}`
     );
     const { data } = (await response.json()) as IBlogs;
 
@@ -44,6 +46,18 @@ export async function getSlugsBlogs(){
     const mapped = data.map(e => {
         return {
             slug: e.attributes.slug
+        }
+    })
+
+    return mapped
+}
+export async function getIdsBlogs(){
+    const response = await fetch(`${API_URL}/blogs?[fields][0]=id`);
+    const { data } = (await response.json()) as IBlogs;
+
+    const mapped = data.map(e => {
+        return {
+            id: e.id
         }
     })
 

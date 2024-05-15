@@ -27,6 +27,7 @@ type TProps = TSection & {
 
 const BlogArea = ({ data: { title, blogs, pagiData, showButton = true }, titleSize }: TProps) => {
     console.log({pagiData})
+    console.log({blogs})
     return (
         <Container clases="blog-area" bg="white">
             <div className="tw-relative">

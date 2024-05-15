@@ -21,8 +21,8 @@ export default [
     },
     {
         id: 5,
-        label: "Eventos",
-        path: "/eventos",
+        label: "Eventos y Talleres",
+        path: "/eventos-y-talleres",
     },
     {
         id: 6,
@@ -30,7 +30,7 @@ export default [
         path: "/blog",
     },
     {
-        id: 5,
+        id: 7,
         label: "Contáctame",
         path: "/contact",
     },

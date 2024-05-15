@@ -104,7 +104,7 @@ Home.Layout = Layout;
 export const getStaticProps: GetStaticProps = async () => {
     const response = await getHome();
     const comments = await getComments();
-    const blogs = await getBlogs();
+    const blogs = await getBlogs({page: 1});
     const freeSesion = await getFreeSesion();
     return {
         props: {
