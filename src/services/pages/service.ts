@@ -15,7 +15,7 @@ export async function getService() {
         text: attr.textoHeader,
         textButton: attr.TextoBotonHeader,
         linkButton: attr.LinkBotonHeader,
-        banner: `${STRAPI_URL}${attr.BannerHeader.data.attributes.url}`,
+        banner: `${STRAPI_URL}${attr?.BannerHeader?.data?.attributes?.url}`,
         tePropongoTitle: attr.TePropongoTitulo,
         tePropongo: attr.tePropongo,
         subtitleTransform: attr.SubtituloTransformacion,

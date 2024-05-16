@@ -13,7 +13,7 @@ export async function getComments() {
             title: e.attributes.Nombre,
             body: e.attributes.Comentario,
             stars: e.attributes.estrellas,
-            img: `${STRAPI_URL}${e.attributes.avatar.data?.attributes.formats.small.url}`,
+            img: `${STRAPI_URL}${e?.attributes?.avatar?.data?.attributes?.formats?.small?.url}`,
         };
     });
     return mapped;

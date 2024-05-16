@@ -25,7 +25,7 @@ export async function getBlogs({ page = 1}: { page: number}) {
             slug: e.attributes.slug,
             title: e.attributes.titulo,
             shortDescription: e.attributes.descripcionCorta,
-            thumbnail: `${STRAPI_URL}${e.attributes.thumbnail.data.attributes.url}`,
+            thumbnail: `${STRAPI_URL}${e?.attributes?.thumbnail?.data?.attributes?.url}`,
         };
     });
     return mapped;
@@ -76,7 +76,7 @@ export async function getBlogBySlug(slug: string){
             title: e.attributes.titulo,
             body: e.attributes.descripcion,
             shortDescription: e.attributes.descripcionCorta,
-            thumbnail: `${STRAPI_URL}${e.attributes.thumbnail.data.attributes.url}`,
+            thumbnail: `${STRAPI_URL}${e?.attributes?.thumbnail?.data?.attributes?.url}`,
         };
     })[0];
     return mapped;

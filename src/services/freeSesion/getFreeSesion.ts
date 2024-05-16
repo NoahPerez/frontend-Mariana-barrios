@@ -13,7 +13,7 @@ export async function getFreeSesion() {
         text: res.data.attributes.freeSesion.Descripcion,
         textButton: res.data.attributes.freeSesion.TextoBoton,
         link: res.data.attributes.freeSesion.TextoLink,
-        img: `${STRAPI_URL}${res.data.attributes.freeSesion.Imagen.data.attributes.url}`,
+        img: `${STRAPI_URL}${res?.data?.attributes?.freeSesion?.Imagen?.data?.attributes?.url}`,
     };
     return mapped;
 }

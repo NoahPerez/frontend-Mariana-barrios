@@ -41,7 +41,7 @@ export async function getHome() {
         text: attr.texto,
         textButton: attr.textoboton,
         linkButton: attr.linkboton,
-        banner: `${STRAPI_URL}${attr.banner.data?.attributes.url}`,
+        banner: `${STRAPI_URL}${attr?.banner?.data?.attributes?.url}`,
         puedoAyudarteTitle: attr.puedoAyudarteTitulo,
         puedoAyudarteText: attr.puedoAyudarteTexto,
         puedoAyudarteCards: attr.Cards,
@@ -50,7 +50,7 @@ export async function getHome() {
             title: attr.ConsigueMiLibro.titulo,
             subtitle: attr.ConsigueMiLibro.subtitulo ?? "",
             buttonText: attr.ConsigueMiLibro.TextoBoton,
-            img: `${STRAPI_URL}${attr.ConsigueMiLibro.imagen.data?.attributes.url}`,
+            img: `${STRAPI_URL}${attr?.ConsigueMiLibro?.imagen?.data?.attributes.url}`,
             paragraphs: attr.ConsigueMiLibro.parrafos,
         },
         freeSesion: {
@@ -58,7 +58,7 @@ export async function getHome() {
             title: attr.SesionGratuita.titulo,
             subtitle: attr.SesionGratuita.subtitulo ?? "",
             buttonText: attr.SesionGratuita.TextoBoton,
-            img: `${STRAPI_URL}${attr.SesionGratuita.imagen.data?.attributes.url}`,
+            img: `${STRAPI_URL}${attr?.SesionGratuita?.imagen?.data?.attributes.url}`,
             paragraphs: attr.SesionGratuita.parrafos,
         },
     };
