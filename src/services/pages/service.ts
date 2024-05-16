@@ -1,6 +1,6 @@
 import { IService } from "./types.service";
 import { Card } from "./types.home";
-import { API_URL, STRAPI_URL } from "config/config";
+import { API_URL } from "config/config";
 
 export async function getService() {
     const response = await fetch(`${API_URL}/servicio?populate=*`);
@@ -15,14 +15,14 @@ export async function getService() {
         text: attr.textoHeader,
         textButton: attr.TextoBotonHeader,
         linkButton: attr.LinkBotonHeader,
-        banner: `${STRAPI_URL}${attr?.BannerHeader?.data?.attributes?.url}`,
+        banner: `${attr?.BannerHeader?.data?.attributes?.url}`,
         tePropongoTitle: attr.TePropongoTitulo,
         tePropongo: attr.tePropongo,
         subtitleTransform: attr.SubtituloTransformacion,
         titleTransform: attr.TituloTransformacion,
         textTransform: attr.DescripcionTransformacion,
         listTransform: attr.ListaTransformacion,
-        imgTransform: `${STRAPI_URL}${attr?.ImagenTransformacion?.data?.attributes?.url}`,
+        imgTransform: `${attr?.ImagenTransformacion?.data?.attributes?.url}`,
         faqTitle: attr.FaqTitulo,
         faqText: attr.FaqTexto,
         moreQuestionsTitle: attr.MasPreguntasTitulo,

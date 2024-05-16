@@ -1,6 +1,6 @@
 import { Card, IParrafo } from "./types.home";
 import { IAboutMe } from "./types.aboutme";
-import { API_URL, STRAPI_URL } from "config/config";
+import { API_URL } from "config/config";
 
 export async function getAboutMe() {
     const response = await fetch(
@@ -15,12 +15,12 @@ export async function getAboutMe() {
         title: attr.TextoHeader,
         buttonHeader: attr.BotonHeader,
         linkHeader: attr.LinkHeader,
-        banner: `${STRAPI_URL}${attr?.BannerHeader?.data?.attributes?.url}`,
+        banner: `${attr?.BannerHeader?.data?.attributes?.url}`,
         ourWork: {
             buttonText: attr.OurWork.TextoBoton,
             title: attr.OurWork.titulo,
             subtitle: attr.OurWork.subtitulo ?? "",
-            img: `${STRAPI_URL}${attr?.OurWork?.Imagen?.data?.attributes?.url}`,
+            img: `${attr?.OurWork?.Imagen?.data?.attributes?.url}`,
             paragraphs: attr.OurWork.parrafos,
             link: attr.OurWork.LinkBoton ?? "",
             id: attr.OurWork.id,

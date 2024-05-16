@@ -1,4 +1,4 @@
-import { API_URL, STRAPI_URL } from "config/config";
+import { API_URL } from "config/config";
 import { Bloque, ICurso, Parrafo } from "./types.cursos";
 
 export async function getCursos() {
@@ -15,8 +15,8 @@ export async function getCursos() {
         textHeader: attr.TextoHeader,
         buttonHeader: attr.TextoBoton,
         linkHeader: attr.Link ?? "",
-        image: `${STRAPI_URL}${attr?.Imagen?.data?.attributes?.url}`,
-        posterVideo: `${STRAPI_URL}${attr?.posterVideo?.data?.attributes?.url}`,
+        image: `${attr?.Imagen?.data?.attributes?.url}`,
+        posterVideo: `${attr?.posterVideo?.data?.attributes?.url}`,
         subtitleTrasnform: attr.SubtituloTransform,
         titleTrasnform: attr.TituloTransform,
         textTransform: attr.ParrafoTransform,

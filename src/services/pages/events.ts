@@ -1,5 +1,5 @@
 
-import { API_URL, STRAPI_URL } from "config/config";
+import { API_URL } from "config/config";
 import { IEvents } from "./types.events";
 import { IBlogData } from "services/blog/getBlogs";
 
@@ -18,7 +18,7 @@ export async function getEvent() {
         textHeader: attr.TextoHeader,
         buttonHeader: attr.BotonHeader,
         linkHeader: attr.LinkHeader ?? "",
-        image: `${STRAPI_URL}${attr?.ImagenHeader?.data?.attributes?.url}`,
+        image: `${attr?.ImagenHeader?.data?.attributes?.url}`,
         titleEvent: attr.TituloEventos,
         pasos: {
             id: attr.pasos.id,
@@ -26,7 +26,7 @@ export async function getEvent() {
             text: attr.pasos.parrafo,
             textButton: attr.pasos.TextoBoton,
             link: attr.pasos.LinkBoton,
-            img: `${STRAPI_URL}${attr.pasos?.Imagen?.data?.attributes?.url}`,
+            img: `${attr.pasos?.Imagen?.data?.attributes?.url}`,
         },
         viaje: {
             id: attr.Viaje.id,
@@ -34,7 +34,7 @@ export async function getEvent() {
             text: attr.Viaje.parrafo,
             textButton: attr.Viaje.TextoBoton,
             link: attr.Viaje.LinkBoton,
-            img: `${STRAPI_URL}${attr.Viaje?.Imagen?.data?.attributes?.url}`,
+            img: `${attr.Viaje?.Imagen?.data?.attributes?.url}`,
         },
         blogs: attr.blogs.data.map((e) => {
             return {
@@ -42,7 +42,7 @@ export async function getEvent() {
                 slug: e.attributes.slug,
                 title: e.attributes.titulo,
                 shortDescription: e.attributes.descripcionCorta,
-                thumbnail: `${STRAPI_URL}${e.attributes?.thumbnail?.data?.attributes?.url}`,
+                thumbnail: `${e.attributes?.thumbnail?.data?.attributes?.url}`,
             };
         }),
     };

@@ -1,4 +1,4 @@
-import { API_URL, STRAPI_URL } from "config/config";
+import { API_URL } from "config/config";
 import { IComments, IDataComment } from "./types.comments";
 
 export async function getComments() {
@@ -13,7 +13,7 @@ export async function getComments() {
             title: e.attributes.Nombre,
             body: e.attributes.Comentario,
             stars: e.attributes.estrellas,
-            img: `${STRAPI_URL}${e?.attributes?.avatar?.data?.attributes?.formats?.small?.url}`,
+            img: `${e?.attributes?.avatar?.data?.attributes?.formats?.small?.url}`,
         };
     });
     return mapped;
