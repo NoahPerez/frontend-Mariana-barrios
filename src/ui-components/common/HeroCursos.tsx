@@ -1,5 +1,6 @@
 import { Text } from "@components/ui/text";
 import Button from "@components/ui/button";
+import { StrapiImage } from "./StrapiImage";
 
 
 type TProps = {
@@ -44,7 +45,13 @@ const HeroCursos = ({
             </div>
             <div className="tw-bg-spring tw-items-center tw-w-1/2 tw-hidden tw-justify-start md:tw-flex">
                 <div className="tw-max-w-[600px] md:tw-px-4 md:tw-pl-16 lg:tw-pl-24  tw-py-12 tw-w-full tw-block">
-                    <img src={image ?? '/images/noimage.png'} alt={title} />
+                    <StrapiImage
+                        src={image}
+                        alt={title || ""}
+                        width={500}
+                        height={250}
+                    />
+                    {/* <img src={image ?? "/images/noimage.png"} alt={title} /> */}
                 </div>
             </div>
         </div>

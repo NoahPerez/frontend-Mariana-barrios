@@ -3,6 +3,7 @@ import { Text } from "@uic/ui/text";
 import { TSection } from "@utils/types";
 import Link from "next/link";
 import { IFreeSesionResult } from "services/freeSesion/getFreeSesion";
+import { StrapiImage } from "../StrapiImage";
 
 type TProps = TSection & {
     data: IFreeSesionResult;
@@ -39,11 +40,18 @@ const FreeSession = ({
                     </Link>
                 </div>
                 <div className="tw-w-full tw-rounded-r-3xl md:tw-w-1/3 tw-flex tw-justify-end tw-aspect-square">
-                    <img
+                    <StrapiImage
+                        src={img}
+                        alt={title || "Sesion gratuita"}
+                        width={100}
+                        height={250}
+                        className="md:tw-max-w-[400px] tw-w-full tw-aspect-square tw-object-cover"
+                    />
+                    {/* <img
                         src={img}
                         alt={title}
                         className="md:tw-max-w-[400px] tw-w-full tw-aspect-square tw-object-cover"
-                    />
+                    /> */}
                 </div>
             </div>
         </Container>

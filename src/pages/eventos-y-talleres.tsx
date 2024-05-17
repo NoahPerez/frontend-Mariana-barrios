@@ -12,6 +12,7 @@ import { Container } from "@uic/ui/container";
 import Input from "@components/ui/form-elements/input";
 import Link from "next/link";
 import BlogArea from "@uic/common/blog/BlogArea-03";
+import { StrapiImage } from "@uic/common/StrapiImage";
 
 type TProps = {
     data: {
@@ -45,12 +46,19 @@ const AboutMe: PageProps = ({
 
             <Container bg="white">
                 <div className="tw-flex tw-gap-5 tw-flex-col md:tw-flex-row">
-                    <img
+                    <StrapiImage
+                        width={300}
+                        height={200}
+                        src={pasos.img}
+                        alt={pasos.title}
+                        className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
+                    />
+                    {/* <img
                         width={300}
                         src={pasos.img ?? "/images/noimage.png"}
                         alt={pasos.title}
                         className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
-                    />
+                    /> */}
                     <div className="tw-flex tw-flex-col md:tw-w-1/2 tw-w-full tw-gap-4 tw-justify-center tw-items-start ">
                         <Text size="2xl" className="tw-font-bold">
                             {pasos.title}
@@ -75,12 +83,19 @@ const AboutMe: PageProps = ({
                 </div>
                 <div className="tw-w-full tw-my-20" />
                 <div className="tw-flex tw-gap-5 tw-flex-col md:tw-flex-row-reverse">
-                    <img
+                    <StrapiImage
+                        width={300}
+                        height={200}
+                        src={viaje.img}
+                        alt={viaje.title}
+                        className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
+                    />
+                    {/* <img
                         width={300}
                         src={viaje.img ?? "/images/noimage.png"}
                         alt={viaje.title}
                         className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
-                    />
+                    /> */}
                     <div className="tw-flex tw-flex-col md:tw-w-1/2 tw-w-full tw-gap-4 tw-justify-center tw-items-start ">
                         <Text size="2xl" className="tw-font-bold">
                             {viaje.title}
@@ -104,7 +119,7 @@ const AboutMe: PageProps = ({
                     </div>
                 </div>
                 <div className="tw-w-full tw-my-10" />
-              
+
                 <BlogArea
                     data={{
                         showButton: false,

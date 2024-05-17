@@ -51,7 +51,7 @@ const AreasHome = ({
                             <div
                                 key={item.id}
                                 className="tw-transition-all tw-border-[1px] tw-border-transparent hover:tw-border-spring tw-p-4 hover:tw-shadow-md hover:tw-shadow-black/5"
-                            >
+                            >   
                                 <img
                                     src={`/icons/svg/${item.icono ?? ""}.svg`}
                                     alt={item.titulo}

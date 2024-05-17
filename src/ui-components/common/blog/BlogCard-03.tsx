@@ -3,6 +3,7 @@ import clsx from "clsx";
 import Anchor from "@ui/anchor";
 import { IBlog } from "@uic/types/types";
 import { Text } from "@uic/ui/text";
+import { StrapiImage } from "../StrapiImage";
 
 type TProps = Pick<
     IBlog,
@@ -38,14 +39,21 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                 <div className="tw-relative tw-overflow-hidden tw-rounded tw-h-[250px]">
                     {image?.src && (
                         <figure className="tw-transition-transform tw-duration-1500 tw-h-full group-hover:tw-scale-110">
-                            <img
+                            <StrapiImage
+                                alt={image?.alt || "Event"}
+                                height={image.height || 250}
+                                width={image.width || 480}
+                                className="tw-w-full tw-h-full tw-object-cover"
+                                src={image.src}
+                            />
+                            {/* <img
                                 className="tw-w-full tw-h-full tw-object-cover"
                                 src={image.src}
                                 alt={image?.alt || "Event"}
                                 width={image.width || 480}
                                 height={image.height || 250}
                                 loading={image.loading || "lazy"}
-                            />
+                            /> */}
                         </figure>
                     )}
                     <Anchor className="link-overlay" path={path}>

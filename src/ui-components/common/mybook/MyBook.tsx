@@ -3,6 +3,7 @@ import { Container } from "@uic/ui/container";
 import { Text } from "@uic/ui/text";
 import Link from "next/link";
 import { IBlock } from "services/pages/home";
+import { StrapiImage } from "../StrapiImage";
 
 type TProps = {
     data: IBlock;
@@ -56,11 +57,18 @@ const MyBook = ({
                     </Link>
                 </div>
                 <div className="tw-w-1/2 tw-mb-10 md:tw-mb-0 md:tw-px-4 tw-flex tw-justify-end">
-                    <img
+                    <StrapiImage
+                        alt={title || "Mi libro"}
+                        width={200}
+                        height={250}
+                        className="md:tw-max-w-[400px] tw-w-full tw-object-cover"
+                        src={img}
+                    />
+                    {/* <img
                         src={img}
                         alt={title}
                         className="md:tw-max-w-[400px] tw-w-full tw-object-cover"
-                    />
+                    /> */}
                 </div>
             </div>
         </Container>

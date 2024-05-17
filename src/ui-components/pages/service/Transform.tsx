@@ -1,3 +1,4 @@
+import { StrapiImage } from "@uic/common/StrapiImage";
 import { Container } from "@uic/ui/container";
 import { Text } from "@uic/ui/text";
 import { TSection } from "@utils/types";
@@ -57,7 +58,9 @@ const TransformSection = ({
                                 >
                                     <div className="tw-rounded-full tw-w-12 tw-h-12 tw-bg-spring tw-p-2 tw-flex tw-items-center tw-justify-center tw-aspect-square">
                                         <img
-                                            src={`/icons/svg/${e.icono ?? ""}.svg`}
+                                            src={`/icons/svg/${
+                                                e.icono ?? ""
+                                            }.svg`}
                                             alt={e.titulo}
                                             width={25}
                                             height={25}
@@ -71,11 +74,18 @@ const TransformSection = ({
                             ))}
                     </div>
                     <div className="tw-block tw-aspect-square">
-                        <img
+                        <StrapiImage
+                            alt={title || "transformacion"}
+                            width={100}
+                            height={250}
+                            className="tw-h-full tw-w-full tw-object-cover h-95"
+                            src={img}
+                        />
+                        {/* <img
                             className="tw-h-full tw-w-full tw-object-cover h-95"
                             src={img}
                             alt={title}
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>

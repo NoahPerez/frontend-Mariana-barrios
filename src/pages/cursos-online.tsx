@@ -16,6 +16,7 @@ import TestimonialCursos from "@uic/common/testimonial/TestimonialCursos";
 import { ICommentResult, getComments } from "services/comments/getComments";
 import Video from "@uic/common/video/Video";
 import { motion } from "framer-motion";
+import { StrapiImage } from "@uic/common/StrapiImage";
 
 type TProps = {
     data: {
@@ -47,12 +48,19 @@ const AboutMe: PageProps = ({ data: { comments, cursos, events: {pasos, viaje} }
 
             <Container bg="white">
                 <div className="tw-flex tw-gap-5 tw-flex-col md:tw-flex-row">
-                    <img
+                    <StrapiImage
+                        src={pasos.img}
+                        alt={pasos.title || ""}
+                        width={300}
+                        height={250}
+                        className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
+                    />
+                    {/* <img
                         width={300}
                         src={pasos.img ?? "/images/noimage.png"}
                         alt={pasos.title}
                         className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
-                    />
+                    /> */}
                     <div className="tw-flex tw-flex-col md:tw-w-1/2 tw-w-full tw-gap-4 tw-justify-center tw-items-start ">
                         <Text size="2xl" className="tw-font-bold">
                             {pasos.title}
@@ -77,12 +85,19 @@ const AboutMe: PageProps = ({ data: { comments, cursos, events: {pasos, viaje} }
                 </div>
                 <div className="tw-w-full tw-my-20" />
                 <div className="tw-flex tw-gap-5 tw-flex-col md:tw-flex-row-reverse">
-                    <img
+                    <StrapiImage
+                        src={viaje.img}
+                        alt={viaje.title || ""}
+                        width={300}
+                        height={250}
+                        className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
+                    />
+                    {/* <img
                         width={300}
                         src={viaje.img ?? "/images/noimage.png"}
                         alt={viaje.title}
                         className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
-                    />
+                    /> */}
                     <div className="tw-flex tw-flex-col md:tw-w-1/2 tw-w-full tw-gap-4 tw-justify-center tw-items-start ">
                         <Text size="2xl" className="tw-font-bold">
                             {viaje.title}
@@ -198,12 +213,20 @@ const AboutMe: PageProps = ({ data: { comments, cursos, events: {pasos, viaje} }
                                 {cursos.downloadTitle}
                             </Text>
                             {cursos.downloadParagraph?.map((e) => (
-                                <Text key={e.id} className="tw-text-center tw-max-w-[500px] tw-mx-auto tw-mb-6">
+                                <Text
+                                    key={e.id}
+                                    className="tw-text-center tw-max-w-[500px] tw-mx-auto tw-mb-6"
+                                >
                                     {e.parrafo}
                                 </Text>
                             ))}
 
-                            <Link href={cursos.linkDownload} className="tw-mb-24 tw-bg-primary tw-text-white hover:tw-text-white tw-px-4 tw-py-2 tw-rounded-lg">{cursos.buttonDownload}</Link>
+                            <Link
+                                href={cursos.linkDownload}
+                                className="tw-mb-24 tw-bg-primary tw-text-white hover:tw-text-white tw-px-4 tw-py-2 tw-rounded-lg"
+                            >
+                                {cursos.buttonDownload}
+                            </Link>
                         </>
                     )}
                 </div>

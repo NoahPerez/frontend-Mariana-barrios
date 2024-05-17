@@ -1,3 +1,4 @@
+import { StrapiImage } from "@uic/common/StrapiImage";
 import { Container } from "@uic/ui/container";
 import { Text } from "@uic/ui/text";
 import { TSection } from "@utils/types";
@@ -31,13 +32,20 @@ const CanHelp = ({ data: { title, cards } }: TProps) => {
                                 key={e.id}
                                 className="tw-p-10 tw-border-[1px] tw-border-spring"
                             >
-                                <img
+                                <StrapiImage
+                                    src={`/icons/svg/${e.icono ?? ""}.svg`}
+                                    alt={title ?? e.icono ?? ""}
+                                    width={40}
+                                    height={40}
+                                    className="tw-mb-4"
+                                />
+                                {/* <img
                                     src={`/icons/svg/${e.icono ?? ""}.svg`}
                                     alt={title}
                                     width={40}
                                     height={40}
                                     className="tw-mb-4"
-                                />
+                                /> */}
                                 <Text type="title" size="lg" as="h3">
                                     {e.titulo}
                                 </Text>

@@ -7,6 +7,7 @@ import { IBlock } from "services/pages/aboutme";
 import { TSection } from "@uic/types/types";
 import Section from "@uic/ui/Section";
 import SectionTitle from "@uic/common/title/SectionTitle";
+import { StrapiImage } from "@uic/common/StrapiImage";
 
 type TProps = TSection & {
     block: IBlock;
@@ -45,14 +46,21 @@ const AboutArea = ({ block, space, bg, titleSize }: TProps) => {
                             viewport={{ once: true, amount: 0.1 }}
                             variants={scrollUpVariants}
                         >
-                            <img
+                            <StrapiImage
+                                src={block.img}
+                                alt={block.title ?? "About One"}
+                                width={570}
+                                height={360}
+                                className="tw-rounded"
+                            />
+                            {/* <img
                                 src={block.img}
                                 alt={block.title ?? "About One"}
                                 width={570}
                                 height={360}
                                 loading="lazy"
                                 className="tw-rounded"
-                            />
+                            /> */}
                         </motion.div>
                     )}
                     {/* {images?.[1]?.src && (

@@ -5,6 +5,7 @@ import { scrollUpVariants } from "@utils/variants";
 
 import { Text } from "@components/ui/text";
 import Button from "@components/ui/button";
+import { StrapiImage } from "./StrapiImage";
 
 type TProps = {
     data: {
@@ -25,10 +26,11 @@ const HeroArea = ({
             <h1 className="tw-sr-only"> </h1>
             <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block ">
                 {image && (
-                    <img
+                    <StrapiImage 
+                        alt={title ?? ''}
                         src={image}
-                        alt={title}
-                        loading="eager"
+                        width={400}
+                        height={400}
                         className="tw-w-full tw-h-full tw-object-cover"
                     />
                 )}
