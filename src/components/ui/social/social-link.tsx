@@ -29,7 +29,7 @@ const SocialLink = ({
 }: TProps) => {
     // texted variant
     const textedWhite =
-        color === "white" && hover && "tw-text-white/50 hover:tw-text-white";
+        color === "white" && hover && "tw-text-primarytext hover:tw-text-primary";
     const textedLight =
         color === "light" && hover && "tw-text-body/50 hover:tw-text-primary";
     const textedDark =
@@ -60,7 +60,7 @@ const SocialLink = ({
                     "tw-text-center",
                     size === "md" && "tw-w-10 tw-h-10 tw-leading-10",
                     color === "light" &&
-                        "tw-border-gray-550 hover:tw-border-primary hover:tw-bg-primary hover:tw-text-white",
+                        "tw-border-gray-550 hover:tw-border-primary hover:tw-bg-primary hover:tw-text-primarytext ",
                 ],
                 variant === "outlined" && "tw-bg-transparent tw-border",
                 shape === "rounded" && "tw-rounded",

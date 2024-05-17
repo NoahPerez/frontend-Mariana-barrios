@@ -10,7 +10,7 @@ const WidgetTitle = ({ children, mode }: TProps) => {
         <h3
             className={clsx(
                 "tw-text-lg tw-mb-[17px]",
-                mode === "dark" && "tw-text-white"
+                mode === "dark" && "tw-text-primarytext"
             )}
         >
             {children}

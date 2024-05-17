@@ -30,6 +30,7 @@ export interface Card {
     icono: null;
     titulo: string;
     cuerpo: string;
+    link: string;
 }
 
 export interface Block {

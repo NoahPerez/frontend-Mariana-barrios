@@ -45,6 +45,16 @@ const AboutMe: PageProps = ({
             />
 
             <Container bg="white">
+                <BlogArea
+                    data={{
+                        showButton: false,
+                        title: titleEvent,
+                        blogs: blogs,
+                    }}
+                    titleSize="large"
+                />
+                <div className="tw-w-full tw-my-10" />
+
                 <div className="tw-flex tw-gap-5 tw-flex-col md:tw-flex-row">
                     <StrapiImage
                         width={300}
@@ -118,16 +128,6 @@ const AboutMe: PageProps = ({
                         </Link>
                     </div>
                 </div>
-                <div className="tw-w-full tw-my-10" />
-
-                <BlogArea
-                    data={{
-                        showButton: false,
-                        title: titleEvent,
-                        blogs: blogs,
-                    }}
-                    titleSize="large"
-                />
             </Container>
 
             {/* <NewsletterArea data={content?.["newsletter-area"]} /> */}

@@ -11,7 +11,6 @@ type TProps = {
 const TwoColumnListWidget = ({ className, mode }: TProps) => {
     return (
         <div className={clsx(className)}>
-            <WidgetTitle mode={mode}>Explore</WidgetTitle>
             <ul
                 className={clsx(
                     "tw-flex tw-flex-wrap tw-text-md tw-font-medium",
@@ -22,31 +21,35 @@ const TwoColumnListWidget = ({ className, mode }: TProps) => {
                     as="li"
                     className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
-                    <Anchor path="/start-here">Start here</Anchor>
+                    <Anchor path="/servicios">Servicios</Anchor>
                 </Text>
                 <Text
                     as="li"
                     className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
-                    <Anchor path="/success-story">Success story</Anchor>
+                    <Anchor path="/cursos-online">Cursos online</Anchor>
                 </Text>
                 <Text
                     as="li"
                     className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
-                    <Anchor path="/blogs/blog-grid">Blog</Anchor>
+                    <Anchor path="/eventos-y-talleres">
+                        Eventos y talleres
+                    </Anchor>
                 </Text>
                 <Text
                     as="li"
                     className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
-                    <Anchor path="/courses/grid-01">Courses</Anchor>
+                    <Anchor path="/blog">
+                        Blog
+                    </Anchor>
                 </Text>
                 <Text
                     as="li"
                     className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
-                    <Anchor path="/about-us-01">About us</Anchor>
+                    <Anchor path="/sobre-mi">Sobre mi</Anchor>
                 </Text>
                 <Text
                     as="li"

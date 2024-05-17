@@ -10,7 +10,7 @@ type TProps = {
 const TextWidget = ({ className, mode }: TProps) => {
     return (
         <div className={clsx(className)}>
-            <WidgetTitle mode={mode}>Address</WidgetTitle>
+            <WidgetTitle mode={mode}>Mariana Barrios</WidgetTitle>
             <div
                 className={clsx(
                     "content ",
@@ -18,8 +18,10 @@ const TextWidget = ({ className, mode }: TProps) => {
                 )}
             >
                 <p className="tw-mb-[11px]">
-                    Design amazing digital experiences that create more happy in
-                    the world.
+                    Te acompaño a un viaje de autodescubrimiento y
+                    transformación a través de la Creatividad Terapéutica El
+                    objetivo es recordar el sentido de tu existencia, para
+                    volver a reencontrarte con tu poder creador.
                 </p>
             </div>
             <Social

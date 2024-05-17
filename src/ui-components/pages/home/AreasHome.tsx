@@ -3,6 +3,7 @@
 import { Card } from "services/pages/types.home";
 import { Text } from "@uic/ui/text";
 import { Container } from "@uic/ui/container";
+import Link from "next/link";
 
 type TProps = {
     data: {
@@ -59,9 +60,11 @@ const AreasHome = ({
                                     height={40}
                                     className="tw-mb-4"
                                 />
-                                <Text as="h3" size="lg">
-                                    {item.titulo}
-                                </Text>
+                                <Link href={item.link ?? '/'}>
+                                    <Text as="h3" size="lg">
+                                        {item.titulo}
+                                    </Text>
+                                </Link>
                                 <Text size="md">{item.cuerpo}</Text>
                             </div>
                         ))}

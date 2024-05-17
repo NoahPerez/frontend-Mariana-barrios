@@ -49,7 +49,7 @@ const HeroArea = ({
             <div className="tw-container 3xl:tw-max-w-full 3xl:tw-px-37">
                 <div className="tw-grid md:tw-gap-7.5 md:tw-grid-cols-2 tw-pt-[80px]">
                     <motion.div
-                        className="content tw-text-center tw-mb-7.5 md:tw-text-left md:tw-self-center"
+                        className="content tw-text-center tw-mb-7.5 md:tw-text-left md:tw-self-center "
                         initial="offscreen"
                         whileInView="onscreen"
                         viewport={{ once: true, amount: 0.1 }}
@@ -74,7 +74,7 @@ const HeroArea = ({
                             <Text
                                 color="white"
                                 size="lg"
-                                className="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] tw-drop-shadow-xl tw-mb-8"
+                                className="[text-shadow:_0_1.3px_0_rgb(0_0_0_/_45%)] tw-drop-shadow-xl tw-mb-8"
                             >
                                 {texto}
                             </Text>
