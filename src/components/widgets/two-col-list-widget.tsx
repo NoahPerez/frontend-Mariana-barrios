@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
 import { Text } from "@components/ui/text";
-import WidgetTitle from "./widget-title";
 
 type TProps = {
     className?: string;
