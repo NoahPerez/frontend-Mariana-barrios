@@ -26,7 +26,7 @@ const HeroCursos = ({
                                 as="h1"
                                 size="big"
                                 color="primary"
-                                className="tw-w-full tw-text-left tw-mb-8"
+                                className=" tw-w-full tw-text-left tw-mb-8"
                             >
                                 {title}
                             </Text>

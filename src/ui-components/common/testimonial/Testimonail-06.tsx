@@ -37,12 +37,16 @@ const Testimonial = ({ name, review, image, rating, className }: TProps) => {
                     {image.src && (
                         <figure className="image tw-flex-auto0 tw-w-[70px] tw-flex">
                             <img
-                                src={image.src}
+                                src={
+                                    image?.src === "undefined"
+                                        ? "/images/user-noimage.png"
+                                        : image.src
+                                }
                                 alt={name}
                                 width={image?.width || 70}
                                 height={image?.height || 70}
                                 loading="lazy"
-                                className="tw-rounded-full tw-aspect-square tw-object-cover"
+                                className={`tw-rounded-full tw-aspect-square tw-object-cover ${image?.src === 'undefined' ? 'tw-opacity-25' :''}`}
                             />
                         </figure>
                     )}

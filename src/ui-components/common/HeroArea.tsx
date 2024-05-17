@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 // import BottomShape from "@ui/bottom-shape/shape-01";
 import { scrollUpVariants } from "@utils/variants";
 
-import { Text } from "@components/ui/text";
+
 import Button from "@components/ui/button";
 import { StrapiImage } from "./StrapiImage";
+import { Text } from "@uic/ui/text";
 
 type TProps = {
     data: {
@@ -26,8 +27,8 @@ const HeroArea = ({
             <h1 className="tw-sr-only"> </h1>
             <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block ">
                 {image && (
-                    <StrapiImage 
-                        alt={title ?? ''}
+                    <StrapiImage
+                        alt={title ?? ""}
                         src={image}
                         width={400}
                         height={400}
@@ -61,8 +62,8 @@ const HeroArea = ({
                         )}
                         {title && (
                             <Text
-                                className="tw-mb-8"
-                                size="big"
+                                className="tw-mb-8 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"
+                                size="2xl"
                                 color="white"
                                 as="h1"
                             >
@@ -70,7 +71,11 @@ const HeroArea = ({
                             </Text>
                         )}
                         {texto && (
-                            <Text color="white" size="md" className="tw-mb-8">
+                            <Text
+                                color="white"
+                                size="lg"
+                                className="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] tw-drop-shadow-xl tw-mb-8"
+                            >
                                 {texto}
                             </Text>
                         )}

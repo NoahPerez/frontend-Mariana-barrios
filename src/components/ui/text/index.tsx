@@ -44,7 +44,7 @@ export const Text: React.FC<Props> = ({
             "": color === "custom",
         },
         {
-            "tw-text-4xl md:tw-text-5xl": size === "big",
+            "tw-text-3xl md:tw-text-4xl": size === "big",
             "tw-text-2xl md:tw-text-3xl": size === "xl",
             "tw-text-lg md:tw-text-xl": size === "xlarge",
             "tw-text-base md:tw-text-lg": size === "lg",
