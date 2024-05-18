@@ -25,7 +25,7 @@ const ContactInfo = ({ data: { address,hour,title} }: TProps) => {
                     </motion.h2>
                 )}
                 <motion.div
-                    className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-x-7.5 tw-gap-y-10 tw-mb-10 md:tw-mb-15"
+                    className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 md:tw-flex md:tw-justify-center tw-gap-x-7.5 tw-gap-y-10 tw-mb-10 md:tw-mb-15"
                     initial="offscreen"
                     whileInView="onscreen"
                     viewport={{ once: true, amount: 0.4 }}
