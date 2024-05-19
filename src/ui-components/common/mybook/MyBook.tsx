@@ -56,7 +56,7 @@ const MyBook = ({
                         {buttonText}
                     </Link>
                 </div>
-                <div className="tw-w-1/2 tw-mb-10 md:tw-mb-0 md:tw-px-4 tw-flex tw-justify-end">
+                <div className="tw-w-full md:tw-w-1/2 tw-mb-10 md:tw-mb-0 md:tw-px-4 tw-flex tw-justify-end">
                     <StrapiImage
                         alt={title || "Mi libro"}
                         width={200}

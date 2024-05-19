@@ -18,7 +18,7 @@ const Footer01 = ({ mode }: TProps) => {
         >
             <Text className="tw-sr-only">Footer</Text>
             <div className="tw-container">
-                <div className="tw-grid tw-grid-cols-12">
+                <div className="tw-flex tw-flex-col md:tw-grid tw-grid-cols-12">
                     <TextWidget
                         mode={mode}
                         className="tw-col-span-3 lg:tw-col-span-3 xl:tw-col-span-3 tw-mb-[43px]"

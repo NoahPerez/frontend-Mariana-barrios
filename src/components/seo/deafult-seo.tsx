@@ -11,20 +11,20 @@ const SEO = () => {
             canonical="https://maxcoach-react.pages.dev/"
             openGraph={{
                 type: "website",
-                locale: "en_IE",
+                locale: "es_ES",
                 site_name: siteConfig.name,
                 images: [
                     {
-                        url: "https://maxcoach-react.pages.dev/images/about/about-me/about-me-popup-video-poster.jpg",
+                        url: "https://eu2.contabostorage.com/622f2bac1bfb414e890dd626a2f98454%3Amariana-creativa/herobanner_ddf355ed97.jpg",
                         width: 800,
                         height: 600,
-                        alt: "Og Image Alt",
+                        alt: "Mariana Barrios",
                     },
                     {
-                        url: "https://maxcoach-react.pages.dev/images/about/about-me/about-me-popup-video-poster.jpg",
+                        url: "https://eu2.contabostorage.com/622f2bac1bfb414e890dd626a2f98454%3Amariana-creativa/herobanner_ddf355ed97.jpg",
                         width: 900,
                         height: 800,
-                        alt: "Og Image Alt Second",
+                        alt: "Mariana Barrios",
                     },
                 ],
             }}
@@ -54,7 +54,7 @@ const SEO = () => {
             additionalLinkTags={[
                 {
                     rel: "apple-touch-icon",
-                    href: "/icons/icon-192x192.png",
+                    href: "/icons/icon.png",
                 },
                 {
                     rel: "manifest",

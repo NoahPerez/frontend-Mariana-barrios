@@ -18,19 +18,19 @@ const TwoColumnListWidget = ({ className, mode }: TProps) => {
             >
                 <Text
                     as="li"
-                    className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
+                    className="tw-text-left md:tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
                     <Anchor path="/servicios">Servicios</Anchor>
                 </Text>
                 <Text
                     as="li"
-                    className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
+                    className="tw-text-left md:tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
                     <Anchor path="/cursos-online">Cursos online</Anchor>
                 </Text>
                 <Text
                     as="li"
-                    className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
+                    className="tw-text-left md:tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
                     <Anchor path="/eventos-y-talleres">
                         Eventos y talleres
@@ -38,7 +38,7 @@ const TwoColumnListWidget = ({ className, mode }: TProps) => {
                 </Text>
                 <Text
                     as="li"
-                    className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
+                    className="tw-text-left md:tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
                     <Anchor path="/blog">
                         Blog
@@ -46,13 +46,13 @@ const TwoColumnListWidget = ({ className, mode }: TProps) => {
                 </Text>
                 <Text
                     as="li"
-                    className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
+                    className="tw-text-left md:tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
                     <Anchor path="/sobre-mi">Sobre mi</Anchor>
                 </Text>
                 <Text
                     as="li"
-                    className="tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
+                    className="tw-text-left md:tw-text-right tw-w-1/2 tw-pr-5 tw-mb-[11px]"
                 >
                     <Anchor path="/contact-us">Contact us</Anchor>
                 </Text>

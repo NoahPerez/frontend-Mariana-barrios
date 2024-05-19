@@ -25,15 +25,18 @@ const HeroArea = ({
     return (
         <div className="tw-h-full md:tw-min-h-[90vh] xl:tw-min-h-[90vh]  tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
             <h1 className="tw-sr-only"> </h1>
-            <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block ">
+            <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 md:tw-block ">
                 {image && (
-                    <StrapiImage
-                        alt={title ?? ""}
-                        src={image}
-                        width={400}
-                        height={400}
-                        className="tw-w-full tw-h-full tw-object-cover"
-                    />
+                    <>
+                        <div className="tw-bg-[rgba(0,0,0,0.3)] tw-w-full tw-h-full tw-absolute tw-left-0 tw-right-0"></div>
+                        <StrapiImage
+                            alt={title ?? ""}
+                            src={image}
+                            width={400}
+                            height={400}
+                            className="tw-w-full tw-h-full tw-object-cover"
+                        />
+                    </>
                 )}
             </div>
             {/* <div className="tw-absolute tw-inset-0 -tw-z-10 tw-block md:tw-hidden">
