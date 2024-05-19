@@ -8,7 +8,7 @@ const SEO = () => {
             titleTemplate={`%s - ${siteConfig.titleTemplate}`}
             defaultTitle={siteConfig.name}
             description={siteConfig.description}
-            canonical="https://maxcoach-react.pages.dev/"
+            canonical="https://mariana-barrios-terapeuta-font-end.ci2gmf.easypanel.host/"
             openGraph={{
                 type: "website",
                 locale: "es_ES",
