@@ -143,3 +143,11 @@
     gap: 10px;
     display: grid;     
 }
+
+
+
+@media (min-width: 768px) {
+  .bg-none-md {
+    background-image: none !important;
+  }
+}

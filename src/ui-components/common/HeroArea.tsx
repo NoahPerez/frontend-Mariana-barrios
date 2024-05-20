@@ -23,7 +23,7 @@ const HeroArea = ({
     data: { subtitle, title, texto, button, image },
 }: TProps) => {
     return (
-        <div className="tw-h-full md:tw-min-h-[90vh] xl:tw-min-h-[90vh]  tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
+        <div className="tw-h-full tw-min-h-[90vh] md:tw-min-h-[90vh] xl:tw-min-h-[90vh]  tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
             <h1 className="tw-sr-only"> </h1>
             <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 md:tw-block ">
                 {image && (

@@ -34,7 +34,7 @@ const BlogArea = ({ data: { title, blogs, pagiData, showButton = true }, titleSi
                     <AnimatedSectionTitle
                         data={{ title }}
                         titleSize={titleSize}
-                        className="tw-mb-7.5 md:tw-mb-15 lg:tw-mt-4"
+                        className="tw-mt-10 tw-mb-7.5 md:tw-mb-15 lg:tw-mt-4"
                         initial="offscreen"
                         whileInView="onscreen"
                         viewport={{ once: true, amount: 0.4 }}

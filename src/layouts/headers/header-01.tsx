@@ -68,13 +68,13 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                 >
                     <div
                         className={clsx(
-                            "tw-container tw-grid tw-grid-flow-col xl:tw-grid-cols-[22%_minmax(60%,_1fr)_22%] tw-items-center",
+                            "tw-container tw-grid tw-grid-flow-col ",
                             fluid && "tw-max-w-[1300px] tw-mx-auto tw-px-4 "
                         )}
                     >
                         <Logo
                             variant={mode}
-                            className="tw-max-w-[120px] sm:tw-max-w-[158px]"
+                            className="tw-flex tw-items-center tw-max-w-[120px] sm:tw-max-w-[158px]"
                         />
                         <MainMenu
                             className="tw-hidden xl:tw-block"
@@ -82,7 +82,7 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                             menu={menu}
                             color={mode}
                         />
-                        <div className="tw-flex tw-justify-end tw-items-center tw-ml-2">
+                        <div className="tw-flex tw-justify-end tw-items-center tw-ml-2 ">
                             <Link
                                 href="/"
                                 className="tw-rounded-lg tw-bg-primary tw-p-1 tw-px-4 md:tw-p-2 md:tw-px-5"
