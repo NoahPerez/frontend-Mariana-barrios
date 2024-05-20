@@ -17,7 +17,7 @@ type TProps = {
 const HeroEvent = ({ data: { subtitle, title, texto, button, image } }: TProps) => {
     return (
         <div
-            className="tw-flex tw-relative tw-min-h-[90vh] md:tw-min-h-[80vh] tw-pb-[30px]  tw-bg-spring tw-pt-[60px] tw-bg-cover   bg-none-md"
+            className="tw-flex tw-relative tw-min-h-[90vh] md:tw-min-h-[80vh] md:tw-pb-[30px]  tw-bg-spring tw-pt-[60px] tw-bg-cover   bg-none-md"
             style={{ backgroundImage: `url(${image})` }}
         >
             <div className="tw-bg-black/20 md:tw-bg-transparent tw-px-4 tw-w-full md:tw-w-1/2 tw-py-12 md:tw-py-0 tw-mx-auto tw-flex tw-justify-end   tw-items-center">
