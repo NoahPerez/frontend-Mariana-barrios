@@ -49,7 +49,7 @@ const HeroArea = ({
                     />
                 )}
             </div> */}
-            <div className="tw-container 3xl:tw-max-w-full 3xl:tw-px-37">
+            <div className="tw-container 3xl:tw-max-w-full 3xl:tw-px-37 tw-self-end tw-pb-4">
                 <div className="tw-grid md:tw-gap-7.5 md:tw-grid-cols-2 tw-pt-[80px]">
                     <motion.div
                         className="content tw-text-center tw-mb-7.5 md:tw-text-left md:tw-self-center "

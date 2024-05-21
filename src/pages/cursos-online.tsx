@@ -131,7 +131,7 @@ const AboutMe: PageProps = ({ data: { comments, cursos, events: {pasos, viaje} }
                 />
             </Container>
 
-            <Container bg="grey" clases=" tw-mb-[550px] tw-relative">
+            <Container bg="grey" clases=" tw-mb-[250px] sm:tw-mb-[350px] md:tw-mb-[550px] tw-relative">
                 <div className="tw-flex tw-flex-col   ">
                     <div className="tw-w-full tw-flex-col md:tw-flex-row tw-flex tw-gap-12 tw-justify-between">
                         {cursos.titleTrasnform && (
