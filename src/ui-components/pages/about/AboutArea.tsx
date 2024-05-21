@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-import { useUI } from "@contexts/ui-context";
 
 import { scrollUpVariants } from "@utils/variants";
 import { IBlock } from "services/pages/aboutme";
@@ -14,8 +13,6 @@ type TProps = TSection & {
 };
 
 const AboutArea = ({ block, space, bg, titleSize }: TProps) => {
-    const { trans1 } = useUI();
-    console.log({ block });
     return (
         <Section className="about-area" space={space} bg={bg}>
             <div className="tw-container tw-grid lg:tw-grid-cols-2 tw-items-center tw-gap-[50px] lg:tw-gap-7.5">
@@ -51,7 +48,7 @@ const AboutArea = ({ block, space, bg, titleSize }: TProps) => {
                                 alt={block.title ?? "About One"}
                                 width={570}
                                 height={360}
-                                className="tw-rounded"
+                                className="tw-rounded tw-w-full"
                             />
                             {/* <img
                                 src={block.img}
@@ -76,50 +73,7 @@ const AboutArea = ({ block, space, bg, titleSize }: TProps) => {
                         </div>
                     )} */}
 
-                    <motion.div
-                        className="tw-absolute tw-z-1 tw-top-[-51px] tw-left-0 lg:tw-left-[-107px]"
-                        animate={{
-                            x: trans1().x,
-                            y: trans1().y,
-                        }}
-                    >
-                        <span className="tw-block -tw-indent-[99999px] tw-border-[7px] tw-border-desert tw-rounded-full tw-w-[45px] tw-h-[45px] lg:tw-w-15 lg:tw-h-15">
-                            shape 1
-                        </span>
-                    </motion.div>
-                    <motion.div
-                        className="tw-absolute tw-z-1 tw-bottom-[-26px] tw-w-20 tw-left-0 lg:tw-w-auto lg:-tw-left-10"
-                        animate={{
-                            x: trans1().x,
-                            y: trans1().y,
-                        }}
-                    >
-                        <img
-                            src="/images/shape-animation/about-shape-1.png"
-                            alt=""
-                        />
-                    </motion.div>
-                    <motion.div
-                        className="tw-absolute tw-z-1 tw-right-2.5 -tw-bottom-10 tw-w-20 lg:tw-w-auto"
-                        animate={{
-                            x: trans1().x,
-                            y: trans1().y,
-                        }}
-                    >
-                        <img
-                            src="/images/shape-animation/nwesletter-shape-2.png"
-                            alt=""
-                        />
-                    </motion.div>
-                    <motion.div
-                        className="tw-absolute tw-z-1 tw-top-[-27px] tw-left-[360px] tw-w-20 lg:tw-w-auto"
-                        animate={{
-                            x: trans1().x,
-                            y: trans1().y,
-                        }}
-                    >
-                        <img src="/images/shape-animation/shape-1.png" alt="" />
-                    </motion.div>
+                 
                 </div>
             </div>
         </Section>
