@@ -7,6 +7,7 @@ import Feedback from "@ui/form-elements/feedback";
 import Button from "@ui/button";
 import { hasKey } from "@utils/methods";
 
+
 type TProps = {
     className?: string;
 };
@@ -27,9 +28,25 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
             formState: { errors },
         } = useForm<IFormValues>();
 
-        const onSubmit: SubmitHandler<IFormValues> = (data) => {
+        const onSubmit: SubmitHandler<IFormValues> = async (form) => {
             // eslint-disable-next-line no-console
-            console.log(data);
+            const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL
+            let url = `${API_URL}/formulario-contactos`;
+            console.log({url})
+            console.log(url)
+            const data = {
+                data: {...form}
+            }
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+            const data2 = await response.json();
+            
+            console.log({data2})
             setMessage("Thank you for your message!");
         };
         return (

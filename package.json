@@ -20,7 +20,7 @@
     "@googlemaps/react-wrapper": "^1.1.35",
     "@googlemaps/typescript-guards": "^2.0.3",
     "@types/markdown-to-jsx": "^7.0.1",
-    "axios": "^1.6.8",
+    "axios": "^1.7.2",
     "classnames": "^2.5.1",
     "clsx": "^1.2.1",
     "dayjs": "^1.11.6",
