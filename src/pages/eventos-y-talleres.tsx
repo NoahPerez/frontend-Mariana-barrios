@@ -9,10 +9,10 @@ import { IEventResult, getEvent } from "services/pages/events";
 import HeroEvent from "@uic/common/HeroEvents";
 import { Text } from "@uic/ui/text";
 import { Container } from "@uic/ui/container";
-import Input from "@components/ui/form-elements/input";
-import Link from "next/link";
 import BlogArea from "@uic/common/blog/BlogArea-03";
 import { StrapiImage } from "@uic/common/StrapiImage";
+import FormPasos from "@uic/ui/forms/form-pasos";
+import FormViajes from "@uic/ui/forms/form-viaje";
 
 type TProps = {
     data: {
@@ -74,21 +74,7 @@ const AboutMe: PageProps = ({
                             {pasos.title}
                         </Text>
                         <Text>{pasos.text}</Text>
-                        <Input id="input" name="name" placeholder="Nombre" />
-                        <Input
-                            id="input"
-                            name="email"
-                            placeholder="email@email.com"
-                        />
-                        <Text>
-                            We care about your data un your privacy policy
-                        </Text>
-                        <Link
-                            href={pasos.link ?? "/"}
-                            className="tw-rounded-lg tw-bg-primary tw-text-white tw-px-4 tw-p-2 hover:tw-text-white"
-                        >
-                            {pasos.textButton}
-                        </Link>
+                        <FormPasos button={pasos.textButton} />
                     </div>
                 </div>
                 <div className="tw-w-full tw-my-20" />
@@ -111,21 +97,7 @@ const AboutMe: PageProps = ({
                             {viaje.title}
                         </Text>
                         <Text>{viaje.text}</Text>
-                        <Input id="input" name="name" placeholder="Nombre" />
-                        <Input
-                            id="input"
-                            name="email"
-                            placeholder="email@email.com"
-                        />
-                        <Text>
-                            We care about your data un your privacy policy
-                        </Text>
-                        <Link
-                            href={viaje.link ?? "/"}
-                            className="tw-rounded-lg tw-bg-primary tw-text-white tw-px-4 tw-p-2 hover:tw-text-white"
-                        >
-                            {viaje.textButton}
-                        </Link>
+                        <FormViajes button={pasos.textButton} />
                     </div>
                 </div>
             </Container>
