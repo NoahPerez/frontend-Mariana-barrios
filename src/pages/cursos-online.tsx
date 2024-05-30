@@ -54,7 +54,7 @@ const AboutMe: PageProps = ({ data: { comments, cursos, events: {pasos, viaje} }
                         alt={pasos.title || ""}
                         width={300}
                         height={250}
-                        className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
+                        className="md:tw-p-8 md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
                     />
                     {/* <img
                         width={300}
@@ -77,7 +77,7 @@ const AboutMe: PageProps = ({ data: { comments, cursos, events: {pasos, viaje} }
                         alt={viaje.title || ""}
                         width={300}
                         height={250}
-                        className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
+                        className="md:tw-p-8 md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
                     />
                     {/* <img
                         width={300}

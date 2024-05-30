@@ -28,7 +28,7 @@ const HeroArea = ({
             <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 md:tw-block ">
                 {image && (
                     <>
-                        <div className="tw-bg-[rgba(0,0,0,0.3)] tw-w-full tw-h-full tw-absolute tw-left-0 tw-right-0"></div>
+                        <div className="bg-opacity md:tw-hidden tw-w-full tw-h-full tw-absolute tw-left-0 tw-right-0"></div>
                         <StrapiImage
                             alt={title ?? ""}
                             src={image}
@@ -49,7 +49,7 @@ const HeroArea = ({
                     />
                 )}
             </div> */}
-            <div className="tw-container 3xl:tw-max-w-full 3xl:tw-px-37 tw-self-end tw-pb-4">
+            <div className="tw-container 3xl:tw-max-w-full 3xl:tw-px-37 md:tw-self-center tw-self-end tw-pb-4">
                 <div className="tw-grid md:tw-gap-7.5 md:tw-grid-cols-2 tw-pt-[80px]">
                     <motion.div
                         className="content tw-text-center tw-mb-7.5 md:tw-text-left md:tw-self-center "
@@ -59,13 +59,13 @@ const HeroArea = ({
                         variants={scrollUpVariants}
                     >
                         {subtitle && (
-                            <span className="tw-text-sm tw-mb-2.5 -tw-tracking-tightest tw-font-bold tw-leading-loose tw-uppercase tw-text-white tw-block md:tw-mb-[18px] md:tw-tracking-[4px]">
+                            <span className="tw-text-sm tw-mb-2.5 -tw-tracking-tightest tw-font-bold tw-leading-loose tw-uppercase tw-text-white tw-block md:tw-mb-[18px] md:tw-tracking-[4px] text-shadow">
                                 {subtitle}
                             </span>
                         )}
                         {title && (
                             <Text
-                                className="tw-mb-8 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"
+                                className="text-shadow tw-mb-8 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"
                                 size="2xl"
                                 color="white"
                                 as="h1"
@@ -77,7 +77,7 @@ const HeroArea = ({
                             <Text
                                 color="white"
                                 size="lg"
-                                className="[text-shadow:_0_1.3px_0_rgb(0_0_0_/_45%)] tw-drop-shadow-xl tw-mb-8"
+                                className="text-shadow tw-mb-8"
                             >
                                 {texto}
                             </Text>

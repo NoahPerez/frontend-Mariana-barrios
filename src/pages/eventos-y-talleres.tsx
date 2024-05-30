@@ -61,7 +61,7 @@ const AboutMe: PageProps = ({
                         height={200}
                         src={pasos.img}
                         alt={pasos.title}
-                        className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
+                        className="md:tw-p-8 md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
                     />
                     {/* <img
                         width={300}
@@ -84,7 +84,7 @@ const AboutMe: PageProps = ({
                         height={200}
                         src={viaje.img}
                         alt={viaje.title}
-                        className="md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
+                        className="md:tw-p-8 md:tw-w-1/2 tw-w-full tw-aspect-square tw-border-[0.8px] tw-border-gray-200"
                     />
                     {/* <img
                         width={300}
