@@ -8,7 +8,6 @@ import { IEventResult, getEvent } from "services/pages/events";
 
 import { Text } from "@uic/ui/text";
 import { Container } from "@uic/ui/container";
-import Input from "@components/ui/form-elements/input";
 import Link from "next/link";
 import HeroCursos from "@uic/common/HeroCursos";
 import { ICursoResult, getCursos } from "services/pages/cursos";
