@@ -17,6 +17,8 @@ import { ICommentResult, getComments } from "services/comments/getComments";
 import Video from "@uic/common/video/Video";
 import { motion } from "framer-motion";
 import { StrapiImage } from "@uic/common/StrapiImage";
+import FormPasos from "@uic/ui/forms/form-pasos";
+import FormViajes from "@uic/ui/forms/form-viaje";
 
 type TProps = {
     data: {
@@ -66,21 +68,7 @@ const AboutMe: PageProps = ({ data: { comments, cursos, events: {pasos, viaje} }
                             {pasos.title}
                         </Text>
                         <Text>{pasos.text}</Text>
-                        <Input id="input" name="name" placeholder="Nombre" />
-                        <Input
-                            id="input"
-                            name="email"
-                            placeholder="email@email.com"
-                        />
-                        <Text>
-                            We care about your data un your privacy policy
-                        </Text>
-                        <Link
-                            href={pasos.link ?? "/"}
-                            className="tw-rounded-lg tw-bg-primary tw-text-white tw-px-4 tw-p-2 hover:tw-text-white"
-                        >
-                            {pasos.textButton}
-                        </Link>
+                        <FormPasos button={pasos.textButton} />
                     </div>
                 </div>
                 <div className="tw-w-full tw-my-20" />
@@ -103,21 +91,7 @@ const AboutMe: PageProps = ({ data: { comments, cursos, events: {pasos, viaje} }
                             {viaje.title}
                         </Text>
                         <Text>{viaje.text}</Text>
-                        <Input id="input" name="name" placeholder="Nombre" />
-                        <Input
-                            id="input"
-                            name="email"
-                            placeholder="email@email.com"
-                        />
-                        <Text>
-                            We care about your data un your privacy policy
-                        </Text>
-                        <Link
-                            href={viaje.link ?? "/"}
-                            className="tw-rounded-lg tw-bg-primary tw-text-white tw-px-4 tw-p-2 hover:tw-text-white"
-                        >
-                            {viaje.textButton}
-                        </Link>
+                        <FormViajes button={pasos.textButton} />
                     </div>
                 </div>
                 <div className="tw-w-full tw-my-10" />
@@ -131,7 +105,10 @@ const AboutMe: PageProps = ({ data: { comments, cursos, events: {pasos, viaje} }
                 />
             </Container>
 
-            <Container bg="grey" clases=" tw-mb-[250px] sm:tw-mb-[350px] md:tw-mb-[550px] tw-relative">
+            <Container
+                bg="grey"
+                clases=" tw-mb-[250px] sm:tw-mb-[350px] md:tw-mb-[550px] tw-relative"
+            >
                 <div className="tw-flex tw-flex-col   ">
                     <div className="tw-w-full tw-flex-col md:tw-flex-row tw-flex tw-gap-12 tw-justify-between">
                         {cursos.titleTrasnform && (
