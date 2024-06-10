@@ -34,12 +34,20 @@ const AreasHome = ({
                     )}
                     <div className="tw-flex tw-flex-col tw-w-full md:tw-w-1/2">
                         {paragraph1 && (
-                            <Text size="md" color="primary">
+                            <Text
+                                size="md"
+                                color="primary"
+                                // className="text-[15px] lg:text-[17px]"
+                            >
                                 {paragraph1}
                             </Text>
                         )}
                         {paragraph2 && (
-                            <Text size="md" color="primary">
+                            <Text
+                                size="md"
+                                color="primary"
+                                // className="text-[15px] lg:text-[17px]"
+                            >
                                 {paragraph2}
                             </Text>
                         )}
@@ -52,7 +60,7 @@ const AreasHome = ({
                             <div
                                 key={item.id}
                                 className="tw-transition-all tw-border-[1px] tw-border-transparent hover:tw-border-spring tw-p-4 hover:tw-shadow-md hover:tw-shadow-black/5"
-                            >   
+                            >
                                 <img
                                     src={`/icons/svg/${item.icono ?? ""}.svg`}
                                     alt={item.titulo}
@@ -60,12 +68,18 @@ const AreasHome = ({
                                     height={40}
                                     className="tw-mb-4"
                                 />
-                                <Link href={item.link ?? '/'}>
+                                <Link href={item.link ?? "/"}>
                                     <Text as="h3" size="lg">
                                         {item.titulo}
                                     </Text>
                                 </Link>
-                                <Text size="md">{item.cuerpo}</Text>
+                                <Text
+                                    size="md"
+                                    color="primary"
+                                    // className="text-[15px] lg:text-[17px]"
+                                >
+                                    {item.cuerpo}
+                                </Text>
                             </div>
                         ))}
                 </div>

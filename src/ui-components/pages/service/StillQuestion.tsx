@@ -12,6 +12,7 @@ type TProps = TSection & {
 const StillQuestionSection = ({
     data: { title, buttonText, paragraphs, link },
 }: TProps) => {
+    console.log({paragraphs})
     return (
         <Container clases="mybook-area" bg="white" py="tw-pt-0 tw-py-0">
             <div className="tw-flex tw-flex-col tw-bg-spring tw-rounded-xl tw-p-6">

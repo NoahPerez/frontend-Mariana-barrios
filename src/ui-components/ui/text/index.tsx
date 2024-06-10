@@ -49,7 +49,7 @@ export const Text: React.FC<Props> = ({
             "tw-text-2xl md:tw-text-3xl": size === "xl",
             "tw-text-lg md:tw-text-xl": size === "xlarge",
             "tw-text-base md:tw-text-lg": size === "lg",
-            "tw-text-sm md:tw-text-md": size === "md",
+            "tw-text-[13px] md:tw-text-base": size === "md",
             "tw-text-xs md:tw-text-sm": size === "sm",
             "tw-text-xs md:tw-text-xs": size === "xs",
             "": type === "custom",

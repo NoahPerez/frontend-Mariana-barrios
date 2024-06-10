@@ -11,6 +11,7 @@ type TProps = {
 };
 
 const AccordionItem = ({ id, title, description, onClick, isOpen }: TProps) => {
+    console.log({description})
     return (
         <div className="accordion-item tw-mb-7.5">
             <h3 className="tw-mb-0 tw-relative" id={`faq-heading-${id}`}>

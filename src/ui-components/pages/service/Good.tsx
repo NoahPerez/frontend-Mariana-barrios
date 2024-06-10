@@ -19,7 +19,7 @@ const GoodSection = ({ data: { texts, faqs } }: TProps) => {
         return {
             id: e.id,
             title: e.question,
-            description: e.question,
+            description: e.answer,
         };
     });
     return (

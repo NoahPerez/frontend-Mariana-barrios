@@ -56,20 +56,24 @@ const TransformSection = ({
                                     key={e.id}
                                     className="tw-flex tw-gap-4 tw-justify-between tw-items-center"
                                 >
-                                    <div className="tw-rounded-full tw-w-12 tw-h-12 tw-bg-spring tw-p-2 tw-flex tw-items-center tw-justify-center tw-aspect-square">
-                                        <img
-                                            src={`/icons/svg/${
-                                                e.icono ?? ""
-                                            }.svg`}
-                                            alt={e.titulo}
-                                            width={25}
-                                            height={25}
-                                        />
-                                    </div>
-                                    <div className="tw-flex tw-flex-col">
-                                        <Text as="h3">{e.titulo}</Text>
-                                        <Text as="p">{e.cuerpo}</Text>
-                                    </div>
+                                    {e.icono && (
+                                        <div className="tw-rounded-full tw-w-12 tw-h-12 tw-bg-spring tw-min-w-[3rem] tw-p-2 tw-flex tw-items-center tw-justify-center tw-aspect-square">
+                                            <img
+                                                src={`/icons/svg/${
+                                                    e.icono ?? ""
+                                                }.svg`}
+                                                alt={e.titulo}
+                                                width={25}
+                                                height={25}
+                                            />
+                                        </div>
+                                    )}
+                                    {e.titulo && (
+                                        <div className="tw-flex tw-flex-col">
+                                            <Text as="h3">{e.titulo}</Text>
+                                            <Text as="p">{e.cuerpo}</Text>
+                                        </div>
+                                    )}
                                 </div>
                             ))}
                     </div>

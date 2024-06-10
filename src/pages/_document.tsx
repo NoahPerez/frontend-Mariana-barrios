@@ -7,7 +7,7 @@ export default class MyDocument extends Document {
         const pageProps = this.props?.__NEXT_DATA__?.props?.pageProps;
 
         return (
-            <Html lang="en">
+            <Html lang="es">
                 <Head />
                 <body className={pageProps.className}>
                     <Main />
