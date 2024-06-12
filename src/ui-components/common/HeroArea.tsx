@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { scrollUpVariants } from "@utils/variants";
 
 
-import Button from "@components/ui/button";
 import { StrapiImage } from "./StrapiImage";
 import { Text } from "@uic/ui/text";
+import Link from "next/link";
 
 type TProps = {
     data: {
@@ -20,7 +20,7 @@ type TProps = {
 };
 
 const HeroArea = ({
-    data: { subtitle, title, texto, button, image },
+    data: { subtitle, title, texto, button, image, link },
 }: TProps) => {
     return (
         <div className="tw-h-full tw-min-h-[90vh] md:tw-min-h-[90vh] xl:tw-min-h-[90vh]  tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
@@ -82,7 +82,12 @@ const HeroArea = ({
                                 {texto}
                             </Text>
                         )}
-                        <Button>{button}</Button>
+                        <Link
+                            href={link ?? "/"}
+                            className="tw-font-bold tw-justify-center tw-items-center tw-border tw-border-solid tw-transition-colors tw-min-w-max tw-inline-flex  tw-border-primary tw-text-white hover:tw-bg-primary hover:tw-border-primary hover:tw-text-white tw-text-md tw-px-7 tw-py-1 tw-min-h-[48px] md:tw-min-h-[52px]  tw-rounded-lg tw-bg-primary tw-p-2 md:tw-p-2 md:tw-px-10"
+                        >
+                            {button}
+                        </Link>
                     </motion.div>
                     {/* <motion.div
                         className="course tw-flex tw-space-between tw-justify-center xl:tw-justify-end tw-relative tw-z-10"

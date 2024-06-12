@@ -1,7 +1,7 @@
 
 import { Text } from "@components/ui/text";
-import Button from "@components/ui/button";
 import { StrapiImage } from "./StrapiImage";
+import Link from "next/link";
 
 
 type TProps = {
@@ -14,7 +14,7 @@ type TProps = {
         image: string;
     };
 };
-const HeroEvent = ({ data: { subtitle, title, texto, button, image } }: TProps) => {
+const HeroEvent = ({ data: { subtitle, title, texto, button, image, link } }: TProps) => {
     return (
         <div
             className="tw-flex tw-relative tw-min-h-[90vh] md:tw-min-h-[80vh] md:tw-pb-[30px]  tw-bg-spring tw-pt-[60px] tw-bg-cover   bg-none-md"
@@ -52,7 +52,14 @@ const HeroEvent = ({ data: { subtitle, title, texto, button, image } }: TProps) 
                                     {texto}
                                 </Text>
                             )}
-                            {button && <Button>{button}</Button>}
+                            {button && (
+                                <Link
+                                    href={link ?? "/"}
+                                    className="tw-font-bold tw-justify-center tw-items-center tw-border tw-border-solid tw-transition-colors tw-min-w-max tw-inline-flex  tw-border-primary tw-text-white hover:tw-bg-primary hover:tw-border-primary hover:tw-text-white tw-text-md tw-px-7 tw-py-1 tw-min-h-[48px] md:tw-min-h-[52px]  tw-rounded-lg tw-bg-primary tw-p-2 md:tw-p-2 md:tw-px-10"
+                                >
+                                    {button}
+                                </Link>
+                            )}
                         </>
                     )}
                 </div>

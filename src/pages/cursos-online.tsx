@@ -100,6 +100,7 @@ const AboutMe: PageProps = ({ data: { comments, cursos, events: {pasos, viaje} }
                         title: cursos.titleTestimonio,
                         button: cursos.buttonTestimonio,
                         items: comments,
+                        link: cursos.linkTestimonio,
                     }}
                 />
             </Container>

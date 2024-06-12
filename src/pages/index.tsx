@@ -106,6 +106,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const comments = await getComments();
     const blogs = await getBlogs({page: 1});
     const freeSesion = await getFreeSesion();
+    
     return {
         props: {
             data: {

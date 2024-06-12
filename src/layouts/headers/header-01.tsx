@@ -11,6 +11,7 @@ import menu from "@data/menu";
 import { useSticky } from "@hooks";
 import Link from "next/link";
 import { Text } from "@components/ui/text";
+import { IFreeSesion } from "services/freeSesion/types";
 // import { useUI } from "@contexts/ui-context";
 
 const MobileMenu = dynamic(() => import("../../components/menu/mobile-menu"), {
@@ -38,6 +39,21 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
     useEffect(() => {
         setOffcanvas(false);
     }, [router]);
+
+    const [link, setLink] = useState<string>("");
+
+    useEffect(() => {
+        fetch(
+            `${process.env.NEXT_PUBLIC_STRAPI_URL}/free-sesion?populate[freeSesion][populate][Imagen][fields][0]=url`
+        )
+            .then((res) => res.json())
+            .then((res: IFreeSesion) => {
+                setLink(res?.data.attributes.freeSesion.TextoLink);
+            })
+            .catch(console.log);
+    }, []);
+      
+   
 
     return (
         <>
@@ -84,7 +100,7 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                         />
                         <div className="tw-flex tw-justify-end tw-items-center tw-ml-2 ">
                             <Link
-                                href="/"
+                                href={link ?? '/'}
                                 className="tw-rounded-lg tw-bg-primary tw-p-1 tw-px-4 md:tw-p-2 md:tw-px-5"
                             >
                                 <Text

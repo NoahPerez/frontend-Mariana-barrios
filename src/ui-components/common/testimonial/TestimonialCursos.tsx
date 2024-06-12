@@ -1,8 +1,8 @@
 import { Text } from "@components/ui/text";
-import Button from "@components/ui/button";
 import { Container } from "@components/ui/container";
 import Testimonial from "./Testimonail-06";
 import { ICommentResult } from "services/comments/getComments";
+import Link from "next/link";
 
 type TProps = {
     data: {
@@ -10,11 +10,12 @@ type TProps = {
         subtitle: string;
         img?: string;
         button?: string;
+        link?: string;
         items?: ICommentResult[];
     };
 };
 const TestimonialCursos = ({
-    data: { title, subtitle, items, button },
+    data: { title, subtitle, items, button, link },
 }: TProps) => {
     return (
         <Container bg="white">
@@ -40,15 +41,19 @@ const TestimonialCursos = ({
                             </Text>
                         </div>
                     )}
-                    <Button className="tw-self-start sm:tw-self-center">
+                    <Link
+                        href={link ?? "/"}
+                        className="tw-font-bold tw-justify-center tw-items-center tw-border tw-border-solid tw-rounded-md tw-transition-colors tw-min-w-max tw-inline-flex tw-bg-primary tw-border-primary tw-text-white hover:tw-bg-secondary hover:tw-border-secondary hover:tw-text-white tw-text-md tw-px-7 tw-py-1 tw-min-h-[48px] md:tw-min-h-[52px] md:tw-px-10 tw-self-start sm:tw-self-center"
+                    >
                         {button}
-                    </Button>
+                    </Link>
                 </div>
                 <div className="tw-w-full tw-max-w-[800px] tw-mx-auto tw-mt-16 tw-auto-testimonial-columns">
                     {items &&
                         items.length > 0 &&
                         items.map((item) => (
                             <Testimonial
+                                key={item.id}
                                 name={item.title ?? ""}
                                 review={item.body ?? ""}
                                 image={{

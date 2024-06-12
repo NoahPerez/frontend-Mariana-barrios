@@ -1,6 +1,6 @@
 import { Text } from "@components/ui/text";
-import Button from "@components/ui/button";
 import { StrapiImage } from "./StrapiImage";
+import Link from "next/link";
 
 
 type TProps = {
@@ -14,12 +14,15 @@ type TProps = {
     };
 };
 const HeroCursos = ({
-    data: { title, texto, image, button },
+    data: { title, texto, image, button, link },
 }: TProps) => {
     return (
         <div
             className="tw-flex tw-relative tw-min-h-[90vh] md:tw-min-h-[60vh]  md:tw-px-0 tw-bg-spring md:tw-bg-transparent tw-pt-[50px] md:tw-pt-[60px] tw-bg-cover bg-none-md"
-            style={{ backgroundImage: `url(${image})`, backgroundPositionY: '-30px',  }}
+            style={{
+                backgroundImage: `url(${image})`,
+                backgroundPositionY: "-30px",
+            }}
         >
             <div className="md:tw-px-4 tw-px-4 tw-bg-black/20 tw-w-full md:tw-w-1/2 tw-py-12 md:tw-py-0 tw-mx-auto tw-flex tw-justify-end  md:tw-bg-white tw-items-center">
                 <div className="tw-self-end md:tw-self-auto tw-w-full lg:tw-max-w-[600px]  tw-block md:tw-pr-16 lg:tw-pr-24">
@@ -41,7 +44,12 @@ const HeroCursos = ({
                             >
                                 {texto}
                             </Text>
-                            <Button>{button}</Button>
+                            <Link
+                                href={link ?? "/"}
+                                className="tw-font-bold tw-justify-center tw-items-center tw-border tw-border-solid tw-transition-colors tw-min-w-max tw-inline-flex  tw-border-primary tw-text-white hover:tw-bg-primary hover:tw-border-primary hover:tw-text-white tw-text-md tw-px-7 tw-py-1 tw-min-h-[48px] md:tw-min-h-[52px]  tw-rounded-lg tw-bg-primary tw-p-2 md:tw-p-2 md:tw-px-10"
+                            >
+                                {button}
+                            </Link>
                         </>
                     )}
                 </div>

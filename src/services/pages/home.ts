@@ -18,6 +18,7 @@ export async function getMyBook() {
             id: attr.ConsigueMiLibro.id,
             title: attr.ConsigueMiLibro.titulo,
             subtitle: attr.ConsigueMiLibro.subtitulo ?? "",
+            link: attr.ConsigueMiLibro.LinkBoton,
             buttonText: attr.ConsigueMiLibro.TextoBoton,
             img: `${attr.ConsigueMiLibro.imagen.data?.attributes.url}`,
             paragraphs: attr.ConsigueMiLibro.parrafos,
@@ -25,6 +26,8 @@ export async function getMyBook() {
     };
     return mappedData;
 }
+
+
 
 export async function getHome() {
     const response = await fetch(
@@ -50,6 +53,7 @@ export async function getHome() {
             title: attr.ConsigueMiLibro.titulo,
             subtitle: attr.ConsigueMiLibro.subtitulo ?? "",
             buttonText: attr.ConsigueMiLibro.TextoBoton,
+            link: attr.ConsigueMiLibro.LinkBoton,
             img: `${attr?.ConsigueMiLibro?.imagen?.data?.attributes.url}`,
             paragraphs: attr.ConsigueMiLibro.parrafos,
         },
@@ -58,10 +62,12 @@ export async function getHome() {
             title: attr.SesionGratuita.titulo,
             subtitle: attr.SesionGratuita.subtitulo ?? "",
             buttonText: attr.SesionGratuita.TextoBoton,
+            link: attr.SesionGratuita.LinkBoton,
             img: `${attr?.SesionGratuita?.imagen?.data?.attributes.url}`,
             paragraphs: attr.SesionGratuita.parrafos,
         },
     };
+
 
     return mappedData;
 }
